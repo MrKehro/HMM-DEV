@@ -33,6 +33,7 @@ on_startup = {
 	on_startup_effect = yes
 	on_startup_dlc_cleanup_effect = yes
 	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
+	initialize_hmm_american_warscore_cost_effect = yes
 
     ##############################
 	#### HMM Dev click counter ###
@@ -597,6 +598,7 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	on_battle_ended_effect = yes
 	on_battle_won_country_effect = yes
+	on_battle_over_hmm_effect = yes
 	#Hungary Achievement -> this triggers first
 	if = {
 		limit = {
@@ -625,6 +627,7 @@ on_battle_won_country = {
 # root = loser country, from = winner country
 on_battle_lost_country = {
 	on_battle_ended_effect = yes
+	on_battle_over_hmm_effect = yes
 	battle_cult_spreading_effect = yes #Scripted effect for fetishist cult mechanics.
 	random_events = {
 		90 = 0
@@ -1352,41 +1355,41 @@ on_monarch_death = {
 }
 
 # country
-#on_regent = {
-#	if = {
-#		limit = {
-#			NOT = { has_global_flag = death_of_haji_giray } #Also set in history.
-#			tag = CRI
-#			exists = TUR
-#			is_subject = no
-#			TUR = {
-#				num_of_cities = ROOT
-#				is_subject = no
-#				num_of_ports = 1
-#			}
-#		}
-#		country_event = { id = flavor_cri.1 } #Death of Haji Giray
-#	}
-#	if = {
-#		limit = {
-#			NOT = { has_global_flag = death_of_haji_giray } #Also set in history.
-#			tag = CRI
-#			OR = {
-#				NOT = { exists = TUR }
-#				is_subject = yes
-#				TUR = { NOT = { num_of_cities = ROOT } }
-#				TUR = { is_subject = yes }
-#				TUR = { NOT = { num_of_ports = 1 } }
-#			}
-#		}
-#		set_global_flag = death_of_haji_giray
-#	}
-#	events = {
-#		tribal_succession.1	# harsh anti-tribals.
-#		flavor_tim.1			#Death of Shah Rukh
-#		flavor_daimyo.4			#Shiba Yoshikado
-#	}
-#}
+on_regent = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = death_of_haji_giray } #Also set in history.
+			tag = CRI
+			exists = TUR
+			is_subject = no
+			TUR = {
+				num_of_cities = ROOT
+				is_subject = no
+				num_of_ports = 1
+			}
+		}
+		set_global_flag = death_of_haji_giray
+	}
+	if = {
+		limit = {
+			NOT = { has_global_flag = death_of_haji_giray } #Also set in history.
+			tag = CRI
+			OR = {
+				NOT = { exists = TUR }
+				is_subject = yes
+				TUR = { NOT = { num_of_cities = ROOT } }
+				TUR = { is_subject = yes }
+				TUR = { NOT = { num_of_ports = 1 } }
+			}
+		}
+		set_global_flag = death_of_haji_giray
+	}
+	events = {
+		tribal_succession.1	# harsh anti-tribals.
+		flavor_tim.1			#Death of Shah Rukh
+		flavor_daimyo.4			#Shiba Yoshikado
+	}
+}
 
 # country
 on_extend_regency = {
@@ -5531,6 +5534,21 @@ on_company_chartered = {
 # ROOT = Overlord, FROM = Minor
 on_dependency_gained = {
 	on_dependency_gained_effect = yes
+	if = {
+		limit = {
+			ai = no
+			FROM = {
+				ai = no
+				OR = {
+					is_subject_of_type = personal_union
+					is_subject_of_type = integrated_personal_union
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = HMM_events.30 }
+		}
+	}
 }
 
 # ROOT = Overlord, FROM = Minor
@@ -5783,7 +5801,7 @@ on_trade_good_changed = {
 		if = {
 			limit = { 
 				trade_goods = coal 
-				FROM = { economic_ideas = 3 }
+				FROM = { has_idea = smithian_economics }
 				has_manufactory_trigger = yes 
 				base_production = 2
 			}
@@ -5816,7 +5834,7 @@ on_loan_repaid = {
 	if = {
 		limit = { 
 			THIS = {
-				economic_ideas = 4 
+				has_idea = debt_and_loans
 			}
 		}
 		THIS = { add_inflation = -0.05 }
@@ -6512,6 +6530,18 @@ on_slacken_stop = {
 
 on_colony_finished = { #ROOT - Province
 	on_colony_finished_effect = yes
+	if = {
+		limit = {
+			continent = south_america
+			owner = {
+				religion = shamanism
+				NOT = { has_unlocked_cult = south_central_american_cult }
+			}
+		}
+		owner = {
+			country_event = { id = fetishist_flavor.404 }
+		}
+	}
 }
 
 on_advisor_hired = { #ROOT - Country

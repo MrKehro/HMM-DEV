@@ -2,7 +2,7 @@ country_decisions = {
 	HMM_state_edicts_decision = {
 		major = yes
 		provinces_to_highlight = {
-			has_state_edict_enabled = yes
+			is_state = yes
 			owned_by = ROOT
 		}
 		potential = {

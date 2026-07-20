@@ -2275,6 +2275,7 @@ pagan = {
 		country = {
 			tolerance_heathen = 2
 			diplomatic_reputation = 1
+			trade_efficiency = 0.05
 		}
 		country_as_secondary = {
 			tolerance_own = 2

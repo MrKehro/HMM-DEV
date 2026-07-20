@@ -1,3 +1,5 @@
+namespace = HMM_events
+
 country_event = { # state edicts
 	id = HMM_events.28
 	title = HMM_events.28.t
@@ -206,18 +208,25 @@ country_event = { # state edicts
 			owns = 183
 			is_year = 1500
 			AND = {
-				at_war = no
+				is_at_war = no
 				truce_with = FRA
 			}
 		}
 	}
 	immediate = {
 		hidden_effect = {
-			random_hired_mercenary_company = {
+			if = {
 				limit = {
-					is_template = merc_hmm_bur
+					any_hired_mercenary_company = {
+						template = merc_hmm_bur
+					}
 				}
-				disband_mercenary_company = THIS
+				random_hired_mercenary_company = {
+					limit = {
+						template = merc_hmm_bur
+					}
+					disband_mercenary_company = THIS
+				}
 			}
 			clr_country_flag = merc_hmm_bur_flag
 		}
@@ -247,12 +256,33 @@ country_event = { # state edicts
 	}
 	option = {
 		trigger = {
-			at_war = no
+			is_at_war = no
 			truce_with = FRA
 			NOT = { owns = 183 }
 			NOT = { is_year = 1500 }
 			NOT = { alliance_with = FRA }
 		}
 		name = HMM_events.29.4
+	}
+}
+
+# Break PU
+country_event = {
+	id = HMM_events.30
+	title = HMM_events.30.t
+	desc = HMM_events.30.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		save_event_target_as = HMM_forced_pu_junior
+		overlord = {
+			save_event_target_as = HMM_forced_pu_overlord
+		}
+	}
+	option = {
+		name = HMM_events.30.1
+		event_target:HMM_forced_pu_overlord = {
+			break_union = event_target:HMM_forced_pu_junior
+		}
 	}
 }

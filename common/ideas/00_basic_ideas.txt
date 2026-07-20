@@ -998,10 +998,6 @@ exploration_ideas = {
 		modifier = {
 			factor = 0
 			is_tribal = yes
-		}
-		modifier = {
-			factor = 0
-			is_subject = yes
 		}		
 		modifier = {
 			factor = 0
@@ -1128,6 +1124,9 @@ exploration_ideas = {
 				tag = ENG
 				tag = FRA
 				tag = KUR
+				tag = BRI
+				tag = SCO
+				tag = NOR
 			}
 		}
 	}
@@ -1657,7 +1656,7 @@ mercenary_ideas = {
 		mercenary_cost = -0.15
 	}
 	war_council = {
-		mil_advisor_cost = -0.15
+		mil_advisor_cost = -0.25
 		merc_independent_from_trade_range = yes
 	}
 	expanded_contracts = {

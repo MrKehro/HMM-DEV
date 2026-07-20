@@ -223,29 +223,41 @@ country_event = {
 	
 	option = {
 		name = flavor_mlo.5.a
-		NAP = {
-			add_opinion = {
-				who = ROOT
-				modifier = mlo_peace_of_lodi
-			}		
+		if = {
+			limit = { NOT = { tag = NAP } }
+			NAP = {
+				add_opinion = {
+					who = ROOT
+					modifier = mlo_peace_of_lodi
+				}
+			}
 		}
-		LAN = {
-			add_opinion = {
-				who = ROOT
-				modifier = mlo_peace_of_lodi
-			}		
+		if = {
+			limit = { NOT = { tag = LAN } }
+			LAN = {
+				add_opinion = {
+					who = ROOT
+					modifier = mlo_peace_of_lodi
+				}
+			}
 		}
-		VEN = {
-			add_opinion = {
-				who = ROOT
-				modifier = mlo_peace_of_lodi
-			}		
+		if = {
+			limit = { NOT = { tag = VEN } }
+			VEN = {
+				add_opinion = {
+					who = ROOT
+					modifier = mlo_peace_of_lodi
+				}
+			}
 		}
-		MLO = {
-			add_opinion = {
-				who = ROOT
-				modifier = mlo_peace_of_lodi
-			}		
+		if = {
+			limit = { NOT = { tag = MLO } }
+			MLO = {
+				add_opinion = {
+					who = ROOT
+					modifier = mlo_peace_of_lodi
+				}
+			}
 		}
 	}	
 }

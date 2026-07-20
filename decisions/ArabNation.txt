@@ -58,42 +58,34 @@ country_decisions = {
 					not = { has_country_flag = free_arabia_forming_flag }
 				}
 				if = {
-					limit = { tag = ORM }
+					limit = {
+						OR = {
+							tag = ORM
+							tag = MAM
+						}
+					}
 					adm_tech = 10
 				}
 				else = {
-					adm_tech = 15
+					adm_tech = 18
 				}
 			}
 			religion_group = muslim
-			OR = {
-				AND = {
-					tag = ORM
-					owns_core_province = 384		#Medina
-					owns_core_province = 385		#Mecca
-					owns_core_province = 388		#Aden
-					owns_core_province = 390		#Sanaa
-					owns_core_province = 392		#Al-Arid
-					owns_core_province = 394		#Qatif
-					owns_core_province = 400		#Muscat
-					owns_core_province = 403		#Nizwa
-				}
-				AND = {
-					owns_core_province = 358		#Alexandria
-					owns_core_province = 361		#Cairo
-					owns_core_province = 377		#Aleppo
-					owns_core_province = 379		#Jerusalem
-					owns_core_province = 382		#Damascus
-					owns_core_province = 384		#Medina
-					owns_core_province = 385		#Mecca
-					owns_core_province = 388		#Aden
-					owns_core_province = 390		#Sanaa
-					owns_core_province = 392		#Al-Arid
-					owns_core_province = 394		#Qatif
-					owns_core_province = 400		#Muscat
-					owns_core_province = 403		#Nizwa
-					owns_core_province = 410		#Baghdad
-				}
+			AND = {
+				owns_core_province = 358		#Alexandria
+				owns_core_province = 361		#Cairo
+				owns_core_province = 377		#Aleppo
+				owns_core_province = 379		#Jerusalem
+				owns_core_province = 382		#Damascus
+				owns_core_province = 384		#Medina
+				owns_core_province = 385		#Mecca
+				owns_core_province = 388		#Aden
+				owns_core_province = 390		#Sanaa
+				owns_core_province = 392		#Al-Arid
+				owns_core_province = 394		#Qatif
+				owns_core_province = 400		#Muscat
+				owns_core_province = 403		#Nizwa
+				owns_core_province = 410		#Baghdad
 			}
 		}
 		effect = {

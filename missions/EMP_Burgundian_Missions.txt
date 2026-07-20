@@ -256,6 +256,29 @@ emp_burgundy_1 = {
 			factor = 500	#Natural conquest
 		}
 	}
+
+	hmm_bur_unlock_deathwar_corps = {
+		icon = mission_the_french_menace
+		required_missions = { }
+
+		provinces_to_highlight = {
+				province_id = 183
+				NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			exists = FRA
+			war_with = FRA
+		}
+
+		effect = {
+			set_country_flag = merc_hmm_bur_flag
+			add_country_modifier = {
+				name = hmm_mission_timed_buff
+				duration = 1825
+			}
+		}
+	}
 }
 
 emp_lotharingia_1 = {

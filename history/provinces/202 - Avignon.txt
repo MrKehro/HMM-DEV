@@ -27,7 +27,7 @@ discovered_by = ottoman
 #	controller = PAP
 #	add_core = PAP
 #	}
-1670.1.1 = { add_core = FRA } # Louis XIV wants to annex the city-state (Chambres de R�union)
+1670.1.1 = { add_core = FRA } # Louis XIV wants to annex the city-state (Chambres de R?union)
 1791.9.14 = {
 	owner = FRA
 	controller = FRA

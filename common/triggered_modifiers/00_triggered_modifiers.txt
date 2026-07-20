@@ -12,10 +12,63 @@ nerf_privateer = {
 	}
 
 	trigger = {
-		date = 1444.11.11
+		always = yes
 	}
 
 	privateer_efficiency = -0.66	
+}
+
+hmm_new_world = {
+	potential = {
+		technology_group = western
+		capital_scope = {
+			continent = europe
+		}
+	}
+
+	trigger = {
+		has_institution = new_world_i
+	}
+
+	colonists = 1
+}
+
+hmm_colonial_player_nation = {
+	potential = {
+		is_colonial_nation = yes
+	}
+	trigger = {
+		ai = no
+	}
+	development_cost = 0.10
+}
+
+hmm_former_player_nation_viability = {
+	potential = {
+		exists = yes
+		NOT = {
+			AND = {
+				is_subject = yes
+				overlord = { ai = no }
+			}
+		}
+	}
+	trigger = {
+		was_player = yes
+		ai = yes
+	}
+	manpower_recovery_speed = 10
+	land_forcelimit_modifier = 0.5
+	mercenary_manpower = 1
+	war_exhaustion = -5
+	global_unrest = -25
+	inflation_reduction = 12
+	yearly_corruption = -12
+	interest = -5
+	global_tax_modifier = 1
+	trade_efficiency = 1
+	production_efficiency = 1
+	reduced_liberty_desire = 100
 }
 
 ###########################################

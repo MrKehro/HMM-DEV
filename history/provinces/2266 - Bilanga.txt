@@ -1,0 +1,21 @@
+# No previous file for Bilanga
+
+owner = WGD
+controller = WGD
+add_core = WGD
+is_city = yes
+culture = mossi 
+religion = sunni
+capital = "Bilanga"
+trade_goods = grain
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+discovered_by = sub_saharan
+
+1444.1.1 = {
+	owner = SON
+	controller = SON
+	add_core = SON
+} 

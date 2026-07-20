@@ -1,6 +1,10 @@
 #
 # Example mercenary companies
 #
+# fire_damage_received = 0.1
+# shock_damage_received = 0.1
+# morale_damage_received = 0.1
+
 
 merc__local_free_company = {
     regiments_per_development = 0.025
@@ -108,14 +112,27 @@ twenty_good_men = {
 	}
 }
 
-merc__local_arty_army = {
+merc_local_arty_army = {
     regiments_per_development = 0.075
+    cavalry_weight = 1
+    cavalry_cap = 0
+    artillery_weight = 0
+    cost_modifier = 1.5
+    trigger = {
+        mil_tech = 7
+        is_allowed_to_recruit_mercenaries = yes
+    }
+    # No home province means local mercenary company
+}
+
+merc_local_horse_army = {
+    regiments_per_development = 0.05
     cavalry_weight = 0
     cavalry_cap = 0
     artillery_weight = 1
     cost_modifier = 2
     trigger = {
-        mil_tech = 7
+        has_idea_group = aristocracy_ideas
         is_allowed_to_recruit_mercenaries = yes
     }
     # No home province means local mercenary company

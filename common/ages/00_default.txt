@@ -73,9 +73,6 @@ age_of_discovery = {
 		}
 		obj_renaissance = {
 	 		has_institution = renaissance
-	 		all_state_province = {
-	 			renaissance = 100
-	 		}
 		}
 		
 		obj_two_unions = {
@@ -517,7 +514,7 @@ age_of_reformation = {
 				on_age_ability_taken = { age = age_of_reformation }
 			}
 			modifier = {
-				global_trade_goods_size_modifier = 0.33
+				global_trade_goods_size_modifier = 0.20
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
@@ -540,7 +537,7 @@ age_of_reformation = {
 				on_age_ability_taken = { age = age_of_reformation }
 			}
 			modifier = {
-				development_cost = -0.2
+				development_cost = -0.1
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {

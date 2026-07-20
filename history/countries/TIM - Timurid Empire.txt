@@ -1,0 +1,80 @@
+technology_group = muslim
+primary_culture = khorasani
+add_accepted_culture = uzbehk
+add_accepted_culture = persian
+religion = sunni
+government = monarchy
+add_government_reform = iqta
+government_rank = 3
+capital = 454 # Samarkand
+historical_rival = DLH
+historical_rival = MUL
+historical_rival = TUR
+religious_school = hanafi_school
+
+change_estate_land_share = {
+	estate = estate_church
+	share = -12
+}
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 12
+}
+
+add_army_tradition = 20			#Years of fighting and infighting before the game start.
+add_army_professionalism = 0.05
+
+1370.1.1 = {
+	monarch = {
+		name = "Timur"
+		dynasty = "Timurid"
+		adm = 4	
+		dip = 4	
+		mil = 5
+		leader = { name = "Timur"	type = general	fire = 6	shock = 6	manuever = 6	siege = 2 }
+	}
+	add_piety = 0.5
+}
+
+1383.1.1 = { leader = {	name = "Miran Shah"	type = general	fire = 3	shock = 3	manuever = 4	siege = 0	death_date = 1408.1.1 } }
+
+1409.1.1 = {
+	capital = 446
+	monarch = {
+		name = "Shah Rukh"
+		birth_date = 1387.8.20
+		death_date = 1445.1.1
+		dynasty = "Timurid"
+		adm = 4
+		dip = 3
+		mil = 5
+		culture = uzbehk
+		religion = sunni
+		leader = {
+			name = "Shah Rukh"
+			type = general
+			fire = 2
+			shock = 4
+			manuever = 3
+			siege = 1
+		}
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = scholar_personality
+	add_ruler_personality = architectural_visionary_personality
+	add_ruler_personality = benevolent_personality
+	queen = {
+		name = "Goharshad"
+		birth_date = 1370.1.1
+		death_date = 1457.7.19
+		dynasty = "Tarkhan"
+		culture = persian
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+	add_piety = -0.5
+	add_ruler_modifier = {
+		name = shahrukhs_empire
+	}
+}

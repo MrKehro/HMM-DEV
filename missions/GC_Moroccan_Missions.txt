@@ -671,8 +671,8 @@ gc_morocco_3 = {
 		
 		effect = {
 			add_country_modifier = {
-				name = "mor_barbary_pirate_coast"
-				duration = 7300
+				name = hmm_mission_timed_buff
+				duration = 1825
 			}
 		}
 	}
@@ -693,9 +693,6 @@ gc_morocco_3 = {
 				}
 			}
 			OR = {
-				any_subject_country = {
-					has_reform = pirate_republic_reform
-				}
 				1298 = {
 					privateer_power = {
 						country = ROOT
@@ -822,7 +819,7 @@ gc_morocco_3 = {
 		}
 		
 		trigger = {
-			1975 = {
+			236 = {
 				privateer_power = {
 					country = ROOT
 					share = 5
@@ -884,10 +881,6 @@ gc_morocco_4 = {
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = mor_mission_timed_buff
-				duration = 1825
 			}
 		}
 	}
