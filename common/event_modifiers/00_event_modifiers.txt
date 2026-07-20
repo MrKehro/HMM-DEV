@@ -1837,7 +1837,7 @@ spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for 
 	trade_goods_size = 3.0
 }
 
-skanemarket = { #Skï¿½nemarknaden - Biggest Herring Market in Europe
+skanemarket = { #Skånemarknaden - Biggest Herring Market in Europe
 	trade_goods_size = 2
 }
 
@@ -4812,23 +4812,6 @@ hab_plague_of_vienna = {
 hab_schwaz_mine = {
 	trade_goods_size = 1.0
 }
-#########################
-####       HMM       ####  
-#########################
-
-kongo_gold_mine = {
-	trade_goods_size = 1.0
-}
-HMM_grand_captain_cooldown = {
-}
-HMM_commandant_cooldown = {
-}
-HMM_military_reform_cooldown = {
-}
-
-#########################
-####   END OF HMM    ####  
-#########################
 
 hab_centralization_of_austria = {
 	global_autonomy = -0.02
@@ -12096,7 +12079,7 @@ estate_cossacks_prime_herding_rights_mod = {
 }
 
 estate_cossacks_exploration_expedition_mod = {
-	local_development_cost = -0.05
+	local_development_cost = -0.15
 }
 
 shortage_of_officers = {
@@ -13083,11 +13066,11 @@ liv_the_general = {
 
 #Province modifiers
 estate_burghers_forest_expansion_forest = {
-	local_development_cost = -0.05
+	local_development_cost = -0.15
 }
 
 estate_burghers_forest_expansion_woods = {
-	local_development_cost = -0.05
+	local_development_cost = -0.10
 }
 
 estate_burghers_mountain_expansion_mountains = {

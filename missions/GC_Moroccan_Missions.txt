@@ -878,28 +878,16 @@ gc_morocco_4 = {
 		}
 		
 		effect = {
-			if = {
+			upper_andalucia_area = {
 				limit = {
-					exists = GRA
-					GRA = {
-						is_subject = no
-						religion_group = muslim
-					}
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
-				add_casus_belli = {
-					type = cb_vassalize_mission
-					months = 300
-					target = GRA
-				}
+				add_permanent_claim = ROOT
 			}
-			else = {
-				upper_andalucia_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}		
+			add_country_modifier = {
+				name = mor_mission_timed_buff
+				duration = 1825
 			}
 		}
 	}

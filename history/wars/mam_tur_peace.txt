@@ -1,0 +1,19 @@
+name = "Mamlukean Vassalization of Cyprus"
+
+war_goal = {
+	type = take_capital_vassalize
+	casus_belli = cb_vassalize_mission
+	tag = CYP
+}
+
+1440.1.1 = {
+	add_attacker = MAM
+	add_defender = CYP
+    add_defender = TUR
+}
+
+1444.10.10 = {
+	rem_attacker = MAM
+	rem_defender = CYP
+    rem_defender = CYP
+}

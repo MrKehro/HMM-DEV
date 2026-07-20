@@ -2641,6 +2641,27 @@ merc_keshig = {
 	}
 }
 
+merc_hmm_bur = {
+    regiments_per_development = 0.05
+	cavalry_weight = 0
+	cavalry_cap = 0
+	mercenary_desc_key = MERC_HMM_BUR
+	cost_modifier = 0.25
+	counts_towards_force_limit = no
+	sprites = { dlc042_ned_sprite_pack dlc028_ned_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = merc_hmm_bur_flag
+	}
+	modifier = { 
+		infantry_power = 0.1
+		shock_damage_received = -0.1
+	}
+	min_size = 20
+	max_size = 20
+	manpower_pool = 60
+}
+
 rnw_modifier_weights = {
 	shock_damage = {
 		min = 0.05

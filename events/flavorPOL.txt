@@ -1807,21 +1807,21 @@ country_event = {
 		set_global_flag = plc_union_outcome_flag
 	}
 	
-	#mean_time_to_happen = {
-	#	months = 12
-	#	modifier = {
-	#		factor = 0.1
-	#		is_year = 1447
-	#	}
-	#	modifier = {
-	#		factor = 0.01
-	#		is_year = 1448
-	#	}
-	#	modifier = {
-	#		factor = 0.001
-	#		is_year = 1449
-	#	}
-	#}
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 0.001
+			is_year = 1445
+		}
+		modifier = {
+			factor = 0.0001
+			is_year = 1446
+		}
+		modifier = {
+			factor = 0.000001
+			is_year = 1447
+		}
+	}
 	
 	option = {
 		name = flavor_pol.18.a #We must retain the Jagiellon Dynasty

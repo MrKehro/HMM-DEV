@@ -6705,6 +6705,7 @@ letat_cest_moi_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		governing_capacity = 250
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 1.5
@@ -6721,6 +6722,7 @@ regional_representation_reform = {
 	modifiers = {
 		min_autonomy_in_territories = -0.05
 		core_creation = -0.05
+		max_absolutism = 5
 	}
 }
 
@@ -6729,6 +6731,7 @@ peoples_kingdom_reform = {
 	allow_normal_conversion = yes
 	modifiers = {
 		possible_policy = 1
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 1
@@ -6741,6 +6744,7 @@ deified_monarchy_reform = {
 	modifiers = {
 		warscore_cost_vs_other_religion = -0.05
 		tolerance_own = 1
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 1
@@ -6756,6 +6760,7 @@ consulate_reform = {
 	modifiers = {
 		global_autonomy = -0.05
 		governing_capacity = 150
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 2.5
@@ -6772,7 +6777,7 @@ political_absolutism_reform = {
 	}
 	modifiers = {
 		administrative_efficiency = 0.025
-		max_absolutism = 10
+		max_absolutism = 20
 	}
 	ai = {
 		factor = 1.5
@@ -6791,6 +6796,7 @@ legislative_houses_reform = {
 	}
 	modifiers = {
 		free_policy = 1
+		max_absolutism = 10
 	}
 }
 
@@ -6801,6 +6807,7 @@ presidential_monarchy_reform = {
 		national_focus_years = -5
 		no_stability_loss_on_monarch_death = yes
 		monarch_diplomatic_power = 1
+		max_absolutism = 10
 	}
 }
 

@@ -1,0 +1,16 @@
+name = "Ganking Minors War"
+war_goal = {
+	type = superiority_trade_mutual
+	casus_belli = cb_trade_war
+}
+
+1440.1.1 = {
+	add_attacker = TUR
+	add_defender = QAR
+}
+
+# Peace
+1444.1.1 = {
+	rem_attacker = TUR
+	rem_defender = QAR
+}

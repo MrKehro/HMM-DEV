@@ -1,0 +1,124 @@
+HMM_Morocco_Missions = {
+	slot = 5
+	generic = no
+	ai = yes
+
+	potential = {
+		tag = MOR
+		NOT = { map_setup = map_setup_random }
+	}
+
+	has_country_shield = yes
+
+	hmm_mor_won_deathwar = {
+		icon = mission_the_french_menace
+		required_missions = { }
+
+		provinces_to_highlight = {
+				OR = {
+					province_id = 219
+					province_id = 224
+					province_id = 2754
+				}
+				NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			truce_with = CAS
+			NOT = { date = 1500.1.1 }
+			343 = { owned_by = ROOT }
+			346 = { owned_by = ROOT }
+			OR = {
+				219 = { owned_by = ROOT }
+				224 = { owned_by = ROOT }
+				2754 = { owned_by = ROOT }
+			}
+		}
+
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = post_deathwar_buff
+				duration = 1825
+			}
+		}
+	}
+}
+
+HMM_Castile_Missions = {
+	slot = 5
+	generic = no
+	ai = yes
+
+	potential = {
+		tag = CAS
+		NOT = { map_setup = map_setup_random }
+	}
+
+	has_country_shield = yes
+
+	hmm_cas_won_deathwar = {
+		icon = mission_the_french_menace
+		required_missions = { }
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 343
+				province_id = 346
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			truce_with = MOR
+			NOT = { date = 1500.1.1 }
+			219 = { owned_by = ROOT }
+			224 = { owned_by = ROOT }
+			2754 = { owned_by = ROOT }
+			OR = {
+				343 = { owned_by = ROOT }
+				346 = { owned_by = ROOT }
+			}
+		}
+
+		effect = {
+			add_prestige = 15
+			add_country_modifier = {
+				name = post_deathwar_buff
+				duration = 1825
+			}
+		}
+	}
+}
+
+HMM_Burgundy_Missions = {
+	slot = 5
+	generic = no
+	ai = yes
+
+	potential = {
+		tag = BUR
+		NOT = { map_setup = map_setup_random }
+	}
+
+	has_country_shield = yes
+
+	hmm_bur_unlock_deathwar_corps = {
+		icon = mission_the_french_menace
+		required_missions = { }
+
+		provinces_to_highlight = {
+				province_id = 183
+				NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			exists = FRA
+			war_with = FRA
+		}
+
+		effect = {
+			set_country_flag = merc_hmm_bur_flag
+		}
+	}
+}

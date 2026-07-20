@@ -985,6 +985,7 @@ eyalet = {
 	naval_forcelimit_to_overlord = 0.1					# Percent of subject FL to use as base for modifiers
 	manpower_to_overlord = 0.1							# Percent of subject FL to use as base for modifiers
 	sailors_to_overlord = 0.1							# Percent of subject FL to use as base for modifiers
+
 	relative_power_class = 2
 	should_quit_wars_on_activation = yes
 

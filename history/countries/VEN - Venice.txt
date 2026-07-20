@@ -6,11 +6,10 @@ religion = catholic
 add_accepted_culture = greek
 add_accepted_culture = dalmatian
 technology_group = western
-elector = yes
+elector = no
 capital = 112 # Venezia
 fixed_capital = 112 # Cannot move capital away from this province & no power cost to move to it
 historical_friend = KNI
-national_focus = DIP
 add_army_professionalism = 0.05
 
 1380.1.1 = { leader = {	name = "Carlo Zeno"	type = admiral	fire = 3	shock = 3	manuever = 4	siege = 0	death_date = 1404.1.1 } }

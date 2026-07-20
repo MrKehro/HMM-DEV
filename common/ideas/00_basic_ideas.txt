@@ -495,7 +495,7 @@ spy_ideas = {
 	
 	privateers = {
 		capture_ship_chance = 0.25
-		privateer_efficiency = 0.33
+		global_ship_trade_power = 0.33
 	}
 	
 	blackmailing = {

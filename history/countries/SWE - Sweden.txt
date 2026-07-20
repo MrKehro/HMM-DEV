@@ -7,8 +7,6 @@ religion = catholic
 add_accepted_culture = finnish
 capital = 1	#Stockholm
 
-national_focus = MIL
-
 change_estate_land_share = {
 	estate = estate_church
 	share = -10

@@ -194,3 +194,65 @@ country_event = { # state edicts
 		clr_country_flag = HMM_state_edicts_flag
 	}
 }
+
+country_event = { # state edicts
+	id = HMM_events.29
+	title = HMM_events.29.t
+	desc = HMM_events.29.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	trigger = {
+		has_country_flag = merc_hmm_bur_flag
+		OR = {
+			owns = 183
+			is_year = 1500
+			AND = {
+				at_war = no
+				truce_with = FRA
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_hired_mercenary_company = {
+				limit = {
+					is_template = merc_hmm_bur
+				}
+				disband_mercenary_company = THIS
+			}
+			clr_country_flag = merc_hmm_bur_flag
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		trigger = {
+			owns = 183
+		}
+		name = HMM_events.29.1
+		add_prestige = 15
+	}
+	option = {
+		trigger = {
+			is_year = 1500
+		}
+		name = HMM_events.29.2
+	}
+	option = {
+		trigger = {
+			alliance_with = FRA
+		}
+		name = HMM_events.29.3
+		add_prestige = -15
+	}
+	option = {
+		trigger = {
+			at_war = no
+			truce_with = FRA
+			NOT = { owns = 183 }
+			NOT = { is_year = 1500 }
+			NOT = { alliance_with = FRA }
+		}
+		name = HMM_events.29.4
+	}
+}

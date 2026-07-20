@@ -2293,10 +2293,6 @@ west_slavic = {
 	}	
 }
 
-#carpathian = {	
-#	graphical_culture = easterngfx
-#}
-	
 east_slavic = {
 	graphical_culture = easterngfx
 	russian = { #Muscovite - Vladimir-Suzdal dialects
@@ -9322,105 +9318,6 @@ southern_african = {
 		female_names = {
 			Achieng Nuru
 		}
-}
-
-kongo_group = {
-	graphical_culture = africangfx
-	lunda = {
-		primary = LND
-	}
-	luba = {
-		primary = LUB
-	}
-	kongolese = {
-		primary = KON
-	}
-	yaka = {
-		primary = YAK
-	}
-	kuba = {
-		primary = KUB
-	}
-	mbundu = {
-		primary = NDO
-	}
-	chokwe = {
-		primary = CKW
-	}
-	mbangala = {
-		primary = KSJ
-	}
-	jukun = {
-	
-	}
-	sawabantu = {
-	
-	}
-	dynasty_names = { 
-		Lukeni Loanga Kalumbwe Kikondja Imbangala Kasanje Shila Kazembe Lunda Kuba
-	}
-	male_names = {
-		Garcia �lvaro Pedro Afonso Ntinu Nkuwu Henrique Ant�nio Bernardo Jos� Ambr�sio Aleixo Andr� Daniel Diogo 
-		Nicolau Nzinga Nkuwa Sebasti�o Ilunga Sanza Kumwimba Kasongo Kekenya Kaumbo Miketo Nday Mwine Maloba 
-		Kitamba Cibind Nawej Munying Kateng Cakasekene Cikombe Kalong Mutand Mbala Mukaz Mpemba
-	}
-	female_names = {
-		Jetta Vandana Zody Nzinga Kengela Mukambu Kangala Ana Barbara Veronica
-	}
-}
-
-great_lakes_group = {
-	graphical_culture = africangfx
-	rwandan = {
-		primary = RWA
-		dynasty_names = { 
-			Songoro Ha Huma Iru Hima Kama Chwa Mpazi Bairu Waha Hinda Bajiji Bashubi Abacyaba
-			Abasinga Abashambo Abahinda Abazigaba Abungura Abarihira Abahondogo Abongera
-		}
-		male_names = {
-			Ruhaga Bunyonya Kiteite Kahiyoza Rutahigwa Rwakyendera Rugacwa Lweikiza Kihira Rwasa
-			Kanyoni Kivunangoma Masimba Maziga Buhinda Kmenyi Ntare Karemera Rushatsi Rufuku Baridamunka
-			Mutaga Mwambutsa Cambarantama Birori Maconco Kigeli Mutara Cyilima Ruganzu Ndahiro Nsoro Rubanda
-			Nyarume Rumeza Kanyarwanda
-		}
-		female_names = {
-			Baramparaye Ngenzahago Nyiramavugo Kanjogera Nyirarukangaga
-		}
-	}
-	ganda = {
-		primary = BUG
-		dynasty_names = { 
-			
-		}
-		male_names = {
-			Ruhinda Nkuba Nyaika Ntare Rushango Kasasira Kitra Rumongye Mirindi Macwa Rwabirere
-			Kahaya Rwebishengye Gasyonga Mutambuka Muteesa Suuna Kamaanya Semakookiro Jjunju Kyabaggu
-			Namuggala Mwanga Mawanda Kikulwe Kagulu Ndawula Tebandeke Juuko Kayemba Mutebi Kateregga
-			Kimbugwe Sekamaanya Jemba Mulondo Nakibinge Kayima Ttembo Kimera "Kato Kintu"
-		}
-		female_names = {
-			Nyiramavugo Kanjogera Nyirarukangaga Balambi Bawedde Sikyayinza Nakamu
-		}
-	}
-	masaba = {
-		dynasty_names = { 
-			Ngonge Nkima Kkobe Ffumbe Mamba Ndiga Ngeye Lugave Ngabi Mbogo Nsenene Mpindi Basoga
-		}
-		male_names = {
-			Ruhinda Nkuba Nyaika Ntare Rushango Kasasira Kitra Rumongye Mirindi Macwa Rwabirere
-			Kahaya Rwebishengye Gasyonga Mutambuka Muteesa Suuna Kamaanya Semakookiro Jjunju Kyabaggu
-			Namuggala Mwanga Mawanda Kikulwe Kagulu Ndawula Tebandeke Juuko Kayemba Mutebi Kateregga
-			Kimbugwe Sekamaanya Jemba Mulondo Nakibinge Kayima Ttembo Kimera "Kato Kintu"
-		}
-		female_names = {
-			Nyiramavugo Kanjogera Nyirarukangaga Balambi Bawedde Sikyayinza Nakamu
-		}
-	}
-}
-
-african = {	#Eastern Bantu Groups
-	graphical_culture = africangfx
-	
 	madagasque = {
 		primary = SKA
 		dynasty_names = {
@@ -9519,6 +9416,96 @@ african = {	#Eastern Bantu Groups
 		Gbemisola Hiwot Hlengiwe Idowu Ife Ige Imani Ime Itumeleng Kagiso Kahina Kamaria Katlego Kayin Kefilwe Kirabo 
 		Kondwani Kumbukani Kunto Lerato Lesedi Limbani Limbikani Lindiwe Lumusi Lungile Madalitso Makena Manyara Marjani 
 		Masego Masozi 
+	}
+}
+
+kongo_group = {
+	graphical_culture = africangfx
+	lunda = {
+		primary = LND
+	}
+	luba = {
+		primary = LUB
+	}
+	kongolese = {
+		primary = KON
+	}
+	yaka = {
+		primary = YAK
+	}
+	kuba = {
+		primary = KUB
+	}
+	mbundu = {
+		primary = NDO
+	}
+	chokwe = {
+		primary = CKW
+	}
+	mbangala = {
+		primary = KSJ
+	}
+	jukun = {
+	
+	}
+	sawabantu = {
+	
+	}
+	dynasty_names = { 
+		Lukeni Loanga Kalumbwe Kikondja Imbangala Kasanje Shila Kazembe Lunda Kuba
+	}
+	male_names = {
+		Garcia �lvaro Pedro Afonso Ntinu Nkuwu Henrique Ant�nio Bernardo Jos� Ambr�sio Aleixo Andr� Daniel Diogo 
+		Nicolau Nzinga Nkuwa Sebasti�o Ilunga Sanza Kumwimba Kasongo Kekenya Kaumbo Miketo Nday Mwine Maloba 
+		Kitamba Cibind Nawej Munying Kateng Cakasekene Cikombe Kalong Mutand Mbala Mukaz Mpemba
+	}
+	female_names = {
+		Jetta Vandana Zody Nzinga Kengela Mukambu Kangala Ana Barbara Veronica
+	}
+	rwandan = {
+		primary = RWA
+		dynasty_names = { 
+			Songoro Ha Huma Iru Hima Kama Chwa Mpazi Bairu Waha Hinda Bajiji Bashubi Abacyaba
+			Abasinga Abashambo Abahinda Abazigaba Abungura Abarihira Abahondogo Abongera
+		}
+		male_names = {
+			Ruhaga Bunyonya Kiteite Kahiyoza Rutahigwa Rwakyendera Rugacwa Lweikiza Kihira Rwasa
+			Kanyoni Kivunangoma Masimba Maziga Buhinda Kmenyi Ntare Karemera Rushatsi Rufuku Baridamunka
+			Mutaga Mwambutsa Cambarantama Birori Maconco Kigeli Mutara Cyilima Ruganzu Ndahiro Nsoro Rubanda
+			Nyarume Rumeza Kanyarwanda
+		}
+		female_names = {
+			Baramparaye Ngenzahago Nyiramavugo Kanjogera Nyirarukangaga
+		}
+	}
+	ganda = {
+		primary = BUG
+		dynasty_names = { 
+			
+		}
+		male_names = {
+			Ruhinda Nkuba Nyaika Ntare Rushango Kasasira Kitra Rumongye Mirindi Macwa Rwabirere
+			Kahaya Rwebishengye Gasyonga Mutambuka Muteesa Suuna Kamaanya Semakookiro Jjunju Kyabaggu
+			Namuggala Mwanga Mawanda Kikulwe Kagulu Ndawula Tebandeke Juuko Kayemba Mutebi Kateregga
+			Kimbugwe Sekamaanya Jemba Mulondo Nakibinge Kayima Ttembo Kimera "Kato Kintu"
+		}
+		female_names = {
+			Nyiramavugo Kanjogera Nyirarukangaga Balambi Bawedde Sikyayinza Nakamu
+		}
+	}
+	masaba = {
+		dynasty_names = { 
+			Ngonge Nkima Kkobe Ffumbe Mamba Ndiga Ngeye Lugave Ngabi Mbogo Nsenene Mpindi Basoga
+		}
+		male_names = {
+			Ruhinda Nkuba Nyaika Ntare Rushango Kasasira Kitra Rumongye Mirindi Macwa Rwabirere
+			Kahaya Rwebishengye Gasyonga Mutambuka Muteesa Suuna Kamaanya Semakookiro Jjunju Kyabaggu
+			Namuggala Mwanga Mawanda Kikulwe Kagulu Ndawula Tebandeke Juuko Kayemba Mutebi Kateregga
+			Kimbugwe Sekamaanya Jemba Mulondo Nakibinge Kayima Ttembo Kimera "Kato Kintu"
+		}
+		female_names = {
+			Nyiramavugo Kanjogera Nyirarukangaga Balambi Bawedde Sikyayinza Nakamu
+		}
 	}
 }
 
