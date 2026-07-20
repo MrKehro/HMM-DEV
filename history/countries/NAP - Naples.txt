@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+elector = no
+religion = catholic
+primary_culture = neapolitan
+capital = 121 # Napoli
+
+1435.2.3 = {
+	monarch = { 
+		name = "Renato I"
+		dynasty = "Camorra"
+		dip = 3
+		mil = 3
+		adm = 3
+	}
+}
+
+1444.11.11 = {
+	monarch = {
+		name = "Renato I"
+		dynasty = "Camorra"
+		birth_date = 1426.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+}

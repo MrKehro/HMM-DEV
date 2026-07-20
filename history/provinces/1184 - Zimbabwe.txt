@@ -1,0 +1,18 @@
+#1184 - Zimbabwe
+
+owner = RZW
+controller = RZW
+add_core = RZW
+culture = shona
+religion = shamanism
+capital = "RZWbabwe"
+is_city = yes
+base_manpower = 5
+trade_goods = gold
+hre = no
+base_tax = 5
+base_production = 4
+discovered_by = east_african
+discovered_by = central_african
+extra_cost = 8
+center_of_trade = 1

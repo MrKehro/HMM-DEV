@@ -1,0 +1,81 @@
+country_decisions = {
+	HMM_state_edicts_decision = {
+		major = yes
+		provinces_to_highlight = {
+			has_state_edict_enabled = yes
+			owned_by = ROOT
+		}
+		potential = {
+			ai = no
+			NOT = { has_country_flag = HMM_state_edicts_flag }
+			OR = {
+				NOT = { has_country_flag = HMM_state_edicts_clear_flag }
+				had_country_flag = {
+					flag = HMM_state_edicts_clear_flag
+					days = 33
+				}
+			}
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = HMM_state_edicts_decision_ttt
+				always = yes
+			}
+		}
+		effect = {
+			set_country_flag = HMM_state_edicts_flag
+			country_event = { id = HMM_events.28 }
+			custom_tooltip = HMM_state_edicts_decision_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	HMM_critical_events = {
+		major = yes
+		potential = {
+			ai = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = HMM_radical_reform_decision
+				NOT = { has_country_flag = radical_mercantilist_reforms }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HMM_military_reform_decision
+				NOT = { has_country_flag = military_reform }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HMM_commandant_decision
+				NOT = { has_country_flag = commandant }
+			}
+			custom_trigger_tooltip = {
+				tooltip = HMM_grand_captain_decision
+				NOT = { has_country_flag = grand_captain }
+			}
+			always = no
+		}
+		effect = {
+		}
+	}
+	HMM_dev_clicks_decision = {
+		major = yes
+		potential = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = HMM_dev_clicks_decision_tooltip
+				always = no
+			}
+		}
+		effect = {
+		}
+	}	
+}
