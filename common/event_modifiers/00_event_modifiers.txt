@@ -1945,6 +1945,11 @@ river_estuary_modifier = {
 	picture = "estuary_icon"
 }
 
+scheldt_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
 neva_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"

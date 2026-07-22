@@ -16766,7 +16766,7 @@ ulm_minster_great_project = {
 			prestige = 0.5
 			tolerance_own = 0.5
 			church_loyalty_modifier = 0.1
-			papal_influence = 1.5
+			papal_influence = 2
 		}
 		on_upgraded = {
 		}
@@ -16788,7 +16788,7 @@ ulm_minster_great_project = {
 			prestige = 1
 			tolerance_own = 1
 			church_loyalty_modifier = 0.15
-			papal_influence = 2
+			papal_influence = 3
 		}
 		on_upgraded = {
 		}

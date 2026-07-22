@@ -9594,6 +9594,7 @@ ROM_ideas = {
 	}
 	legacy_of_rome = {
 		diplomatic_reputation = 2
+		land_morale = 0.15
 	}
 	spqr = {
 		stability_cost_modifier = -0.2
