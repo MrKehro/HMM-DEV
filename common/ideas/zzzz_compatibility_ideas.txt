@@ -1,22 +1,6 @@
 # Compatibility placeholder idea groups for scripts/events that still reference removed groups.
 # They are intentionally unavailable to players and AI.
 
-maritime_ideas = {
-	category = dip
-	trigger = {
-		always = no
-	}
-	ai_will_do = {
-		factor = 0
-	}
-	start = {
-	}
-	grand_navy = {
-	}
-	bonus = {
-	}
-}
-
 naval_ideas = {
 	category = mil
 	trigger = {

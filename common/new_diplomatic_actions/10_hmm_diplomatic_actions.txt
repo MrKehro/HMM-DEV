@@ -1,0 +1,262 @@
+# HMM custom diplomatic actions
+# ROOT is the country using the action, FROM is the target country.
+
+
+hmm_scorrupt_officials = {
+	category = spy_offence
+
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+	}
+	is_allowed = {
+		FROM = { NOT = { has_country_modifier = corrupt_officials } }
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_30_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 30
+			}
+		}
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -30
+		}
+        FROM = {
+            add_country_modifier = {
+                name = corrupt_officials
+                duration = 1825
+            }
+        }
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 30
+		}
+	}
+}
+
+hmm_sabotage_reputation = {
+	category = spy_offence
+
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+	}
+	is_allowed = {
+		FROM = { NOT = { has_country_modifier = reputation_sabotaged } }
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_60_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 60
+			}
+		}
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -60
+		}
+        FROM = {
+            add_country_modifier = {
+                name = reputation_sabotaged
+                duration = 1825
+            }
+        }
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 60
+		}
+	}
+}
+
+hmm_slander_merchants = {
+	category = spy_offence
+
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+	}
+	is_allowed = {
+		FROM = { NOT = { has_country_modifier = merchants_slandered } }
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_70_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 70
+			}
+		}
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -70
+		}
+        FROM = {
+            add_country_modifier = {
+                name = merchants_slandered
+                duration = 1825
+            }
+        }
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 70
+		}
+	}
+}
+
+hmm_sabotage_recruitment = {
+	category = spy_offence
+
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+	}
+	is_allowed = {
+		FROM = { NOT = { has_country_modifier = recruitment_sabotaged } }
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_80_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 80
+			}
+		}
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -80
+		}
+        FROM = {
+            add_country_modifier = {
+                name = recruitment_sabotaged
+                duration = 1825
+            }
+        }
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 80
+		}
+	}
+}
+
+hmm_show_discontent = {
+	category = spy_offence
+
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+	}
+	is_allowed = {
+		FROM = { NOT = { has_country_modifier = discontent_sowed } }
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_80_SPY_NETWORK_TT
+			has_spy_network_in = {
+				who = FROM
+				value = 80
+			}
+		}
+	}
+	on_accept = {
+		add_spy_network_in = {
+			who = FROM
+			value = -80
+		}
+        FROM = {
+            add_country_modifier = {
+                name = discontent_sowed
+                duration = 1825
+            }
+        }
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		has_spy_network_in = {
+			who = FROM
+			value = 80
+		}
+	}
+}
+
+hmm_agitate_for_liberty = {
+	category = spy_offence
+
+	require_acceptance = no
+
+	is_visible = {
+		full_idea_group = spy_ideas
+		FROM = { is_subject = yes }
+	}
+	is_allowed = {
+		FROM = { NOT = { has_country_modifier = hmm_agitated_for_liberty_desire } }
+		custom_trigger_tooltip = {
+			tooltip = REQUIRES_40_SPY_NETWORK_TT
+			FROM = {
+				overlord = {
+					ROOT = {
+						has_spy_network_in = {
+							who = PREV
+							value = 40
+						}
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			overlord = {
+				ROOT = {
+					add_spy_network_in = {
+						who = PREV
+						value = -40
+					}
+				}
+			}
+		}
+		FROM = {
+			add_country_modifier = {
+                name = hmm_agitated_for_liberty_desire
+                duration = 1825
+            }
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		has_spy_network_in = {
+			who = FROM
+			value = 90
+		}
+	}
+}

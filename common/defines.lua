@@ -389,8 +389,8 @@ NDiplomacy = {
 	REMOVE_FREECITY_INFLUENCE_COST = 5,				-- The amount of IA Grant Free Gity costs.
 	IMPERIAL_CITY_IA = 0.005,						-- Monthly per imperial free city
 
-	AGITATE_FOR_LIBERTY_DESIRE = 25,				-- Liberty Desire gained due to ongoing agitation.
-	AGITATE_FOR_LIBERTY_RATE = 1,					-- Monthly rate at which Liberty Desire rises towards the maximum during agitation, or otherwise falls towards zero.
+	AGITATE_FOR_LIBERTY_DESIRE = 15,				-- Liberty Desire gained due to ongoing agitation.
+	AGITATE_FOR_LIBERTY_RATE = 0.5,					-- Monthly rate at which Liberty Desire rises towards the maximum during agitation, or otherwise falls towards zero.
 	STUDY_TECHNLOGY_CATEGORY_CAP = 1,				-- Max number of monarch points possible to gain in a category.
 	STUDY_TECHNOLOGY_MIN_TECHS_AHEAD = 2,			-- Target must be at least this number of techs ahead of you to get power
 
