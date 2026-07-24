@@ -89,6 +89,8 @@
         spare_jolly_roger_desc:0 "With this ship, Mimiles' pirates will meet a swift end, there will be no mercy."
         hmm_new_world:0 "I go to America"
         hmm_new_world_desc:1 "Maybe we find some gold, or at least some Fun, okay probably not even that, but definetely new enemies."
+        hmm_new_world_asia:0 "I go to America"
+        hmm_new_world_asia_desc:1 "The Pacific is rather large"
         hmm_colonial_player_nation:0 "Colonial Player"
         hmm_colonial_player_nation_desc:0 "Colonial Player, there has to be a drawback for owning a nation that can't fight back right?"
         hmm_former_player_nation_viability:0 "Ragequit Nation"

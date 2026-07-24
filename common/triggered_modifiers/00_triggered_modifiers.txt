@@ -33,6 +33,21 @@ hmm_new_world = {
 	colonists = 1
 }
 
+hmm_new_world_asia = {
+	potential = {
+		OR = {
+			culture_group = japanese_g
+			culture_group = malay
+		}
+	}
+
+	trigger = {
+		exists = yes
+	}
+
+	range = 0.33
+}
+
 hmm_colonial_player_nation = {
 	potential = {
 		is_colonial_nation = yes
