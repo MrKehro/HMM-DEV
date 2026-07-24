@@ -286,3 +286,21 @@ country_event = {
 		}
 	}
 }
+
+# Spy ideas completed
+country_event = {
+	id = HMM_events.31
+	title = HMM_events.31.t
+	desc = HMM_events.31.d
+	picture = SPY_eventPicture
+	trigger = {
+		full_idea_group = spy_ideas
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = HMM_events.31.0
+		add_prestige = 5
+	}
+}

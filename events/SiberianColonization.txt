@@ -1,4 +1,4 @@
-###########################################
+﻿###########################################
 # Events for the Colonization of Siberia
 # Written by Henrik Lohmander
 ###########################################
@@ -259,6 +259,10 @@ country_event = {
 						ROOT = { tag = KON }
 						ROOT = { tag = ETH }
 						ROOT = { tag = RZW }
+						ROOT = { was_tag = SON }
+						ROOT = { was_tag = KON }
+						ROOT = { was_tag = ETH }
+						ROOT = { was_tag = RZW }
 					}
 				}
 			}
@@ -325,6 +329,10 @@ country_event = {
 						ROOT = { tag = KON }
 						ROOT = { tag = ETH }
 						ROOT = { tag = RZW }
+						ROOT = { was_tag = SON }
+						ROOT = { was_tag = KON }
+						ROOT = { was_tag = ETH }
+						ROOT = { was_tag = RZW }
 					}
 				}
 			}
@@ -433,6 +441,10 @@ country_event = {
 								ROOT = { tag = KON }
 								ROOT = { tag = ETH }
 								ROOT = { tag = RZW }
+								ROOT = { was_tag = SON }
+								ROOT = { was_tag = KON }
+								ROOT = { was_tag = ETH }
+								ROOT = { was_tag = RZW }
 							}
 						}
 					}
@@ -516,6 +528,10 @@ country_event = {
 						ROOT = { tag = KON }
 						ROOT = { tag = ETH }
 						ROOT = { tag = RZW }
+						ROOT = { was_tag = SON }
+						ROOT = { was_tag = KON }
+						ROOT = { was_tag = ETH }
+						ROOT = { was_tag = RZW }
 					}
 				}
 			}
@@ -553,6 +569,10 @@ country_event = {
 						ROOT = { tag = KON }
 						ROOT = { tag = ETH }
 						ROOT = { tag = RZW }
+						ROOT = { was_tag = SON }
+						ROOT = { was_tag = KON }
+						ROOT = { was_tag = ETH }
+						ROOT = { was_tag = RZW }
 					}
 				}
 			}
@@ -606,6 +626,10 @@ country_event = {
 								ROOT = { tag = KON }
 								ROOT = { tag = ETH }
 								ROOT = { tag = RZW }
+								ROOT = { was_tag = SON }
+								ROOT = { was_tag = KON }
+								ROOT = { was_tag = ETH }
+								ROOT = { was_tag = RZW }
 							}
 						}
 					}
@@ -714,6 +738,10 @@ country_event = {
 						ROOT = { tag = KON }
 						ROOT = { tag = ETH }
 						ROOT = { tag = RZW }
+						ROOT = { was_tag = SON }
+						ROOT = { was_tag = KON }
+						ROOT = { was_tag = ETH }
+						ROOT = { was_tag = RZW }
 					}
 				}
 			}
@@ -763,6 +791,10 @@ country_event = {
 								ROOT = { tag = KON }
 								ROOT = { tag = ETH }
 								ROOT = { tag = RZW }
+								ROOT = { was_tag = SON }
+								ROOT = { was_tag = KON }
+								ROOT = { was_tag = ETH }
+								ROOT = { was_tag = RZW }
 							}
 						}
 					}
@@ -896,6 +928,10 @@ country_event = {
 						ROOT = { tag = KON }
 						ROOT = { tag = ETH }
 						ROOT = { tag = RZW }
+						ROOT = { was_tag = SON }
+						ROOT = { was_tag = KON }
+						ROOT = { was_tag = ETH }
+						ROOT = { was_tag = RZW }
 					}
 				}
 			}

@@ -1740,7 +1740,7 @@ POL_ideas = {
 		infantry_power = 0.1
 	}
 	winged_hussars = {
-		cavalry_power = 0.20
+		cavalry_power = 0.3
 		can_recruit_hussars = yes
 	}
 	wojsko_komputoe = {
@@ -4477,7 +4477,7 @@ KON_ideas = {
 	}
 	triangle_trade = {
 		global_prov_trade_power_modifier = 0.1
-		infantry_power = 0.15
+		infantry_power = 0.10
 	}
 	foreign_demand_for_slaves = {
 		production_efficiency = 0.10
@@ -9594,6 +9594,7 @@ ROM_ideas = {
 	}
 	legacy_of_rome = {
 		diplomatic_reputation = 2
+		land_morale = 0.15
 	}
 	spqr = {
 		stability_cost_modifier = -0.2
@@ -17743,6 +17744,8 @@ AKS_ideas = {
 	
 	aks_stellae_builders = {
 		prestige = 1
+		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
 	}
 	
 	aks_legacy_of_king_kaleb = {

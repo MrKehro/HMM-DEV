@@ -389,8 +389,8 @@ NDiplomacy = {
 	REMOVE_FREECITY_INFLUENCE_COST = 5,				-- The amount of IA Grant Free Gity costs.
 	IMPERIAL_CITY_IA = 0.005,						-- Monthly per imperial free city
 
-	AGITATE_FOR_LIBERTY_DESIRE = 25,				-- Liberty Desire gained due to ongoing agitation.
-	AGITATE_FOR_LIBERTY_RATE = 1,					-- Monthly rate at which Liberty Desire rises towards the maximum during agitation, or otherwise falls towards zero.
+	AGITATE_FOR_LIBERTY_DESIRE = 15,				-- Liberty Desire gained due to ongoing agitation.
+	AGITATE_FOR_LIBERTY_RATE = 0.5,					-- Monthly rate at which Liberty Desire rises towards the maximum during agitation, or otherwise falls towards zero.
 	STUDY_TECHNLOGY_CATEGORY_CAP = 1,				-- Max number of monarch points possible to gain in a category.
 	STUDY_TECHNOLOGY_MIN_TECHS_AHEAD = 2,			-- Target must be at least this number of techs ahead of you to get power
 
@@ -744,8 +744,8 @@ NCountry = {
 	PS_BUY_CONQUISTADOR = 50,
 	PS_BUY_EXPLORER = 50,
 	PS_ASSAULT = 5,
-	PS_ARTILLERY_BARRAGE = 35,
-	PS_NAVAL_BARRAGE = 35,
+	PS_ARTILLERY_BARRAGE = 50,
+	PS_NAVAL_BARRAGE = 50,
 	PS_ADD_TRIBAL_LAND = 100,
 	PS_ADD_TRIBAL_LAND_EXTRA_COST_PER_PROVINCE = 10,
 	PS_FORCE_MARCH = 2,

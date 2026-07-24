@@ -459,7 +459,7 @@ technology = {
 	
 	#Standardisation of Calibre
 	artillery_shock 	= 	0.1
-	artillery_fire 		= 	1.0	
+	artillery_fire 		= 	0.5	
 
 
 	land_morale		= 	0.3
@@ -484,6 +484,7 @@ technology = {
 	}
 	
 	cavalry_shock	= 	0.4
+	artillery_fire	= 	0.5
 	supply_limit	= 	0.5	
 	
 	enable = maharathan_cavalry		
@@ -599,6 +600,7 @@ technology = {
 	infantry_fire		= 	0.15
 	infantry_shock		= 	0.2
 	cavalry_fire		= 	0.15
+	artillery_fire		= 	0.5
 }
 
 technology = {
@@ -615,7 +617,7 @@ technology = {
 	
 	#Cartridge
 	artillery_shock 	=	0.1
-	artillery_fire		=	2.0
+	artillery_fire		=	1.0
 	military_tactics	= 	0.125
 	infantry_shock		= 	0.15
 	cavalry_fire		= 	0.2
@@ -648,6 +650,7 @@ technology = {
 	
 	maneuver_value 		= 	0.5
 	military_tactics	= 	0.125
+	artillery_fire		= 	0.5
 	cavalry_fire		= 	0.15
 	cavalry_shock		= 	0.4
 	enable = swedish_arme_blanche	
@@ -694,6 +697,7 @@ technology = {
 	
 	#Covered Way
 	military_tactics	= 	0.125
+	artillery_fire		= 	0.5
 	cavalry_shock		= 	0.3
 	fort_18th	= yes	
 	combat_width = 2
@@ -714,7 +718,7 @@ technology = {
 	
 	#Metallurgy
 	artillery_shock 	=	0.1
-	artillery_fire		=	2.0
+	artillery_fire		=	1.0
 	land_morale			= 	0.3
 	military_tactics	= 	0.125
 	enable = royal_mortar
@@ -737,6 +741,7 @@ technology = {
 	#Light Infantry Companies
 	sprite_level = 4
 	land_morale		= 	0.4
+	artillery_fire	= 	0.5
 	infantry_fire	= 	0.15
 	enable = austrian_white_coat	
 	enable = french_bluecoat	
@@ -905,6 +910,7 @@ technology = {
 	#Rifle
 	land_morale			= 	0.3
 	military_tactics	= 	0.125
+	artillery_fire		= 	1.0
 	infantry_fire		= 	0.4
 	cavalry_shock		= 	0.4
 	supply_limit		=	0.5
@@ -926,7 +932,7 @@ technology = {
 	
 	#Field Howitzer
 	artillery_shock		=	0.1
-	artillery_fire		=	2.0	
+	artillery_fire		=	1.0	
 	military_tactics	= 	0.125
 	infantry_fire		= 	0.3
 	cavalry_shock		= 	0.3
