@@ -18137,7 +18137,7 @@ ARB_ideas = {
 
 	bonus = {
 		siege_ability = 0.15
-		land_forcelimit_modifier = 0.2
+		land_forcelimit_modifier = 0.25
 	}
 
 	trigger = {
