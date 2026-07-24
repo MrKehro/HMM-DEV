@@ -1384,7 +1384,7 @@ muslim = {
 			shiite
 		}
 		country = {
-			trade_efficiency = 0.1
+			cav_to_inf_ratio = 0.10
 			heir_chance = 1.0
 		}
 		country_as_secondary = {

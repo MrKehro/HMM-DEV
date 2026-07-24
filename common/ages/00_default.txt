@@ -514,7 +514,7 @@ age_of_reformation = {
 				on_age_ability_taken = { age = age_of_reformation }
 			}
 			modifier = {
-				global_trade_goods_size_modifier = 0.20
+				global_trade_goods_size_modifier = 0.25
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
