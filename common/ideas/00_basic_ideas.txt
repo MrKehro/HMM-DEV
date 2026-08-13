@@ -485,7 +485,7 @@ spy_ideas = {
 	
 	agent_training = {
 		diplomats = 1
-		advisor_cost = -0.15
+		advisor_cost = -0.2
 	}
 
 	vetting = {
@@ -495,12 +495,17 @@ spy_ideas = {
 	
 	privateers = {
 		capture_ship_chance = 0.25
-		global_ship_trade_power = 0.33
+		effect = {
+        fifty_percent_merc_army_professionalism_cost = yes
+		}
+		removed_effect = {
+			clr_country_flag = fifty_percent_merc_army_professionalism_cost
+		}
 	}
 	
 	blackmailing = {
 		monthly_favor_modifier = 0.33
-		accept_vassalization_reasons = 15
+		reduced_liberty_desire = 15
 		num_of_pronoiars = 1
 	}
 
@@ -1786,10 +1791,10 @@ mercenary_ideas = {
 		merc_leader_army_tradition = 0.5
 	}
 	seasoned_veterans = {
-		land_attrition = -0.1
+		artillery_power = 0.1	
 	}
 	organised_mercenary_recruitment = { 
-		mercenary_manpower = 0.25
+		mercenary_manpower = 0.3
 		allow_mercenary_drill = yes
 	}
 

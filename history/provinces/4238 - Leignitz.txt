@@ -4,7 +4,7 @@
 owner = GLG
 controller = GLG
 culture = schlesian
-religion = catholic
+religion = hussite
 capital = "Liegnitz"
 trade_goods = glass
 hre = no

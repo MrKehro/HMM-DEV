@@ -12217,6 +12217,7 @@ dutch_polders = {
 			factor = 2500
 		}
 		province_modifiers = {
+			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = {
 			local_defensiveness = 0.15
@@ -12238,8 +12239,10 @@ dutch_polders = {
 			factor = 5000
 		}
 		province_modifiers = {
+			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = {
+			local_defender_dice_roll_bonus = 1
 			local_defensiveness = 0.25
 			local_monthly_devastation = -1
 		}

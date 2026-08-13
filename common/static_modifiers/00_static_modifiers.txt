@@ -208,24 +208,24 @@ severe_winter = {
 
 mild_monsoon = {
 	local_hostile_attrition = 0.5
-	local_hostile_movement_speed = -0.20
-	local_friendly_movement_speed = -0.20
+	local_hostile_movement_speed = -0.1
+	local_friendly_movement_speed = -0.1
 
 	picture = "monsoon_mild"
 }
 
 normal_monsoon = {
 	local_hostile_attrition = 1
-	local_hostile_movement_speed = -0.25
-	local_friendly_movement_speed = -0.25
+	local_hostile_movement_speed = -0.15
+	local_friendly_movement_speed = -0.15
 
 	picture = "monsoon_normal"
 }
 
 severe_monsoon = {
 	local_hostile_attrition = 1.5
-	local_hostile_movement_speed = -0.50
-	local_friendly_movement_speed = -0.50
+	local_hostile_movement_speed = -0.2
+	local_friendly_movement_speed = -0.2
 
 	picture = "monsoon_severe"
 }
@@ -2353,7 +2353,7 @@ negative_imperial_authority_member = {
 
 slackening_modifier = {
     yearly_army_professionalism = -0.05
-    manpower_recovery_speed = 2.5
+    manpower_recovery_speed = 2
 }
 
 royal_council_meeting_mod = {

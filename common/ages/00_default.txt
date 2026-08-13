@@ -974,7 +974,7 @@ age_of_revolutions = {
 				}
 			}
 			modifier = {
-				fire_damage_received = -0.2
+				fire_damage_received = -0.1
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {
@@ -1026,7 +1026,7 @@ age_of_revolutions = {
 				}
 			}
 			modifier = {
-				morale_damage_received = -0.2
+				morale_damage_received = -0.1
 				num_of_age_rewards = 1
 			}
 			ai_will_do = {

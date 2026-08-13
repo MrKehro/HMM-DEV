@@ -885,7 +885,7 @@ crimean_succession_effect = {
 				num_of_ports = 1
 			}
 		}
-		set_global_flag = death_of_haji_giray
+		country_event = { id = flavor_cri.1 } #Death of Haji Giray
 	}
 	if = {
 		limit = {
@@ -2817,7 +2817,6 @@ imperial_modifiers_on_province_change_culture_or_change_owner_effect = {
 			has_owner_accepted_culture = no
 			OR = {
 				culture_group = southern_african
-				culture_group = kongo_group
 			}
 		}
 		add_province_modifier = {

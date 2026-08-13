@@ -40,7 +40,7 @@ hmm_american_province_warscore_cost = {
 		always = yes
 	}
 
-	province_warscore_cost = 1
+	province_warscore_cost = 0.5
 	
 	#Province scope
 	on_activation = {

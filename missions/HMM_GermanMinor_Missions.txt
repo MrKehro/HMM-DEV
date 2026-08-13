@@ -1,0 +1,13 @@
+
+hmm_german_minor_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+        tag = HES
+		tag = WES
+		tag = HAN
+	}
+	has_country_shield = yes
+
+}
