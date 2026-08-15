@@ -12217,6 +12217,7 @@ dutch_polders = {
 			factor = 2500
 		}
 		province_modifiers = {
+			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = {
 			local_defensiveness = 0.15
@@ -12238,8 +12239,10 @@ dutch_polders = {
 			factor = 5000
 		}
 		province_modifiers = {
+			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = {
+			local_defender_dice_roll_bonus = 1
 			local_defensiveness = 0.25
 			local_monthly_devastation = -1
 		}
@@ -16766,7 +16769,7 @@ ulm_minster_great_project = {
 			prestige = 0.5
 			tolerance_own = 0.5
 			church_loyalty_modifier = 0.1
-			papal_influence = 1.5
+			papal_influence = 2
 		}
 		on_upgraded = {
 		}
@@ -16788,7 +16791,7 @@ ulm_minster_great_project = {
 			prestige = 1
 			tolerance_own = 1
 			church_loyalty_modifier = 0.15
-			papal_influence = 2
+			papal_influence = 3
 		}
 		on_upgraded = {
 		}

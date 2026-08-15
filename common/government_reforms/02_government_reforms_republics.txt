@@ -3110,6 +3110,28 @@ consolidate_power_into_different_candidates_reform = {
 	}
 }
 
+pirate_republic_reform = {
+	icon = "pirate_king"
+	allow_normal_conversion = yes
+	potential = {
+		always = no
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+pirates_become_republic_reform = {
+	icon = "pirate_king"
+	allow_normal_conversion = yes
+	potential = {
+		always = no
+	}
+	ai = {
+		factor = 0
+	}
+}
+
 pirate_king_reform = {
 	icon = "pirate_king"
 	allow_normal_conversion = yes
@@ -3717,22 +3739,6 @@ pirate_representation_reform = {
 }
 
 #Question of Dictatorship
-
-pirates_become_republic_reform = {
-	icon = "parliament_highlighted"
-	allow_normal_conversion = yes
-	
-	potential = {
-		has_reform = pirate_republic_reform
-	}
-	effect = {
-		remove_government_reform = pirate_republic_reform
-		set_country_flag = populists_in_government
-	}
-	ai = {
-		factor = 0
-	}
-}
 
 seize_executive_power_reform = {
 	icon = "king_2_highlighted"

@@ -30,5 +30,5 @@ change_estate_land_share = {
 		mil = 3
 	}
 	capital = 343 # Fez
-	add_ruler_personality = strict_personality
+	add_ruler_personality = inspiring_leader_personality
 }

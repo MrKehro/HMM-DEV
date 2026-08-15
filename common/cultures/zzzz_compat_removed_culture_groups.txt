@@ -1,0 +1,44 @@
+# Compatibility placeholders for removed culture groups referenced by legacy triggers.
+# These groups intentionally contain only dummy cultures so scripts parse cleanly.
+
+african = {
+	graphical_culture = africangfx
+	dummy_african_compat_culture = {
+		color = { 0.35 0.35 0.35 }
+	}
+}
+
+great_lakes_group = {
+	graphical_culture = africangfx
+	dummy_great_lakes_compat_culture = {
+		color = { 0.25 0.25 0.25 }
+	}
+}
+
+carpathian = {
+	graphical_culture = easterngfx
+	dummy_carpathian_compat_culture = {
+		color = { 0.45 0.45 0.45 }
+	}
+}
+
+sahelian = {
+	graphical_culture = africangfx
+	dummy_sahelian_compat_culture = {
+		color = { 0.40 0.40 0.40 }
+	}
+}
+
+west_african = {
+	graphical_culture = africangfx
+	dummy_west_african_compat_culture = {
+		color = { 0.38 0.38 0.38 }
+	}
+}
+
+sudanese = {
+	graphical_culture = africangfx
+	dummy_sudanese_compat_culture = {
+		color = { 0.33 0.33 0.33 }
+	}
+}

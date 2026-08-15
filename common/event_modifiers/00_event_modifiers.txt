@@ -1188,6 +1188,21 @@ commandant_boost = {
 	discipline = 0.1
 }
 
+# Cooldown markers used by custom advisor events.
+HMM_grand_captain_cooldown = {
+}
+
+HMM_commandant_cooldown = {
+}
+
+HMM_military_reform_cooldown = {
+}
+
+# Marker modifier for Ndongo's permanent gold mine setup.
+kongo_gold_mine = {
+	trade_goods_size = 1.0
+}
+
 quartermaster_boost = {
 	reinforce_speed = 0.15
 }
@@ -1837,7 +1852,7 @@ spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for 
 	trade_goods_size = 3.0
 }
 
-skanemarket = { #Skånemarknaden - Biggest Herring Market in Europe
+skanemarket = { #Skï¿½nemarknaden - Biggest Herring Market in Europe
 	trade_goods_size = 2
 }
 
@@ -1926,6 +1941,11 @@ trade_post_modifier = {
 # Important river estuaries
 # If you add any be sure to update the has_river_estuary_trigger scripted trigger too.
 river_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+scheldt_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }

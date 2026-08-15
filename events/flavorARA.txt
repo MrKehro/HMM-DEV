@@ -1,7 +1,7 @@
 ########################################
 # Flavor Events for Aragon
 #
-# written by Sara Wendel-ï¿½rtqvist
+# written by Sara Wendel-Örtqvist
 ########################################
 
 namespace = flavor_ara
@@ -160,7 +160,7 @@ country_event = {
 	}
 }
 
-# Monastery of Santa Marï¿½a de Sigena
+# Monastery of Santa María de Sigena
 country_event = {
 	id = flavor_ara.5
 	title = "flavor_ara.EVTNAME5"
@@ -202,7 +202,7 @@ country_event = {
 	}
 }
 
-# Sindicat Remenï¿½a
+# Sindicat Remença
 country_event = {
 	id = flavor_ara.6
 	title = "flavor_ara.EVTNAME6"
@@ -289,7 +289,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 45
+			factor = 50
 		}
 	}
 	option = {
@@ -306,56 +306,7 @@ country_event = {
 			add_local_autonomy = -25
 		}
 		ai_chance = {
-			factor = 45
-		}
-	}
-	
-	option = {
-		name = "flavor_ara.EVTOPTC6"
-		
-		if = { 
-			limit = { 
-				stability = 0 
-			}
-			add_stability = -3 
-		}
-		else = { 
-			add_adm_power = -50 
-			add_dip_power = -50
-			add_mil_power = -50
-		}
-		every_owned_province = {
-			limit = {
-				has_province_flag = ara_sindicat_remensa_flag
-			}
-			clr_province_flag = ara_sindicat_remensa_flag
-			spawn_rebels = {
-				type = noble_rebels
-				size = 3
-			}
-		}
-		define_ruler = {
-			name = "ï¿½ric" 
-			DIP = 6
-			ADM = 5
-			MIL = 4
-			age = 28
-			
-		}
-		if = {
-			limit = { has_dlc = "Rights of Man" }
-			add_ruler_personality = careful_personality
-			add_ruler_personality = peasant_revolt_leader_personality
-		}
-		custom_tooltip = ara_become_p_republic_tt
-		add_stability_or_adm_power = yes 
-		hidden_effect = {
-			change_government = republic 
-			add_government_reform = peasants_republic
-			hidden_effect = { add_republican_tradition = 100 }
-		}
-		ai_chance = {
-			factor = 1
+			factor = 50
 		}
 	}
 }
@@ -431,7 +382,7 @@ country_event = {
 		name = "flavor_ara.EVTOPTA8"
 		define_ruler = {
 			name = "Ferrando I"
-			dynasty = "de Trastï¿½mara"
+			dynasty = "de Trastámara"
 			dip = 4
 			mil = 4
 			adm = 2
@@ -457,7 +408,7 @@ country_event = {
 		name = "flavor_ara.EVTOPTB8"
 		define_ruler = {
 			name = "Ferrando I"
-			dynasty = "de Trastï¿½mara"
+			dynasty = "de Trastámara"
 			dip = 4
 			mil = 4
 			adm = 2

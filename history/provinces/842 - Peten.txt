@@ -1,0 +1,17 @@
+#842 - Petén
+
+culture = putun
+religion = mesoamerican_religion
+capital = "Petén"
+trade_goods = cocoa
+hre = no
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+is_city = yes
+
+
+
+discovered_by = mesoamerican
+
+

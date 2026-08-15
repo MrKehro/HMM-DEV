@@ -1,13 +1,13 @@
-#4238 - Liegnitz (Liegnitz+Schweidnitz+Jauer+Glatz+Neisse+Mï¿½nsterberg)
+#4238 - Liegnitz (Liegnitz+Schweidnitz+Jauer+Glatz+Neisse+Münsterberg)
 
 #Coal
 owner = GLG
 controller = GLG
 culture = schlesian
-religion = catholic
+religion = hussite
 capital = "Liegnitz"
 trade_goods = glass
-hre = yes
+hre = no
 base_tax = 4
 base_production = 4
 is_city = yes 

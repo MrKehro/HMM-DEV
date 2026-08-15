@@ -1,0 +1,15 @@
+# No previous file for Xocotla
+
+culture = aztek
+religion = nahuatl
+capital = "Xocotla"
+trade_goods = sugar
+hre = no 
+base_tax = 4 
+base_production = 4
+base_manpower = 1
+is_city = yes
+discovered_by = mesoamerican
+
+add_province_triggered_modifier = MAY_obsidian_source
+

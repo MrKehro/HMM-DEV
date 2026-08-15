@@ -8,6 +8,7 @@ capital = 134 # Wien
 historical_friend = HUN
 historical_rival = TUR
 historical_rival = FRA
+elector = yes
 
 add_accepted_culture = slovene
 
