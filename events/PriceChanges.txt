@@ -525,10 +525,7 @@ country_event = {
 			always = yes
 		}
 		else = {
-			OR = {
-				full_idea_group = exploration_ideas
-				full_idea_group = expansion_ideas
-			}
+			has_any_colonist_idea = yes
 			num_of_ports = 4
 			NOT = {
 				capital_scope = {
