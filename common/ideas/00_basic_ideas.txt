@@ -1183,7 +1183,7 @@ maritime_ideas = {
 	}
 	naval_fighting_instruction = {
 		blockade_efficiency = 0.5
-		privateer_efficiency = 0.25
+		global_ship_trade_power = 0.25
 	}
 
 	ai_will_do = {
