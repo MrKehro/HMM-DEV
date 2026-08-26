@@ -767,7 +767,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.05
+	discipline = 0.0375
 	
 	effect = {}
 	removed_effect = {}
