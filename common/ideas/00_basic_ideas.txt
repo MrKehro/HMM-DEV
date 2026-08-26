@@ -1705,16 +1705,15 @@ influence_ideas = {
 court_ideas = {
 	category = DIP
 
-
 	bonus = {
-		legitimacy = 0.5 
-		republican_tradition = 0.2
-		devotion = 0.5 
-		horde_unity = 0.5
-		meritocracy = 0.25 
-		imperial_mandate = 0.1
-		imperial_authority = 0.05
-		monthly_cultural_unity = 0.5
+		legitimacy = 1
+		republican_tradition = 0.4
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 0.5
+		imperial_mandate = 0.2
+		imperial_authority = 0.1
+		monthly_cultural_unity = 1
 	}
 	
 	long_echo = {
@@ -1730,7 +1729,7 @@ court_ideas = {
 		monthly_persian_influence = 0.1
 	}
 	tranquil_coordination = {
-		reform_progress_growth = 0.2
+		reform_progress_growth = 0.33
 	}
 	respected_authority = {
 		all_estate_possible_privileges = 1
@@ -1740,8 +1739,8 @@ court_ideas = {
 		estate_interaction_cooldown_modifier = -0.20
 	}
 	court_embassies = {
-		possible_dip_policy = 1 
-		monarch_diplomatic_power = 1 
+		free_policy = 1 
+		monarch_military_power = 1
 	}
 
 	ai_will_do = {
