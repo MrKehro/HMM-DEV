@@ -2804,7 +2804,6 @@ WoC_austria_4 = {
 	hab_weaken_france = {
 		icon = mission_the_french_menace
 		position = 2
-		required_missions = { hab_burgundy } 
 		trigger = {
 			if = {
 				limit = {

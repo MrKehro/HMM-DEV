@@ -304,3 +304,73 @@ country_event = {
 		add_prestige = 5
 	}
 }
+
+# DTT Hesse
+country_event = {
+	id = HMM_events.32
+	title = HMM_events.32.t
+	desc = HMM_events.32.d
+	picture = SPY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = HMM_events.32.0
+		random_owned_province = {
+			spawn_rebels = {
+				type = parliamentarians_rebels
+				size = 3
+				leader = "Wulf Isebrand"
+				leader_dynasty = "Isebrand"
+			}
+		}
+		add_country_modifier = {
+			name = "hmm_gm_choose_nobles"
+			duration = -1
+		}
+	}
+	option = {
+		name = HMM_events.32.1
+		change_government_to_republic = yes
+		add_government_reform = peasants_republic
+		define_ruler = {
+			name = "Achtundvierziger"
+			ADM = 4
+			DIP = 4
+			MIL = 4
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = pretender_rebels
+				use_monarch_as_leader = yes
+				size = 3
+			}
+		}
+	}
+	option = {
+		name = HMM_events.32.2
+		add_country_modifier = {
+			name = "hmm_gm_choose_clergy"
+			duration = -1
+		}
+		if = {
+			limit = {
+				NOT = { government = theocracy }
+			}
+			change_government = theocracy
+		}
+		add_government_reform = leading_clergy_reform
+		define_ruler = {
+			name = "Konrad von Hochstaden"
+			age = 40
+			ADM = 4
+			DIP = 4
+			MIL = 5
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = heretic_rebels
+				use_monarch_as_leader = yes
+				size = 3
+			}
+		}
+	}
+}

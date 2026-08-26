@@ -14905,3 +14905,24 @@ kon_beat_the_armada = {
 	navy_tradition = 1
 	recover_navy_morale_speed = 0.25
 }
+
+hmm_gm_ae = {
+	ae_impact = -0.15
+	overextension_impact_modifier = -0.05
+}
+
+hmm_gm_choose_nobles = {
+	all_estate_loyalty_equilibrium = 0.05
+}
+
+hmm_gm_choose_clergy = {
+	papal_influence = 1
+	devotion = 0.25
+	monthly_fervor_increase = 0.25
+	church_power_modifier = 0.1
+	monthly_piety_accelerator = 0.001
+	yearly_karma_decay = 0.1
+	yearly_doom_reduction = 1
+	yearly_authority = 0.15
+	yearly_patriarch_authority = 0.005
+}
