@@ -1352,7 +1352,7 @@ crimea={
 constantinople={
 	location=1320
 	color={
-		126 203 120 
+		139 0 35
 	}
 	outgoing={
 		name="ragusa"
