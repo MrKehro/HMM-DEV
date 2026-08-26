@@ -682,8 +682,8 @@ defensive_ideas = {
 	category = MIL
 
 	bonus = {
-		hostile_attrition = 1
-		max_hostile_attrition = 1 
+		hostile_attrition = 2
+		max_hostile_attrition = 2
 	}
 
 	battlefield_commisions = {
@@ -701,13 +701,12 @@ defensive_ideas = {
 	}
 	defensive_mentality = {
 		defensiveness = 0.25
-		fort_maintenance_modifier = -0.1
 	}
 	supply_trains = {
 		reinforce_speed = 0.3
 	}
 	improved_foraging = {
-		garrison_size = 0.33
+		fort_maintenance_modifier = -0.25
 		effect = {
 			hidden_effect = {
 				if = {
