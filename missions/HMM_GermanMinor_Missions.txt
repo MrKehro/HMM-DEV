@@ -284,9 +284,11 @@ hmm_german_minor_2 = {
 		effect = {
 			every_province = {
 				limit = {
+					OR = {
+						culture = bavarian
+						culture = swabian
+					}
 					NOT = { is_permanent_claim = ROOT }
-					culture = bavarian
-					culture = swabian
 					NOT = { owned_by = ROOT }
 					NOT = { owned_by = HAB }
 					NOT = { owned_by = emperor }
@@ -551,6 +553,7 @@ hmm_german_minor_3 = {
 	hmm_gm_deal_with_prussia = {
 		icon = tame_brandenburg
 		position = 4
+		required_missions = { hmm_gm_peasants }
 		provinces_to_highlight = {
 			if = {
 				limit = { exists = BRA }
@@ -796,10 +799,8 @@ hmm_german_minor_4 = {
 			}
 		}
 		trigger = {
-
 		}
 		effect = {
-			
 		}
 	}
 
@@ -808,8 +809,9 @@ hmm_german_minor_4 = {
 		position = 2
 		required_missions = { hmm_gm_electorate_of_saxony }
 		trigger = {
-			1876 = {
-				development = 25
+			63 = {
+				development = 20
+				province_has_center_of_trade_of_level = 2
 				OR = {
 					has_building = marketplace 
 					has_building = trade_depot
@@ -858,7 +860,7 @@ hmm_german_minor_4 = {
 	hmm_gm_dominate_lubeck = {
 		icon = mission_dominate_home_trade_node 
 		position = 3
-		required_missions = { hmm_gm_hansa wes_rheinland_end }
+		required_missions = { hmm_gm_hansa wes_rheinland_end hmm_gm_peasants }
 		provinces_to_highlight = {
 			province_id = 45
 		}
@@ -1111,6 +1113,10 @@ hmm_german_minor_5 = {
 			owns_core_province = 69	# Dortmund
 			1876 = {
 				is_strongest_trade_power = ROOT
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
 			}
 		}
 		
