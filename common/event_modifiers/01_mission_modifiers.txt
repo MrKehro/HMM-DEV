@@ -14941,6 +14941,17 @@ hmm_umgestaltung_der_natur = {
 	local_development_cost = -0.05
 }
 
-hmm_gm_lubeck_merchant = {
+hmm_gm_channel_merchant = {
 	merchants = 1
+}
+
+hmm_gm_integrate_low_countries = {
+	trade_goods_size_modifier = 0.25
+	local_monthly_devastation = -0.1
+	local_unrest = -5
+	local_autonomy = -0.05
+	province_trade_power_modifier = 0.10
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.1
 }

@@ -33,16 +33,6 @@ hmm_german_minor_1 = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = has_been_insulted_by_root
-						OR = {
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = insulted
-							}
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = scornfully_insulted
-							}
-						}
 					}
 				}
 			}
@@ -87,7 +77,7 @@ hmm_german_minor_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = frisia_area
-				area = holland_area
+				area = north_brabant_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -122,7 +112,7 @@ hmm_german_minor_1 = {
 		}
 		effect = {
 			give_claims = { area = frisia_area }
-			give_claims = { area = holland_area }
+			give_claims = { area = north_brabant_area }
 			85 = {
 				add_province_modifier = {
 					name = "dominant_trade_hub"
@@ -142,6 +132,111 @@ hmm_german_minor_1 = {
 				}
 			}
 		}
+	}
+
+	hmm_gm_secure_holland = {
+		icon = mission_the_austrian_succession
+		position = 4
+		required_missions = { hmm_gm_go_west }
+		provinces_to_highlight = {
+			OR = {
+				area = frisia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {			
+			frisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			give_claims = { area = holland_area }
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+			}
+		}
+	}
+
+	hmm_gm_integrate_low_countries = {
+		icon = mission_colonial
+		position = 5
+		required_missions = { hmm_gm_secure_holland }
+		provinces_to_highlight = {
+			OR = {
+				area = holland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {			
+			frisia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = dutch
+						culture = flemish
+						culture = frisian
+					}
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "hmm_gm_integrate_low_countries"
+					duration = 9125
+				}
+			}
+		}
+	}
+
+	hmm_gm_english_channel_dominance = {
+		icon = mission_control_the_channel
+		position = 6
+		required_missions = { hmm_gm_integrate_low_countries } 
+		provinces_to_highlight = {
+			province_id = 1269
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 60
+				}
+			}
+		} 
+		trigger = {  
+			1269 = {
+				trade_share = {
+					country = ROOT
+					share = 60
+				}
+			}
+			num_of_light_ship = 30
+		} 
+
+		effect = {
+			custom_tooltip = NED_GAIN_DIPLO_POWER_PER_ENGLISH_COT
+			custom_tooltip = " "
+			hidden_effect = {
+				1269 = {
+					every_trade_node_member_province = {
+						limit = {
+							province_has_center_of_trade_of_level = 1
+							owned_by = ROOT
+						}
+						owner = {
+							add_dip_power = 25
+						}
+					}
+				}
+			}
+			add_country_modifier = {
+				name = hmm_gm_channel_merchant
+				duration = -1
+			}
+		} 
 	}
 }
 
@@ -380,7 +475,7 @@ hmm_german_minor_2 = {
 			}
 		}
 		effect = {
-			add_dip_power = 100
+			add_mil_power = 100
 			if = {
 				limit = { exists = HAB }
 				add_casus_belli = {
@@ -521,6 +616,7 @@ hmm_german_minor_3 = {
 		}
 		trigger = {			
 			braunschweig_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -726,6 +822,18 @@ hmm_german_minor_3 = {
 		}
 
 		effect = {
+			custom_tooltip = NED_LOSE_10_AE_WITH_HRE
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -25
+					}
+				}
+			} 
 			add_power_projection = {
 				type = mission_rewards_power_projection
 				amount = 25
@@ -799,8 +907,28 @@ hmm_german_minor_4 = {
 			}
 		}
 		trigger = {
+			if = {
+				limit = { exists = SAX }
+				SAX = {
+					OR = {
+						AND = {
+							preferred_emperor = ROOT
+						}
+						alliance_with = ROOT
+						ROOT = { is_rival = PREV }
+					}
+				}
+			}
+			else = {
+				owns_core_province = 63
+			}
 		}
 		effect = {
+			add_core = 63
+			add_country_modifier = {
+				name = influential_diplomacy
+				duration = 9125
+			}
 		}
 	}
 
@@ -833,7 +961,7 @@ hmm_german_minor_4 = {
 	}
 
 	hmm_gm_hansa = {
-		icon = mission_hanseatic_city 
+		icon = mission_bane_of_the_hansa 
 		position = 3
 		required_missions = { hmm_gm_saxony_expansion hmm_gm_braunschweig }
 		provinces_to_highlight = {
@@ -872,14 +1000,14 @@ hmm_german_minor_4 = {
 		effect = {
 			add_estate_burghers_loyalty_effect = yes
 			add_country_modifier = {
-				name = hmm_gm_lubeck_merchant
+				name = dan_humiliated_the_hanse
 				duration = -1
 			}
 		}
 	}
 
 	hmm_gm_umgestaltung_der_natur = {
-		icon = mission_expand_into_the_forest
+		icon = mission_peasantry
 		position = 5
 		required_missions = { hmm_gm_universities }
 		provinces_to_highlight = {
@@ -895,6 +1023,7 @@ hmm_german_minor_4 = {
 				limit = {
 					region = north_german_region
 					has_building = workshop
+					owned_by = ROOT
 				}
 				add_province_modifier = {
 					name = hmm_umgestaltung_der_natur
@@ -913,7 +1042,6 @@ hmm_german_minor_4 = {
 		}
 		trigger = {
 			owns_core_province = 69
-			has_institution = enlightenment
 			69 = {
 				AND = {
 					has_manufactory_trigger = yes
