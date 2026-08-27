@@ -1009,6 +1009,14 @@ hmm_german_minor_4 = {
 				name = "dan_humiliated_the_hanse"
 				duration = 10950
 			}
+			define_advisor = {
+				type = naval_reformer
+				skill = 3
+				cost_multiplier = 0.25
+				name = "Paul Beneke"
+				culture = lower_saxon
+				religion = root
+			}
 		}
 	}
 
@@ -1029,14 +1037,22 @@ hmm_german_minor_4 = {
 			}
 		}
 		effect = {
-			add_country_modifier = {
-				name = got_teachings_of_the_hansa
-				duration = 10950
-			}
 			add_mercantilism = 5
 			add_years_of_trade_income = {
 				custom_tooltip = dan_the_german_trade_cities_ct
-				years = 4
+				years = 5
+			}
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+				name = "Johann Wittenborg"
+				culture = lower_saxon
+				religion = root
+			}
+			add_country_modifier = {
+				name = got_lubeck_trade_fleet
+				duration = -1
 			}
 		}
 	}
