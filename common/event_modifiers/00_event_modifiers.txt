@@ -13086,11 +13086,11 @@ liv_the_general = {
 
 #Province modifiers
 estate_burghers_forest_expansion_forest = {
-	local_development_cost = -0.15
+	local_development_cost = -0.05
 }
 
 estate_burghers_forest_expansion_woods = {
-	local_development_cost = -0.10
+	local_development_cost = -0.05
 }
 
 estate_burghers_mountain_expansion_mountains = {

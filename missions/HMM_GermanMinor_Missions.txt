@@ -16,72 +16,6 @@ hmm_german_minor_1 = {
 	}
 	has_country_shield = yes
 
-	hmm_gm_hre1 = {
-		icon = mission_monarch_in_throne_room
-		position = 1
-		trigger = {
-			OR = {
-				alliance_with = emperor
-				is_rival = emperor
-				emperor = {
-					has_opinion = {
-						who = root
-						value = 100
-					}
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "hmm_gm_ae"
-				duration = 9125
-			}
-			give_claims = { area = franconia_area }
-			give_claims = { area = upper_franconia_area  }
-		}
-	}
-
-	hmm_gm_cologne = {
-		icon = mission_european_church
-		position = 3
-		provinces_to_highlight = {
-			province_id = 85
-		}
-		trigger = {
-			owns_core_province = 85
-		}
-		effect = {
-			85 = {
-				add_great_project_tier = {
-					type = cologne_cathedral
-					tier = 1
-				}
-			}
-		}
-	}
-
-	hmm_gm_ruhrgebiet = {
-		icon = eng_rb_coal_produced_mod
-		position = 5
-		provinces_to_highlight = {
-			province_id = 69
-		}
-		trigger = {
-			owns_core_province = 69
-			has_institution = enlightenment
-			69 = {
-				enlightenment = 100
-			}
-			69 = {
-					development = 20
-				}
-		}
-		effect = {
-			69 = {
-				change_trade_goods = coal
-			}
-		}
-	}
 }
 
 hmm_german_minor_2 = {
@@ -133,6 +67,137 @@ hmm_german_minor_2 = {
 			give_claims = { area = lorraine_area  }
 			give_claims = { area = alsace_area }
 			give_claims = { area = upper_rhineland_area }
+		}
+	}
+
+	hmm_gm_cologne = {
+		icon = mission_european_church
+		position = 3
+		required_missions = { hmm_gm_rhineland_conquest }
+		provinces_to_highlight = {
+			province_id = 85
+		}
+		trigger = {
+			owns_core_province = 85
+			85 = {
+				NOT = { local_autonomy = 1 }
+			}
+		}
+		effect = {
+			85 = {
+				add_great_project_tier = {
+					type = cologne_cathedral
+					tier = 1
+				}
+			}
+		}
+	}
+
+	hmm_gm_hre1 = {
+		icon = mission_monarch_in_throne_room
+		position = 4
+		trigger = {
+			OR = {
+				alliance_with = emperor
+				is_rival = emperor
+				emperor = {
+					has_opinion = {
+						who = root
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hmm_gm_ae"
+				duration = 9125
+			}
+			give_claims = { area = franconia_area }
+			give_claims = { area = upper_franconia_area  }
+		}
+	}
+
+	wes_hre_peace = {
+		icon = mission_noble_council
+		position = 5
+		required_missions = { hmm_gm_hre1 }
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				custom_trigger_tooltip = {
+					tooltip = westphalia_peace_trigger_tt
+					OR = {
+						AND = {
+							hre_religion_treaty = yes
+						}
+						AND = {
+							hre_religion_locked = yes
+							emperor = { religion = ROOT }
+						}
+					}
+				}
+			}
+			else = {
+				is_at_war = no
+				num_of_cities = 50
+			}
+		}
+		
+		effect = {
+			custom_tooltip = westphalia_peace_reward1_tt
+			tooltip = {
+				add_country_modifier = { 
+					name = westphalia_religious_peace_mod 
+					duration = -1 
+				}
+			}
+			custom_tooltip = westphalia_peace_reward2_tt
+			tooltip = {
+				add_country_modifier = { 
+					name = westphalia_religious_supermacy_mod 
+					duration = -1 
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						hre_religion_locked = no
+					}
+					add_country_modifier = { 
+						name = westphalia_religious_peace_mod 
+						duration = -1 
+					}
+				}
+				else = {
+					add_country_modifier = { 
+						name = westphalia_religious_supermacy_mod 
+						duration = -1 
+					}
+				}
+			}
+		}
+	}
+
+	hmm_gm_end_the_habsburgs = {
+		icon = end_the_habsburgs
+		required_missions = { hmm_gm_hre1 }
+		provinces_to_highlight = {
+			owner = {
+				tag = HAB
+			}
+		}
+		position = 5
+		trigger = {
+			NOT = { exists = HAB }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "ended_the_habsburgs"
+				duration = -1
+			}
 		}
 	}
 }
@@ -234,69 +299,6 @@ hmm_german_minor_4 = {
 	}
 	has_country_shield = yes
 
-	wes_hre_peace = {
-		icon = mission_noble_council
-		position = 1
-		
-		trigger = {
-			if = {
-				limit = {
-					hre_size = 1
-				}
-				custom_trigger_tooltip = {
-					tooltip = westphalia_peace_trigger_tt
-					OR = {
-						AND = {
-							hre_religion_treaty = yes
-						}
-						AND = {
-							hre_religion_locked = yes
-							emperor = { religion = ROOT }
-						}
-					}
-				}
-			}
-			else = {
-				is_at_war = no
-				num_of_cities = 50
-			}
-		}
-		
-		effect = {
-			custom_tooltip = westphalia_peace_reward1_tt
-			tooltip = {
-				add_country_modifier = { 
-					name = westphalia_religious_peace_mod 
-					duration = -1 
-				}
-			}
-			custom_tooltip = westphalia_peace_reward2_tt
-			tooltip = {
-				add_country_modifier = { 
-					name = westphalia_religious_supermacy_mod 
-					duration = -1 
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						hre_religion_locked = no
-					}
-					add_country_modifier = { 
-						name = westphalia_religious_peace_mod 
-						duration = -1 
-					}
-				}
-				else = {
-					add_country_modifier = { 
-						name = westphalia_religious_supermacy_mod 
-						duration = -1 
-					}
-				}
-			}
-		}
-	}
-
 	hmm_gm_saxony_expansion = {
 		icon = electorate_of_saxony
 		position = 2
@@ -315,6 +317,81 @@ hmm_german_minor_4 = {
 					NOT = { owned_by = BRA }
 				}
 				add_claim = ROOT
+			}
+		}
+	}
+
+	hmm_gm_hansa = {
+		icon = mission_hanseatic_city 
+		position 3
+		required_missions = { hmm_gm_saxony_expansion wes_rheinland_mid }
+		provinces_to_highlight = {
+			province_id = 44
+			province_id = 45
+			province_id = 1874
+		}
+		trigger = {
+			owns_core_province = 44
+			owns_core_province = 45
+			owns_core_province = 1874
+			NOT = { exists = HSA }
+		}
+		effect = {
+			add_estate_burghers_loyalty_effect = yes
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = swe_baltic_trade
+				duration = 9125
+			}
+		}
+	}
+
+	hmm_gm_umgestaltung_der_natur = {
+		icon = mission_expand_into_the_forest
+		position = 5
+		required_missions = { hmm_gm_universities }
+		provinces_to_highlight = {
+			owned_by = ROOT
+			region = north_german_region
+			trade_goods = woods
+		}
+		trigger = {
+			owns = 4773
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					region = north_german_region
+					trade_goods = woods
+				}
+				add_province_modifier = {
+					name = hmm_umgestaltung_der_natur
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	hmm_gm_ruhrgebiet = {
+		icon = mission_rb_prospect_for_coal
+		position = 6
+		required_missions = { hmm_gm_umgestaltung_der_natur }
+		provinces_to_highlight = {
+			province_id = 69
+		}
+		trigger = {
+			owns_core_province = 69
+			has_institution = enlightenment
+			69 = {
+				enlightenment = 100
+			}
+			69 = {
+				development = 30
+			}
+		}
+		effect = {
+			69 = {
+				change_trade_goods = coal
 			}
 		}
 	}
@@ -519,5 +596,56 @@ hmm_german_minor_5 = {
 			}
 		}
 	}
+
+	hmm_gm_universities = {
+		icon = mission_rb_renovate_oxbridge
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4773
+			}
+		}
+		trigger = {
+			owns = 4773
+			OR = {
+				4773 = { development = 20 }
+				if = {
+					limit = { has_dlc = "Rule Britannia" }
+					innovativeness = 30
+				}
+				else = {
+					full_idea_group = innovativeness_ideas
+				}
+			}
+		}
+		effect = {
+			4773 = {
+				add_building = university
+				add_province_modifier = {
+					name = eng_most_esteemed_university
+					duration = -1
+				}
+			}
+			change_innovativeness = 5
+		}
+	}
+
+	hmm_gm_kruppstahl = {
+		icon = mission_cannons_firing
+		position = 6
+		required_missions = { hmm_gm_umgestaltung_der_natur }
+		trigger = {
+			army_professionalism = 0.25
+			num_of_artillery = 50
+		}
+		effect = {
+			add_country_modifier = {
+				name = "hmm_krupp_stahl"
+				duration = -1
+			}
+		}
+	}
+	
 }
 
