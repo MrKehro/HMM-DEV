@@ -153,3 +153,5 @@
         HMM_events.31.d:0 "With the formation of the Intelligence Agency we can now disrupt our enemies' plans and wreak havoc on their nation."
         HMM_events.31.0:0 "Excellent! Time to cause some trouble."
         scheldt_estuary_modifier:0 "Scheldt Estuary"
+        HMM_GM_INTEGRATE_LOW_COUNTRIES_COT:0 "Add a special modifier for 25 years to our owned Provinces in the Low Countries"
+        HMM_GM_UMGESTALTUNG_DER_NATUR_COT:0 "Adds a special province modifier to all provinces with a Workshop in Germany for 25 years"
