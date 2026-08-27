@@ -21,6 +21,7 @@ hmm_german_minor_1 = {
 		position = 1
 		trigger = {
 			OR = {
+				is_emperor = yes
 				alliance_with = emperor
 				emperor = {
 					custom_trigger_tooltip = {
@@ -56,64 +57,24 @@ hmm_german_minor_1 = {
 		}
 	}
 
-	wes_hre_peace = {
-		icon = mission_noble_council
+	hmm_gm_cologne = {
+		icon = mission_european_church
 		position = 2
 		required_missions = { hmm_gm_hre1 }
+		provinces_to_highlight = {
+			province_id = 85
+		}
 		trigger = {
-			if = {
-				limit = {
-					hre_size = 1
-				}
-				custom_trigger_tooltip = {
-					tooltip = westphalia_peace_trigger_tt
-					OR = {
-						AND = {
-							hre_religion_treaty = yes
-						}
-						AND = {
-							hre_religion_locked = yes
-							emperor = { religion = ROOT }
-						}
-					}
-				}
-			}
-			else = {
-				is_at_war = no
-				num_of_cities = 50
+			owns_core_province = 85
+			85 = {
+				NOT = { local_autonomy = 1 }
 			}
 		}
-		
 		effect = {
-			custom_tooltip = westphalia_peace_reward1_tt
-			tooltip = {
-				add_country_modifier = { 
-					name = westphalia_religious_peace_mod 
-					duration = -1 
-				}
-			}
-			custom_tooltip = westphalia_peace_reward2_tt
-			tooltip = {
-				add_country_modifier = { 
-					name = westphalia_religious_supermacy_mod 
-					duration = -1 
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						hre_religion_locked = no
-					}
-					add_country_modifier = { 
-						name = westphalia_religious_peace_mod 
-						duration = -1 
-					}
-				}
-				else = {
-					add_country_modifier = { 
-						name = westphalia_religious_supermacy_mod 
-						duration = -1 
-					}
+			85 = {
+				add_great_project_tier = {
+					type = cologne_cathedral
+					tier = 1
 				}
 			}
 		}
@@ -122,7 +83,7 @@ hmm_german_minor_1 = {
 	hmm_gm_go_west = {
 		icon = bavarian_netherlands
 		position = 3
-		required_missions = { hmm_gm_rhineland_conquest }
+		required_missions = { hmm_gm_rhineland_conquest hmm_gm_cologne }
 		provinces_to_highlight = {
 			OR = {
 				area = frisia_area
@@ -202,6 +163,68 @@ hmm_german_minor_2 = {
 	}
 	has_country_shield = yes
 
+	wes_hre_peace = {
+		icon = mission_noble_council
+		position = 1
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				custom_trigger_tooltip = {
+					tooltip = westphalia_peace_trigger_tt
+					OR = {
+						AND = {
+							hre_religion_treaty = yes
+						}
+						AND = {
+							hre_religion_locked = yes
+							emperor = { religion = ROOT }
+						}
+					}
+				}
+			}
+			else = {
+				is_at_war = no
+				num_of_cities = 50
+			}
+		}
+		
+		effect = {
+			custom_tooltip = westphalia_peace_reward1_tt
+			tooltip = {
+				add_country_modifier = { 
+					name = westphalia_religious_peace_mod 
+					duration = -1 
+				}
+			}
+			custom_tooltip = westphalia_peace_reward2_tt
+			tooltip = {
+				add_country_modifier = { 
+					name = westphalia_religious_supermacy_mod 
+					duration = -1 
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						hre_religion_locked = no
+					}
+					add_country_modifier = { 
+						name = westphalia_religious_peace_mod 
+						duration = -1 
+					}
+				}
+				else = {
+					add_country_modifier = { 
+						name = westphalia_religious_supermacy_mod 
+						duration = -1 
+					}
+				}
+			}
+		}
+	}
+
 	hmm_gm_rhineland_conquest = {
 		icon = rhineland_conquest
 		position = 2
@@ -236,13 +259,49 @@ hmm_german_minor_2 = {
 		}
 	}
 
+	hmm_gm_invade_bavaria = {
+		icon = conquer_franconia
+		position = 3
+		required_missions = { hmm_gm_rhineland_conquest }
+		provinces_to_highlight = {
+			OR = {
+				area = east_bavaria_area
+				area = upper_bavaria_area
+				area = lower_bavaria_area
+				area = lower_swabia_area
+				area = upper_swabia_area
+				area = alsace_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			OR = {
+				accepted_culture = franconian
+				accepted_culture = bavarian
+				accepted_culture = swabian
+			}
+		}
+		effect = {
+			every_province = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					culture = bavarian
+					culture = swabian
+					NOT = { owned_by = ROOT }
+					NOT = { owned_by = HAB }
+					NOT = { owned_by = emperor }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+
 	hmm_gm_protect_against_austria = {
 		icon = protect_against_austria
-		required_missions = { hmm_gm_rhineland_conquest }
 		provinces_to_highlight = {
 			owner = { tag = HAB }
 		}
-		position = 3
+		position = 4
 		trigger = {
 			army_size_percentage = 1
 			if = {
@@ -370,7 +429,7 @@ hmm_german_minor_2 = {
 	}
 
 	hmm_gm_one_german_to_rule_em_all = {
-		icon = Blood_Iron
+		icon = ger_kaiserreich
 		position = 6
 		required_missions = { hmm_gm_end_the_habsburgs hmm_german_minor_berlin }
 		provinces_to_highlight = {
@@ -491,7 +550,6 @@ hmm_german_minor_3 = {
 
 	hmm_gm_deal_with_prussia = {
 		icon = tame_brandenburg
-		required_missions = { hmm_gm_peasants hmm_gm_hansa }
 		position = 4
 		provinces_to_highlight = {
 			if = {
@@ -573,9 +631,9 @@ hmm_german_minor_3 = {
 				limit = {
 					NOT = { exists = BRA }
 					NOT = { exists = PRU }
-					85 = { NOT = { owned_by = ROOT } }
+					50 = { NOT = { owned_by = ROOT } }
 				}
-				85 = {
+				50 = {
 					owner = {
 						root = {
 							army_strength = {
@@ -609,7 +667,7 @@ hmm_german_minor_3 = {
 				}
 			}
 			else = {
-				owns_core_province = 85
+				owns_core_province = 50
 			}
 		}
 		effect = {
@@ -633,9 +691,9 @@ hmm_german_minor_3 = {
 				limit = {
 					NOT = { exists = BRA }
 					NOT = { exists = PRU }
-					85 = { NOT = { owned_by = ROOT } }
+					50 = { NOT = { owned_by = ROOT } }
 				}
-				85 = {
+				50 = {
 					owner = {
 						reverse_add_casus_belli = {
 							target = ROOT
@@ -722,17 +780,45 @@ hmm_german_minor_4 = {
 	}
 	has_country_shield = yes
 
-	hmm_gm_saxony_expansion = {
+	hmm_gm_electorate_of_saxony = {
 		icon = electorate_of_saxony
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				owner = {
+					tag = SAX
+					NOT = { is_subject_of = ROOT }
+				}
+				AND = {
+					area = south_saxony_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		}
+		trigger = {
+
+		}
+		effect = {
+			
+		}
+	}
+
+	hmm_gm_saxony_expansion = {
+		icon = reclaim_our_ancestral_lands
 		position = 2
-		required_missions = { wes_rheinland_start hmm_gm_raise_the_army }
+		required_missions = { hmm_gm_electorate_of_saxony }
 		trigger = {
 			1876 = {
 				development = 25
-				has_building = marketplace
+				OR = {
+					has_building = marketplace 
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
 			}
 		}
 		effect = {
+			add_accepted_culture = saxon
 			every_province = {
 				limit = {
 					culture = saxon
@@ -747,7 +833,7 @@ hmm_german_minor_4 = {
 	hmm_gm_hansa = {
 		icon = mission_hanseatic_city 
 		position = 3
-		required_missions = { hmm_gm_saxony_expansion wes_rheinland_mid }
+		required_missions = { hmm_gm_saxony_expansion hmm_gm_braunschweig }
 		provinces_to_highlight = {
 			province_id = 44
 			province_id = 45
@@ -769,25 +855,23 @@ hmm_german_minor_4 = {
 		}
 	}
 
-	hmm_gm_cologne = {
-		icon = mission_european_church
-		position = 4
-		required_missions = { hmm_gm_rhineland_conquest }
+	hmm_gm_dominate_lubeck = {
+		icon = mission_dominate_home_trade_node 
+		position = 3
+		required_missions = { hmm_gm_hansa wes_rheinland_end }
 		provinces_to_highlight = {
-			province_id = 85
+			province_id = 45
 		}
 		trigger = {
-			owns_core_province = 85
-			85 = {
-				NOT = { local_autonomy = 1 }
+			45 = {
+				is_strongest_trade_power = ROOT
 			}
 		}
 		effect = {
-			85 = {
-				add_great_project_tier = {
-					type = cologne_cathedral
-					tier = 1
-				}
+			add_estate_burghers_loyalty_effect = yes
+			add_country_modifier = {
+				name = hmm_gm_lubeck_merchant
+				duration = -1
 			}
 		}
 	}
@@ -1027,10 +1111,6 @@ hmm_german_minor_5 = {
 			owns_core_province = 69	# Dortmund
 			1876 = {
 				is_strongest_trade_power = ROOT
-				trade_share = {
-					country = ROOT
-					share = 80
-				}
 			}
 		}
 		
@@ -1045,7 +1125,7 @@ hmm_german_minor_5 = {
 	}
 
 	hmm_gm_universities = {
-		icon = mission_rb_renovate_oxbridge
+		icon = wittenberg_university
 		position = 4
 		
 		provinces_to_highlight = {

@@ -14940,3 +14940,7 @@ hmm_krupp_stahl = {
 hmm_umgestaltung_der_natur = {
 	local_development_cost = -0.05
 }
+
+hmm_gm_lubeck_merchant = {
+	merchants = 1
+}
