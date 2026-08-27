@@ -331,31 +331,6 @@ country_event = {
 		name = HMM_events.32.1
 		random_owned_province = {
 			spawn_rebels = {
-				type = pretender_rebels
-				size = 3
-			}
-		}
-		change_government_to_republic = yes
-		change_government_reform_progress = 200
-		add_government_reform = peasants_republic
-		hidden_effect = {
-			set_variable = {
-				which = election_term
-				value = 1
-			}
-		}
-		define_ruler = {
-			name = "Wulf Isebrand"
-			age = 31
-			ADM = 4
-			DIP = 4
-			MIL = 4
-		}
-	}
-	option = {
-		name = HMM_events.32.2
-		random_owned_province = {
-			spawn_rebels = {
 				type = heretic_rebels
 				size = 3
 			}
@@ -372,12 +347,36 @@ country_event = {
 		}
 		add_government_reform = leading_clergy_reform
 		define_ruler = {
-			name = "Konrad von Hochstaden"
+			name = "Konrad"
 			dynasty = "von Hochstaden"
 			age = 40
 			ADM = 4
 			DIP = 4
 			MIL = 5
+		}
+	}
+	option = {
+		name = HMM_events.32.2
+		random_owned_province = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+			}
+		}
+		change_government_to_republic = yes
+		add_government_reform = peasants_republic
+		hidden_effect = {
+			set_variable = {
+				which = election_term
+				value = 1
+			}
+		}
+		define_ruler = {
+			name = "Wulf Isebrand"
+			age = 31
+			ADM = 4
+			DIP = 4
+			MIL = 4
 		}
 	}
 }
