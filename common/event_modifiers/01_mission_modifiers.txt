@@ -14934,6 +14934,7 @@ hmm_gm_choose_clergy = {
 
 hmm_krupp_stahl = {
 	artillery_cost = -0.20
+	artillery_power = 0.05
 }
 
 hmm_umgestaltung_der_natur = {

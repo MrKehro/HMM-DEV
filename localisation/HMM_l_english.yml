@@ -79,7 +79,7 @@
         hmm_cas_won_deathwar_title: "No free Food for France"
         hmm_cas_won_deathwar_desc: "We won against the infidels, the French should not reap the rewards of our Victory"
         hmm_bur_unlock_deathwar_corps_title: "Stop the Blob"
-        hmm_bur_unlock_deathwar_corps_desc: "To stand a Chance of beating the French, we need to unleash a special unit of soldiers, the Deathwar Corps"
+        hmm_bur_unlock_deathwar_corps_desc: "To stand a Chance of beating the French, we need to unleash the Deathwar Corps"
         merc_hmm_bur:0 "Burgundian Deathwar Corps"
         merc_local_arty_army:0 "Guns for Hire"
         merc_local_horse_army:0 "Nobles on Horseback"
