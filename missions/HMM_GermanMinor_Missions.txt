@@ -570,6 +570,10 @@ hmm_german_minor_2 = {
 				}
 				add_local_autonomy = -100
 			}
+			add_country_modifier = {
+				name = "pru_german_confederation"
+				duration = -1
+			}
 		}
 	}
 }
@@ -858,9 +862,13 @@ hmm_german_minor_3 = {
 				name = "post_deathwar_buff"
 				duration = 1825
 			}
-			add_country_modifier = {
-				name = "pru_german_confederation"
-				duration = -1
+			define_advisor = {
+				type = statesman
+				skill = 5
+				cost_multiplier = 0.1
+				name = "Otto von Bismarck"
+				culture = prussian
+				religion = protestant
 			}
 		}
 	}
@@ -998,8 +1006,8 @@ hmm_german_minor_4 = {
 			add_estate_burghers_loyalty_effect = yes
 			add_mercantilism = 5
 			add_country_modifier = {
-				name = swe_baltic_trade
-				duration = 9125
+				name = "dan_humiliated_the_hanse"
+				duration = 10950
 			}
 		}
 	}
@@ -1014,11 +1022,15 @@ hmm_german_minor_4 = {
 		trigger = {
 			45 = {
 				is_strongest_trade_power = ROOT
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = dan_humiliated_the_hanse
+				name = got_teachings_of_the_hansa
 				duration = 10950
 			}
 			add_mercantilism = 5

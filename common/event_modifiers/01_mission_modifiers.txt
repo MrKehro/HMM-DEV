@@ -14943,6 +14943,7 @@ hmm_umgestaltung_der_natur = {
 
 hmm_gm_channel_merchant = {
 	merchants = 1
+	trade_efficiency = 0.1
 }
 
 hmm_gm_integrate_low_countries = {
