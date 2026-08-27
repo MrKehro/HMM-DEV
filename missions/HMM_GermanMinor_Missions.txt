@@ -56,6 +56,7 @@ hmm_german_minor_1 = {
 			owns_core_province = 85
 			85 = {
 				NOT = { local_autonomy = 1 }
+				development = 20
 			}
 		}
 		effect = {
@@ -64,7 +65,6 @@ hmm_german_minor_1 = {
 					type = cologne_cathedral
 					tier = 1
 				}
-				num_of_times_improved = 5
 			}
 		}
 	}
@@ -606,7 +606,11 @@ hmm_german_minor_3 = {
 			give_claims = { area = lower_rhineland_area }
 			give_claims = { area = north_westphalia_area }
 			give_claims = { area = hesse_area }
-			give_claims = { area = braunschweig_area }
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				months = 180
+				target = BRU
+			}
 		} 
 	}
 
@@ -626,6 +630,19 @@ hmm_german_minor_3 = {
 			}
 		}
 		effect = {
+			custom_tooltip = NED_LOSE_10_AE_WITH_HRE
+			custom_tooltip = " "
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					add_aggressive_expansion = {
+						who = ROOT
+						value = -25
+					}
+				}
+			}
 			every_province = {
 				limit = {
 					culture = lower_saxon
@@ -647,6 +664,7 @@ hmm_german_minor_3 = {
 			owns_core_province = 4141
 		}
 		effect = {
+			add_accepted_culture = lower_saxon
 			country_event = { id = HMM_events.32 }
 		}
 	}
@@ -669,6 +687,7 @@ hmm_german_minor_3 = {
 			}
 		}
 		trigger = {
+			army_size_percentage = 1
 			if = {
 				limit = { exists = BRA }
 				army_strength = {
@@ -810,6 +829,10 @@ hmm_german_minor_3 = {
 			else = {
 				prestige = 25
 			}
+			add_country_modifier = {
+				name = "hmm_mission_timed_buff"
+				duration = 1825
+			}
 		}
 	}
 
@@ -827,21 +850,13 @@ hmm_german_minor_3 = {
 		}
 
 		effect = {
-			custom_tooltip = NED_LOSE_10_AE_WITH_HRE
-			hidden_effect = {
-				every_known_country = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					add_aggressive_expansion = {
-						who = ROOT
-						value = -25
-					}
-				}
-			} 
 			add_power_projection = {
 				type = mission_rewards_power_projection
 				amount = 25
+			}
+			add_country_modifier = {
+				name = "post_deathwar_buff"
+				duration = 1825
 			}
 			add_country_modifier = {
 				name = "pru_german_confederation"
@@ -853,7 +868,7 @@ hmm_german_minor_3 = {
 	hmm_gm_forest_expansion = {
 		icon = mission_expand_into_the_forest
 		position = 6
-		required_missions = { hmm_german_minor_berlin }
+		required_missions = { hmm_german_minor_berlin hmm_gm_umgestaltung_der_natur }
 		provinces_to_highlight = {
 			owned_by = ROOT
 			region = north_german_region
@@ -953,7 +968,6 @@ hmm_german_minor_4 = {
 			}
 		}
 		effect = {
-			add_accepted_culture = saxon
 			every_province = {
 				limit = {
 					culture = saxon
@@ -1003,10 +1017,14 @@ hmm_german_minor_4 = {
 			}
 		}
 		effect = {
-			add_estate_burghers_loyalty_effect = yes
 			add_country_modifier = {
 				name = dan_humiliated_the_hanse
-				duration = -1
+				duration = 10950
+			}
+			add_mercantilism = 5
+			add_years_of_trade_income = {
+				custom_tooltip = dan_the_german_trade_cities_ct
+				years = 4
 			}
 		}
 	}
@@ -1325,7 +1343,7 @@ hmm_german_minor_5 = {
 			}
 			add_country_modifier = {
 				name = "teu_pru_westphalian_uniforms"
-				duration = 1825
+				duration = 3650
 			}
 		}
 	}
