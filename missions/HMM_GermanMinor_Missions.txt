@@ -197,17 +197,14 @@ hmm_german_minor_2 = {
 
 	hmm_gm_end_the_habsburgs = {
 		icon = end_the_habsburgs
-		position = 6
 		provinces_to_highlight = {
 			owner = {
 				tag = HAB
 			}
 		}
+		position = 5
 		trigger = {
 			NOT = { exists = HAB }
-			has_won_war_against = {
-				who = { is_or_was_tag = { HAB }}
-			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -438,14 +435,12 @@ hmm_german_minor_3 = {
 			}
 		}
 		effect = {
-			unlock_estate_privilege = {
-				estate_privilege = estate_burghers_forest_expansion
-			}
-			hidden_effect = {
-				north_german_region = {
+			north_german_region = {
 					limit = { owned_by = ROOT }
 					add_prosperity = 10
 				}
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_forest_expansion
 			}
 		}
 	}
