@@ -1356,10 +1356,7 @@ hmm_german_minor_5 = {
 		required_missions = { hmm_gm_universities }
 		trigger = {
 			army_professionalism = 0.10
-			check_variable = {
-				which = num_won_battles
-				value = 25
-			}
+			num_of_battles = { amount = 25 }
 		}
 		effect = {
 			define_advisor = {
