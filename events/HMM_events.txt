@@ -326,6 +326,7 @@ country_event = {
 			name = "hmm_gm_choose_nobles"
 			duration = -1
 		}
+		add_yearly_manpower = 2
 	}
 	option = {
 		name = HMM_events.32.1
@@ -354,6 +355,7 @@ country_event = {
 			DIP = 4
 			MIL = 5
 		}
+		add_years_of_income = 1.0
 	}
 	option = {
 		name = HMM_events.32.2

@@ -356,14 +356,18 @@ hmm_german_minor_2 = {
 	}
 
 	hmm_gm_invade_bavaria = {
-		icon = conquer_franconia
+		icon = duchy_of_bavaria
 		position = 3
 		required_missions = { hmm_gm_rhineland_conquest }
 		provinces_to_highlight = {
 			OR = {
-				region = south_german_region
+				culture = franconian
+				culture = bavarian
+				culture = swabian
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { owned_by = HAB }
+			NOT = { owned_by = emperor }
 		}
 		trigger = {
 			OR = {
@@ -373,7 +377,7 @@ hmm_german_minor_2 = {
 					accepted_culture = swabian
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 15
+					value = 10
 					OR = {
 						region = south_german_region
 					}
@@ -381,18 +385,23 @@ hmm_german_minor_2 = {
 			}
 		}
 		effect = {
-			every_province = {
-				limit = {
-					OR = {
-						culture = bavarian
-						culture = swabian
+			custom_tooltip = hmm_gm_bavaria_tt
+			custom_tooltip = " "
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							culture = franconian
+							culture = bavarian
+							culture = swabian
+						}
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { owned_by = ROOT }
+						NOT = { owned_by = HAB }
+						NOT = { owned_by = emperor }
 					}
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { owned_by = ROOT }
-					NOT = { owned_by = HAB }
-					NOT = { owned_by = emperor }
+					add_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 		}
 	}
@@ -635,7 +644,8 @@ hmm_german_minor_3 = {
 		}
 		effect = {
 			custom_tooltip = NED_LOSE_10_AE_WITH_HRE
-			custom_tooltip = " "
+			custom_tooltip = "   "
+			custom_tooltip = hmm_gm_braunschweig_tt
 			hidden_effect = {
 				every_known_country = {
 					limit = {
@@ -646,13 +656,15 @@ hmm_german_minor_3 = {
 						value = -25
 					}
 				}
-			}
-			every_province = {
-				limit = {
-					culture = lower_saxon
-					NOT = { owned_by = ROOT }
+				every_province = {
+					limit = {
+						culture = lower_saxon
+						NOT = { owned_by = ROOT }
+						NOT = { owned_by = BRA }
+						NOT = { owned_by = PRU }
+					}
+					add_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 		}
 	}
@@ -976,13 +988,19 @@ hmm_german_minor_4 = {
 			}
 		}
 		effect = {
-			every_province = {
-				limit = {
-					culture = saxon
-					NOT = { owned_by = ROOT }
-					NOT = { owned_by = BRA }
+			custom_tooltip = hmm_gm_saxony_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = saxon
+						NOT = { owned_by = ROOT }
+						NOT = { owned_by = BRA }
+						NOT = { owned_by = PRU }
+						NOT = { owned_by = BOH }
+						NOT = { owned_by = HAB }
+					}
+					add_claim = ROOT
 				}
-				add_claim = ROOT
 			}
 		}
 	}
