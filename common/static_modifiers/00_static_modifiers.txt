@@ -802,6 +802,7 @@ war_exhaustion = {
 	monthly_arabic_trade_influence_power = -0.05
 	monthly_cultural_unity = -0.05
 	monthly_authority_power = 0.01
+	stability_cost_modifier = 0.1
 }
 
 doom = {
