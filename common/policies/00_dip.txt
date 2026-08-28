@@ -125,8 +125,8 @@ hold_the_weather_gauge = {
 		full_idea_group = offensive_ideas
 	}
 	
-	leader_naval_manuever = 1
-	ship_durability = 0.05
+	siege_ability = 0.05
+	siege_blockade_progress = 1
 	
 	effect = {}
 	removed_effect = {}
@@ -209,13 +209,11 @@ colonial_expansions = {
 	monarch_power = DIP
 
 	potential = {
-		has_idea_group = expansion_ideas
-		has_idea_group = exploration_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = expansion_ideas
-		full_idea_group = exploration_ideas
+		always = no
 	}		
 
 	global_colonial_growth = 15
@@ -360,13 +358,11 @@ naval_infrastructure_act = {
 
 
 	potential = {
-		has_idea_group = maritime_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = maritime_ideas
-		full_idea_group = expansion_ideas
+		always = no
 	}
 
 
@@ -397,33 +393,6 @@ naval_infrastructure_act = {
 			factor = 1.5
 			navy_size_percentage = 2.5
 		}				
-	}
-}
-
-new_naval_tactis = {
-	monarch_power = DIP
-	potential = {
-		has_idea_group = innovativeness_ideas
-		has_idea_group = maritime_ideas
-	}
-	
-	allow = {
-		full_idea_group = innovativeness_ideas
-		full_idea_group = maritime_ideas
-	}
-
-	leader_naval_manuever = 1
-	heavy_ship_power = 0.1
-
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}
 	}
 }
 
@@ -465,7 +434,7 @@ trade_connection_policy = {
 	}
 }
 
-naval_secrecy_act = {
+local_army_organisation = {
 	monarch_power = DIP
 	potential = {
 		has_idea_group = exploration_ideas
@@ -477,8 +446,8 @@ naval_secrecy_act = {
 		full_idea_group = defensive_ideas
 	}
 
-	sunk_ship_morale_hit_recieved = -0.1
-	naval_morale = 0.1
+	global_regiment_cost = -0.1
+	recover_army_morale_speed = 0.15
 
 	effect = {}
 	removed_effect = {}
@@ -503,9 +472,7 @@ streamlined_galley_production = {
 		full_idea_group = quantity_ideas
 	}
 	
-	galley_cost = -0.15
-	galley_power = 0.15
-
+	naval_forcelimit_modifier = 0.25
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
@@ -584,13 +551,11 @@ production_quota_act = {
 encouragement_of_merchant_navy = {
 	monarch_power = DIP
 	potential = {
-		has_idea_group = trade_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = trade_ideas
-		full_idea_group = expansion_ideas
+		always = no
 	}
 	
 	trade_efficiency = 0.1
@@ -777,7 +742,7 @@ chaplains_of_the_fleet = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_morale = 0.1
+	heavy_ship_cost = -0.20
 	recover_navy_morale_speed = 0.1
 	
 	effect = {}
@@ -1166,7 +1131,7 @@ armed_neutrality_act = {
 	}
 }
 
-letters_of_marque = {
+the_pioneer_policy = {
 	monarch_power = DIP
 	
 	potential = {
@@ -1179,8 +1144,8 @@ letters_of_marque = {
 		full_idea_group = exploration_ideas
 	}
 	
-	ship_trade_power_modifier = 0.1
-	capture_ship_chance = 0.25
+	auto_explore_adjacent_to_colony = yes
+	colonist_placement_chance = 0.05
 
 	
 	effect = {}
@@ -1207,8 +1172,8 @@ trained_marines_act = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_morale = 0.1
-	allowed_marine_fraction = 0.1
+	allowed_marine_fraction = 0.20
+	global_sailors_modifier = 0.1
 
 	effect = {}
 	removed_effect = {}

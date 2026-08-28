@@ -202,13 +202,11 @@ manueline_architecture = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = aristocracy_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = aristocracy_ideas
-		full_idea_group = expansion_ideas
+		always = no
 	}
 
 	build_cost = -0.15
@@ -486,17 +484,15 @@ vassal_taxation_policy = {
 	}
 }
 
-the_pioneer_policy = {
+the_pioneer_policy = { letters_of_marque
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = offensive_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = offensive_ideas
-		full_idea_group = expansion_ideas
+		always = no
 	}
 
 	auto_explore_adjacent_to_colony = yes
@@ -682,13 +678,11 @@ policy_of_calculate_delay = {
 the_loyalty_act = {
 	monarch_power = ADM
 	potential = {
-		has_idea_group = spy_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = spy_ideas
-		full_idea_group = expansion_ideas
+		always = no
 	}
 	
 	global_autonomy = -0.05
@@ -858,13 +852,11 @@ overseas_dominions = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = influence_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = influence_ideas
-		full_idea_group = expansion_ideas
+		always = no
 	}	
 	
 	reduced_liberty_desire = 15
@@ -1203,13 +1195,11 @@ the_statute_of_monopolies = {
 taxation_with_representation = {
 	monarch_power = ADM
 	potential = {
-		has_idea_group = expansion_ideas
-		has_idea_group = plutocracy_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = expansion_ideas
-		full_idea_group = plutocracy_ideas
+		always = no
 	}
 	
 	production_efficiency = 0.1
@@ -1299,8 +1289,7 @@ the_citrus_statute = {
 		full_idea_group = maritime_ideas
 	}	
 	
-	global_tax_modifier = 0.2
-	sunk_ship_morale_hit_recieved = -0.25
+	global_tax_modifier = 0.33
 	
 	effect = {}
 	removed_effect = {}
@@ -1636,13 +1625,11 @@ religious_spread_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = expansion_ideas
-		has_idea_group = theocracy_gov_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = expansion_ideas
-		full_idea_group = theocracy_gov_ideas
+		always = no
 	}
 	
 	global_missionary_strength = 0.01
@@ -1808,13 +1795,11 @@ shared_land_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = expansion_ideas
-		has_idea_group = indigenous_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = expansion_ideas
-		full_idea_group = indigenous_ideas
+		always = no
 	}
 	
 	build_cost = -0.15
@@ -2024,13 +2009,11 @@ subject_obligations_act = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = court_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = court_ideas
-		full_idea_group = expansion_ideas 
+		always = no
 	}
 	
 	reduced_liberty_desire = 15
