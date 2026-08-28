@@ -28,10 +28,9 @@ aristocracy_ideas = {
 	}
 	serfdom = {
 		global_manpower_modifier = 0.15
-		development_cost = -0.05
 	}
 	noble_resilience = {
-		cav_to_inf_ratio = 0.1
+		cav_to_inf_ratio = 0.20
 		cavalry_cost = -0.20
 	}
 	noble_officers = {
@@ -39,17 +38,15 @@ aristocracy_ideas = {
 		navy_tradition_decay = -0.01
 		num_of_pronoiars = 1
 	}
-	international_nobility = {
-		diplomats = 1
-		general_cost = -0.1
+	glory_on_the_battlefield = {
+		artillery_barrage_cost = -0.50
+		warscore_from_battles_modifier = 0.15
 	}
-	rightful_conquest = {
-		fabricate_claims_cost = -0.5
-		unjustified_demands = -0.25
+	melee_combat_training = {
+		shock_damage = 0.1
 	}
 	local_nobility = {
-		global_autonomy = -0.025
-		yearly_absolutism = 0.5
+		general_cost = -0.1
 	}
 	
 
@@ -203,7 +200,7 @@ theocracy_gov_ideas = {
 	category = MIL
 	
 	bonus = {
-		fire_damage_received = -0.1
+		land_forcelimit_modifier = 0.15
 	}
 	
 	trigger = {
@@ -215,7 +212,7 @@ theocracy_gov_ideas = {
 		brahmins_hindu_loyalty_modifier = 0.1
 		brahmins_muslim_loyalty_modifier = 0.1
 	}
-	by_the_grace_of_god = {
+	improved_body_armor = {
 		shock_damage_received = -0.1
 	}
 	friends_in_high_places = {
@@ -225,17 +222,17 @@ theocracy_gov_ideas = {
 	flesh_is_weak = {
 		morale_damage_received = -0.1
 	}
-	glory_on_the_battlefield = {
-		artillery_barrage_cost = -0.50
-		warscore_from_battles_modifier = 0.15
-	}
 	conviction_of_sin = {
 		army_tradition_from_battle = 0.5
 		prestige_from_land = 0.5
 	}
+	by_the_grace_of_god = {
+		fire_damage_received = -0.1
+	}
 	martyrs = {
 		manpower_in_true_faith_provinces = 0.15
 	}
+	
 	ai_will_do = {
 		factor = 5
 		modifier = {
@@ -1765,6 +1762,7 @@ court_ideas = {
 	long_echo = {
 		power_projection_from_insults = 1
 		diplomatic_reputation = 1
+		diplomats = 1
 	}
 	recognize_hierarchy = {
 		all_estate_loyalty_equilibrium = 0.1
@@ -1783,6 +1781,7 @@ court_ideas = {
 	palace_of_splendor = {
 		monthly_splendor = 2 
 		estate_interaction_cooldown_modifier = -0.20
+		yearly_absolutism = 1
 	}
 	court_embassies = {
 		free_policy = 1 

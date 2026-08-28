@@ -27,7 +27,7 @@ hmm_garrison_buff = {
 		always = yes
 	}
 
-	garrison_size = 0.33
+	garrison_size = 0.50
 }
 
 hmm_new_world = {
