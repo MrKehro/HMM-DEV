@@ -505,7 +505,7 @@ hmm_german_minor_2 = {
 				}
 			}
 			else = {
-				prestige = 25
+				add_prestige = 25
 			}
 		}
 	}
@@ -831,7 +831,7 @@ hmm_german_minor_3 = {
 				}
 			}
 			else = {
-				prestige = 25
+				add_prestige = 25
 			}
 			add_country_modifier = {
 				name = "hmm_mission_timed_buff"
