@@ -403,13 +403,11 @@ field_priests = {
 pen_rely_on_sword_act = {
 	monarch_power = MIL
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = quantity_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = quantity_ideas
+		always = no
 	}
 	
 	diplomatic_reputation = 1
@@ -468,13 +466,11 @@ local_army_organisation = {
 underhanded_diplomacy_act = {
 	monarch_power = MIL
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = offensive_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = offensive_ideas
+		always = no
 	}
 	
 	spy_offence = 0.33
@@ -520,13 +516,11 @@ the_tenures_abolition_act = {
 	monarch_power = MIL
 
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = aristocracy_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = aristocracy_ideas
+		always = no
 	}
 
 	army_tradition = 0.5
@@ -844,12 +838,12 @@ military_allotment_act = {
 	monarch_power = MIL
 
 	potential = {
-		has_idea_group = spy_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = plutocracy_ideas
 	}
 	
 	allow = {
-		full_idea_group = spy_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = plutocracy_ideas
 	}
 
@@ -905,20 +899,21 @@ unified_army_command = {
 	}
 }
 
-trade_kontor_network = {
+mandatory_service = {
 	monarch_power = MIL
 	potential = {
 		has_idea_group = plutocracy_ideas
-		has_idea_group = trade_ideas
+		has_idea_group = economic_ideas
 	}
 	
 	allow = {
 		full_idea_group = plutocracy_ideas
-		full_idea_group = trade_ideas
+		full_idea_group = economic_ideas
 	}
 	
-	merchants = 1
 	global_regiment_cost = -0.1
+	global_manpower_modifier = 0.1
+	may_recruit_female_generals = yes
 
 	effect = {}
 	removed_effect = {}
@@ -1052,17 +1047,17 @@ the_best_defense_policy = {
 	}
 }
 
-omne_datum_optimum_policy = { 
+otto_per_mille = {
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = theocracy_gov_ideas
-		has_idea_group = administrative_ideas
+		has_idea_group = economic_ideas
 	}
 	
 	allow = {
 		full_idea_group = theocracy_gov_ideas
-		full_idea_group = administrative_ideas
+		full_idea_group = economic_ideas
 	}
 
 	manpower_in_true_faith_provinces = 0.15
@@ -1190,13 +1185,11 @@ fear_tactics_policy = {
 	monarch_power = MIL
 
 	potential = {
-		has_idea_group = horde_gov_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = horde_gov_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}
 
 	shock_damage = 0.1
@@ -1294,17 +1287,17 @@ my_word_is_my_bond_policy = {
 	}
 }
 
-render_unto_caesar_policy = { 
+ora_et_labora_policy = { 
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = theocracy_gov_ideas
-		has_idea_group = exploration_ideas
+		has_idea_group = innovativeness_ideas
 	}
 	
 	allow = {
 		full_idea_group = theocracy_gov_ideas
-		full_idea_group = exploration_ideas
+		full_idea_group = innovativeness_ideas
 	}
 
 	global_manpower_modifier = 0.1

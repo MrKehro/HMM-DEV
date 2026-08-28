@@ -629,13 +629,11 @@ encouragement_of_merchant_navy = {
 commercial_embassies = {
 	monarch_power = DIP
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = expansion_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = expansion_ideas
+		always = no
 	}
 	
 	global_trade_power = 0.1
@@ -664,16 +662,14 @@ commercial_embassies = {
 	}
 }
 
-mandatory_service = {
+formalized_measures = {
 	monarch_power = DIP
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = plutocracy_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = plutocracy_ideas
+		always = no
 	}
 	
 	reelection_cost = -0.10
@@ -692,13 +688,11 @@ mandatory_service = {
 professional_diplomatic_corps = {
 	monarch_power = DIP
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = quality_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = quality_ideas
+		always = no
 	}
 	
 	diplomatic_reputation = 1
@@ -801,13 +795,11 @@ multilingual_diplomats = {
 	monarch_power = DIP
 	
 	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}	
 	
 	num_accepted_cultures = 1
@@ -942,13 +934,11 @@ the_integrated_administration_act = {
 record_keeping_act = {
 	monarch_power = DIP
 	potential = {
-		has_idea_group = administrative_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = administrative_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}
 
 	diplomats = 1
@@ -1111,13 +1101,11 @@ black_chamber_act = {
 diplomatic_defence_act = {
 	monarch_power = DIP
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = defensive_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = defensive_ideas
+		always = no
 	}
 
 	diplomats = 1
@@ -1310,13 +1298,11 @@ faith_advisors_policy = {
 	monarch_power = DIP
 	
 	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	papal_influence = 1
@@ -1429,13 +1415,11 @@ appeal_to_old_powers_policy = {
 	monarch_power = DIP
 	
 	potential = {
-		has_idea_group = indigenous_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = indigenous_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	diplomatic_reputation = 1
@@ -1573,13 +1557,11 @@ the_smooth_integration_act = {
 	monarch_power = DIP
 	
 	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = diplomatic_ideas 
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = diplomatic_ideas 
+		always = no 
 	}
 	
 	diplomatic_reputation = 1 
@@ -1739,13 +1721,11 @@ diplomatic_arms_act = {
 	monarch_power = DIP
 	
 	potential = {
-		has_idea_group = mercenary_ideas
-		has_idea_group = diplomatic_ideas   
+		always = no   
 	}
 	
 	allow = {
-		full_idea_group = mercenary_ideas
-		full_idea_group = diplomatic_ideas 
+		always = no 
 	}
 	
 	diplomatic_upkeep = 2

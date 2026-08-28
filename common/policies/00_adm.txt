@@ -93,22 +93,23 @@ the_court_of_wards_and_liveries = {
 	}
 }
 
-formalized_measures = {
+trade_kontor_network = {
 	monarch_power = ADM
 
 
 	potential = {
 		has_idea_group = plutocracy_ideas
-		has_idea_group = economic_ideas
+		has_idea_group = trade_ideas
 	}
 	
 	allow = {
 		full_idea_group = plutocracy_ideas
-		full_idea_group = economic_ideas
+		full_idea_group = trade_ideas
 	}	
 
-	global_tax_modifier = 0.10
-	republican_tradition = 0.2
+	merchants = 1
+	reelection_cost = -0.10
+	female_advisor_chance = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -616,12 +617,12 @@ the_education_act = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovativeness_ideas
+		has_idea_group = spy_ideas
 		has_idea_group = plutocracy_ideas
 	}
 	
 	allow = {
-		full_idea_group = innovativeness_ideas
+		full_idea_group = spy_ideas
 		full_idea_group = plutocracy_ideas
 	}
 
@@ -639,13 +640,11 @@ the_education_act = {
 policy_of_calculate_delay = {
 	monarch_power = ADM
 	potential = {
-		has_idea_group = religious_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = religious_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	religious_unity = 0.25
@@ -1078,13 +1077,11 @@ the_dissolution_act = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = diplomatic_ideas
-		has_idea_group = economic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = diplomatic_ideas
-		full_idea_group = economic_ideas
+		always = no
 	}
 	
 	global_tax_modifier = 0.15
@@ -1317,13 +1314,11 @@ diplomatic_cooperation_act = {
 
 
 	potential = {
-		has_idea_group = innovativeness_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = innovativeness_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}
 
 
@@ -1597,16 +1592,16 @@ esprit_de_corps_policy = {
 	}
 }
 
-otto_per_mille = {
+omne_datum_optimum_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = economic_ideas
+		has_idea_group = administrative_ideas
 		has_idea_group = theocracy_gov_ideas
 	}
 	
 	allow = {
-		full_idea_group = economic_ideas
+		full_idea_group = administrative_ideas
 		full_idea_group = theocracy_gov_ideas
 	}
 	
@@ -1723,16 +1718,16 @@ omnism_policy = {
 	}
 }
 
-ora_et_labora_policy = {
+render_unto_caesar_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = innovativeness_ideas
+		has_idea_group = exploration_ideas
 		has_idea_group = theocracy_gov_ideas
 	}
 	
 	allow = {
-		full_idea_group = innovativeness_ideas
+		full_idea_group = exploration_ideas
 		full_idea_group = theocracy_gov_ideas
 	}
 	
