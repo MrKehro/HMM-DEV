@@ -40,8 +40,12 @@ hmm_german_minor_1 = {
 				name = "hmm_gm_ae"
 				duration = 9125
 			}
-			give_claims = { area = franconia_area }
-			give_claims = { area = upper_franconia_area  }
+			if = {
+				limit = {
+					NOT = { owns = 85 }
+				}
+				add_core = 85
+			}
 		}
 	}
 
@@ -60,11 +64,54 @@ hmm_german_minor_1 = {
 			}
 		}
 		effect = {
-			85 = {
-				add_great_project_tier = {
-					type = cologne_cathedral
-					tier = 1
+			custom_tooltip = hmm_gm_cologne_tt
+			if = {
+				limit = {
+					85 = {
+						NOT = {
+							has_great_project = {
+								type = cologne_cathedral
+								tier = 2
+							}
+						}
+						NOT = {
+							has_great_project = {
+								type = cologne_cathedral
+								tier = 3
+							}
+						}
+					}
 				}
+				85 = {
+					add_great_project_tier = {
+						type = cologne_cathedral
+						tier = 1
+					}
+				}
+				add_treasury = -1000
+			}
+			else = {
+				if = {
+					limit = {
+						85 = {
+							NOT = {
+								has_building = cathedral
+							}
+						}
+						85 = {
+							add_building = cathedral
+						}
+					}
+				}
+				else = {
+					add_treasury = 1000
+				}
+			}
+			if = {
+				limit = {
+					NOT = { owns = 1931 }
+				}
+				add_core = 1931
 			}
 		}
 	}
@@ -110,8 +157,6 @@ hmm_german_minor_1 = {
 			}
 		}
 		effect = {
-			give_claims = { area = frisia_area }
-			give_claims = { area = north_brabant_area }
 			85 = {
 				add_province_modifier = {
 					name = "dominant_trade_hub"
@@ -130,6 +175,16 @@ hmm_german_minor_1 = {
 					duration = 9125
 				}
 			}
+			every_province = {
+				limit = {
+					OR = {
+						area = frisia_area
+						area = north_brabant_area
+					}
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 
@@ -144,17 +199,28 @@ hmm_german_minor_1 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {			
-			frisia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = frisia_area
+					area = north_brabant_area
+				}
 			}
 		}
 		effect = {
-			give_claims = { area = holland_area }
 			define_advisor = {
 				type = trader
 				skill = 3
 				cost_multiplier = 0.25
+			}
+			every_province = {
+				limit = {
+					OR = {
+						area = holland_area
+					}
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
 			}
 		}
 	}
@@ -170,12 +236,13 @@ hmm_german_minor_1 = {
 			owned_by = ROOT
 		}
 		trigger = {			
-			frisia_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				region = region = low_countries_region
 			}
 		}
 		effect = {
-			custom_tooltip = HMM_GM_INTEGRATE_LOW_COUNTRIES_COT
+			custom_tooltip = hmm_gm_low_countries_tt
 			custom_tooltip = " "
 			hidden_effect = {
 				every_owned_province = {
@@ -615,14 +682,24 @@ hmm_german_minor_3 = {
 		} 
 		effect = { 
 			create_general_with_pips = { tradition = 75 add_shock = 1 }
-			give_claims = { area = north_rhine_area }
-			give_claims = { area = lower_rhineland_area }
-			give_claims = { area = north_westphalia_area }
-			give_claims = { area = hesse_area }
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				months = 180
 				target = BRU
+			}
+			custom_tooltip = hmm_gm_raise_army_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = hannoverian
+						culture = hessian
+						NOT = { owned_by = ROOT }
+						NOT = { owned_by = BRA }
+						NOT = { owned_by = PRU }
+						NOT = { owned_by = emperor }
+					}
+					add_claim = ROOT
+				}
 			}
 		} 
 	}
@@ -632,9 +709,10 @@ hmm_german_minor_3 = {
 		position = 2
 		required_missions = { hmm_gm_raise_the_army }
 		provinces_to_highlight = {
-			OR = {
-				area = braunschweig_area
-			}
+				culture = lower_saxon
+				NOT = { owned_by = ROOT }
+				NOT = { owned_by = BRA }
+				NOT = { owned_by = PRU }
 		}
 		trigger = {			
 			braunschweig_area = {
@@ -964,7 +1042,24 @@ hmm_german_minor_4 = {
 			}
 		}
 		effect = {
-			add_core = 63
+			if = {
+				limit = {
+					NOT = { owns = 63 }
+				}
+				add_core = 63
+				63 = {
+					owner = {
+						every_owned_province = {
+							limit = {
+								NOT = { province_id = 63 }
+								culture = franconian
+								culture = saxon
+							}
+							add_claim = ROOT
+						}
+					}
+				}
+			}
 			add_country_modifier = {
 				name = influential_diplomacy
 				duration = 9125
@@ -976,6 +1071,14 @@ hmm_german_minor_4 = {
 		icon = reclaim_our_ancestral_lands
 		position = 2
 		required_missions = { hmm_gm_electorate_of_saxony hmm_gm_raise_the_army }
+		provinces_to_highlight = {
+			culture = saxon
+			NOT = { owned_by = ROOT }
+			NOT = { owned_by = BRA }
+			NOT = { owned_by = PRU }
+			NOT = { owned_by = BOH }
+			NOT = { owned_by = HAB }
+		}
 		trigger = {
 			63 = {
 				development = 20
@@ -1088,7 +1191,7 @@ hmm_german_minor_4 = {
 			workshop = 15
 		}
 		effect = {
-			custom_tooltip = HMM_GM_UMGESTALTUNG_DER_NATUR_COT
+			custom_tooltip = hmm_gm_umgestaltung_tt
 			custom_tooltip = " "
 			hidden_effect = {
 				every_owned_province = {
@@ -1098,6 +1201,7 @@ hmm_german_minor_4 = {
 							region = south_german_region
 						}
 						has_building = workshop
+						has_terrain = woods
 						owned_by = ROOT
 					}
 					add_province_modifier = {
@@ -1302,7 +1406,7 @@ hmm_german_minor_5 = {
 						NOT = { is_strongest_trade_power = ROOT }
 						trade_share = {
 							country = ROOT
-							share = 80
+							share = 33
 						}
 					}
 				}
@@ -1319,7 +1423,7 @@ hmm_german_minor_5 = {
 				is_strongest_trade_power = ROOT
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 33
 				}
 			}
 		}
