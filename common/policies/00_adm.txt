@@ -2159,7 +2159,7 @@ efficient_war_taxes_act = {
 	}
 	
 	global_tax_modifier = 0.15
-	possible_condottieri = 1 
+	mercenary_manpower = 0.15
 
 	effect = {}
 	removed_effect = {}

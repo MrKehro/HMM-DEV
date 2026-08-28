@@ -12343,7 +12343,7 @@ ITA_new_renaissance = {
 }
 
 ITA_adapt_the_condotierri = {
-	possible_condottieri = 1
+	mercenary_manpower = 0.1
 	mercenary_discipline = 0.05
 	merc_maintenance_modifier = -0.25
 	merc_leader_army_tradition = 0.5
