@@ -478,7 +478,7 @@ vassal_taxation_policy = {
 	}
 }
 
-the_pioneer_policy = { letters_of_marque
+the_pioneer_policy = {
 	monarch_power = ADM
 
 	potential = {

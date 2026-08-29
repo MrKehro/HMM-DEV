@@ -237,7 +237,7 @@ hmm_german_minor_1 = {
 		trigger = {			
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
-				region = region = low_countries_region
+				region = low_countries_region
 			}
 		}
 		effect = {
@@ -496,19 +496,6 @@ hmm_german_minor_2 = {
 								root = { is_rival = prev }
 							}
 						}
-						custom_trigger_tooltip = {
-							tooltip = has_been_insulted_by_root
-							OR = {
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = insulted
-								}
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = scornfully_insulted
-								}
-							}
-						}
 					}
 				}
 			}
@@ -531,19 +518,6 @@ hmm_german_minor_2 = {
 								OR = {
 									is_rival = root
 									root = { is_rival = prev }
-								}
-							}
-							custom_trigger_tooltip = {
-								tooltip = has_been_insulted_by_root
-								OR = {
-									has_opinion_modifier = {
-										who = ROOT
-										modifier = insulted
-									}
-									has_opinion_modifier = {
-										who = ROOT
-										modifier = scornfully_insulted
-									}
 								}
 							}
 						}
@@ -796,19 +770,6 @@ hmm_german_minor_3 = {
 								root = { is_rival = prev }
 							}
 						}
-						custom_trigger_tooltip = {
-							tooltip = has_been_insulted_by_root
-							OR = {
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = insulted
-								}
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = scornfully_insulted
-								}
-							}
-						}
 					}
 				}
 			}
@@ -825,19 +786,6 @@ hmm_german_minor_3 = {
 							OR = {
 								is_rival = root
 								root = { is_rival = prev }
-							}
-						}
-						custom_trigger_tooltip = {
-							tooltip = has_been_insulted_by_root
-							OR = {
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = insulted
-								}
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = scornfully_insulted
-								}
 							}
 						}
 					}
@@ -863,19 +811,6 @@ hmm_german_minor_3 = {
 								OR = {
 									is_rival = root
 									root = { is_rival = prev }
-								}
-							}
-							custom_trigger_tooltip = {
-								tooltip = has_been_insulted_by_root
-								OR = {
-									has_opinion_modifier = {
-										who = ROOT
-										modifier = insulted
-									}
-									has_opinion_modifier = {
-										who = ROOT
-										modifier = scornfully_insulted
-									}
 								}
 							}
 						}

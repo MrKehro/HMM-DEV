@@ -4,7 +4,7 @@ primary_culture = hessian
 religion = catholic
 elector = no
 technology_group = western
-capital = 85	# Kï¿½ln
+capital = 85	# Köln
 fixed_capital = 85 # Cannot move capital away from this province & no power cost to move to it
 
 1372.1.1 = {
@@ -19,7 +19,7 @@ fixed_capital = 85 # Cannot move capital away from this province & no power cost
 
 1414.4.9 = {
 	monarch = {
-		name = "Dietrich II von Mï¿½rs"
+		name = "Dietrich II von Mörs"
 		birth_date = 1385.1.1
 		adm = 4
 		dip = 1

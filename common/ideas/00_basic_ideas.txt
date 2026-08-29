@@ -1619,18 +1619,18 @@ humanist_ideas = {
 		num_accepted_cultures = 2
 		promote_culture_cost = -0.5
 	}
-	benevolence = {
-		advisor_cost = -0.20
-		advisor_pool = 1
-	}
-	centralization = {
-		global_autonomy = -0.05
-	}
 	humanist_tolerance = {
 		tolerance_of_heretics_capacity = 2
 		tolerance_of_heathens_capacity = 2
 		tolerance_heretic = 2
 		tolerance_heathen = 2
+	}
+	benevolence = {
+		advisor_cost = -0.20
+		advisor_pool = 1
+	}
+	tolerance_idea = {
+		global_autonomy = -0.05
 	}
 }
 
