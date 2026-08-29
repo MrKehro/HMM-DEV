@@ -1371,6 +1371,7 @@ crown_colony_government = {
 		embracement_cost = -0.1
 		governing_capacity = 100
 		max_absolutism = 40
+		transport_attrition = -0.25
 	}
 	effect = {
 		hidden_effect = {
@@ -1429,6 +1430,7 @@ private_enterprise_colony_government = {
 		merchants = 1
 		production_efficiency = 0.05
 		max_absolutism = 40
+		transport_attrition = -0.25
 	}
 
 	custom_attributes = {
@@ -1487,6 +1489,7 @@ self_governing_colony_government = {
 		embracement_cost = -0.1
 		state_maintenance_modifier = -0.25
 		max_absolutism = 40
+		transport_attrition = -0.25
 	}
 
 	custom_attributes = {

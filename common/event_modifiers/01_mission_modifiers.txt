@@ -12343,7 +12343,7 @@ ITA_new_renaissance = {
 }
 
 ITA_adapt_the_condotierri = {
-	possible_condottieri = 1
+	mercenary_manpower = 0.1
 	mercenary_discipline = 0.05
 	merc_maintenance_modifier = -0.25
 	merc_leader_army_tradition = 0.5
@@ -14887,7 +14887,7 @@ post_deathwar_buff = {
 }
 
 hmm_mission_timed_buff = {
-	land_maintenance_modifier = -0.05
+	land_maintenance_modifier = -0.10
 }
 
 kon_naval_bonus = {
@@ -14904,4 +14904,55 @@ kon_beat_the_armada = {
 	ship_durability = 0.05
 	navy_tradition = 1
 	recover_navy_morale_speed = 0.25
+}
+
+kon_new_world_colonist = {
+	colonists = 1
+	global_tariffs = 0.05
+}
+
+hmm_gm_ae = {
+	ae_impact = -0.15
+	overextension_impact_modifier = -0.05
+}
+
+hmm_gm_choose_nobles = {
+	all_estate_loyalty_equilibrium = 0.05
+}
+
+hmm_gm_choose_clergy = {
+	papal_influence = 1
+	devotion = 0.25
+	monthly_fervor_increase = 0.25
+	church_power_modifier = 0.1
+	monthly_piety_accelerator = 0.001
+	yearly_karma_decay = 0.1
+	yearly_doom_reduction = 1
+	yearly_authority = 0.15
+	yearly_patriarch_authority = 0.005
+}
+
+hmm_krupp_stahl = {
+	artillery_cost = -0.20
+	artillery_power = 0.05
+}
+
+hmm_umgestaltung_der_natur = {
+	local_development_cost = -0.05
+}
+
+hmm_gm_channel_merchant = {
+	merchants = 1
+	trade_efficiency = 0.1
+}
+
+hmm_gm_integrate_low_countries = {
+	trade_goods_size_modifier = 0.25
+	local_monthly_devastation = -0.1
+	local_unrest = -5
+	local_autonomy = -0.05
+	province_trade_power_modifier = 0.10
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.1
 }

@@ -114,10 +114,10 @@ twenty_good_men = {
 
 merc_local_arty_army = {
     regiments_per_development = 0.075
-    cavalry_weight = 1
+    cavalry_weight = 0
     cavalry_cap = 0
-    artillery_weight = 0
-    cost_modifier = 1.5
+    artillery_weight = 1
+    cost_modifier = 2
     trigger = {
         mil_tech = 7
         is_allowed_to_recruit_mercenaries = yes
@@ -126,11 +126,10 @@ merc_local_arty_army = {
 }
 
 merc_local_horse_army = {
-    regiments_per_development = 0.05
-    cavalry_weight = 0
-    cavalry_cap = 0
-    artillery_weight = 1
-    cost_modifier = 2
+    regiments_per_development = 0.075
+    cavalry_weight = 1
+    artillery_weight = 0
+    cost_modifier = 1.5
     trigger = {
         has_idea_group = aristocracy_ideas
         is_allowed_to_recruit_mercenaries = yes

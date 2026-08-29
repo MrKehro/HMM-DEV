@@ -1417,7 +1417,7 @@ hmm_kon_colonizer_one = {
 		effect = {
 			add_country_modifier = {
 				name = "the_unknown_frontier"
-				duration = 9125
+				duration = 18250
 			}
 			add_dip_power = 50
 		}
@@ -1499,6 +1499,22 @@ hmm_kon_colonizer_two = {
 			change_ruler_stat = {
 				type = dip
 				amount = 1
+			}
+		}
+	}
+
+	hmm_kon_colonialism = {
+		icon = mission_west_african_ports
+		required_missions = { hmm_kon_exploration }
+		position = 8
+
+		trigger = {
+			has_institution = new_world_i
+		}
+		effect = {
+			add_country_modifier = {
+				name = "kon_new_world_colonist"
+				duration = -1
 			}
 		}
 	}
