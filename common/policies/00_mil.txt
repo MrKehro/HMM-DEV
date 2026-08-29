@@ -709,7 +709,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.0375
+	discipline = 0.037
 	
 	effect = {}
 	removed_effect = {}
@@ -762,7 +762,7 @@ noble_loyalty_act = {
 }
 
 the_witchcraft_act = {
-	monarch_power = ADM
+	monarch_power = MIL
 
 	potential = {
 		has_idea_group = religious_ideas
@@ -1589,6 +1589,33 @@ omnism_policy = {
 
 new_naval_tactis = {
 	monarch_power = MIL
+
+	potential = {
+		has_idea_group = maritime_ideas
+		has_idea_group = offensive_ideas
+	}
+	
+	allow = {
+		full_idea_group = maritime_ideas
+		full_idea_group = offensive_ideas
+	}
+
+	ship_durability = 0.05
+	siege_blockade_progress = 1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.6
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 20 }
+		}				
+	}
+}
+
+streamlined_galley_production = {
+	monarch_power = MIL
 	potential = {
 		has_idea_group = innovativeness_ideas
 		has_idea_group = maritime_ideas
@@ -1599,8 +1626,8 @@ new_naval_tactis = {
 		full_idea_group = maritime_ideas
 	}
 
-	galley_cost = -0.25
-	galley_power = 0.25
+	galley_cost = -0.20
+	galley_power = 0.20
 
 	effect = {}
 	removed_effect = {}

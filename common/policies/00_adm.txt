@@ -1179,6 +1179,33 @@ the_citrus_statute = {
 	}
 }
 
+chaplains_of_the_fleet = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = maritime_ideas
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = maritime_ideas
+	}
+	
+	heavy_ship_cost = -0.20
+	recover_navy_morale_speed = 0.1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 20 }
+		}
+	}
+}
+
 diplomatic_cooperation_act = {
 	monarch_power = DIP
 
