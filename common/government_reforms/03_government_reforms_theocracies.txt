@@ -1881,6 +1881,7 @@ religious_culture_reform = {
 
 	modifiers = {
 		governing_capacity = 250
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 1
@@ -1894,6 +1895,7 @@ harmonization_of_cultures_reform = {
 	modifiers = {
 		promote_culture_cost = -0.5
 		same_culture_advisor_cost = -0.2
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 1
@@ -1907,6 +1909,7 @@ cultural_safe_haven_reform = {
 	modifiers = {
 		manpower_in_accepted_culture_provinces = 0.1
 		manpower_in_culture_group_provinces = 0.1
+		max_absolutism = 5
 	}
 	#custom_attributes = {
 	#	unrest_per_accepted_culture = yes	#Reduces Global Unrest by 0.25 per accepted culture	#For 1.35, not implemented yet.
@@ -1922,6 +1925,7 @@ taxation_of_the_foreigners_reform = {
 
 	modifiers = {
 		global_tax_modifier = 0.5
+		max_absolutism = 5
 	}
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
@@ -1952,6 +1956,7 @@ religion_in_one_country_reform = {
 	}
 	modifiers = {
 		warscore_cost_vs_other_religion = -0.3
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 3
@@ -1979,6 +1984,7 @@ religious_permanent_revolution_reform = {
 	}
 	modifiers = {
 		enforce_religion_cost = -0.5
+		max_absolutism = 5
 	}
 	custom_attributes = {
 		has_upgraded_holy_wars = yes
@@ -2000,6 +2006,7 @@ many_fingers_of_god_reform = {
 	modifiers = {
 		tolerance_heretic = 2	
 		tolerance_heathen = 2
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 3
@@ -2013,6 +2020,7 @@ priestly_autonomy_reform = {
 	modifiers = {
 		administrative_efficiency = 0.025
 		min_autonomy_in_territories = -0.05
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 3
@@ -2025,6 +2033,7 @@ state_of_theologians_reform = {
 	modifiers = {
 		advisor_pool = 2
 		advisor_cost = -0.2
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 3
@@ -2037,6 +2046,7 @@ divinity_through_craftsmanship_reform = {
 	modifiers = {
 		development_cost_modifier = -0.025
 		global_trade_goods_size_modifier = 0.1
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 3
@@ -2078,6 +2088,7 @@ proclaim_religious_head_reform = {
 	modifiers = {
 		warscore_cost_vs_other_religion = -0.25
 		diplomatic_reputation = 1
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 3
@@ -2096,6 +2107,7 @@ all_under_tengri_reform = {
 	modifiers = {
 		cavalry_power = 0.15
 		cav_to_inf_ratio = 0.25
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 3

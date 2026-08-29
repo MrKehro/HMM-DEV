@@ -6981,6 +6981,7 @@ nizam_i_cedid_reform = {
 		movement_speed = 0.05
 		reinforce_speed = 0.15
 		recover_army_morale_speed = 0.1
+		max_absolutism = 10
 	}
 	ai = {
 		factor = 10
@@ -7177,7 +7178,7 @@ strengthen_bakuhan_system_reform = {
 	}
 	modifiers = {
 		max_absolutism_effect = 0.2
-		max_absolutism = 5
+		max_absolutism = 15
 	}
 }
 
