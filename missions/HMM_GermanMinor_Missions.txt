@@ -90,22 +90,21 @@ hmm_german_minor_1 = {
 				}
 				add_treasury = -1000
 			}
-			else = {
-				if = {
-					limit = {
-						85 = {
-							NOT = {
-								has_building = cathedral
-							}
-						}
-						85 = {
-							add_building = cathedral
+			else_if = {
+				limit = {
+					85 = {
+						NOT = {
+							has_building = cathedral
 						}
 					}
 				}
-				else = {
-					add_treasury = 1000
+				85 = {
+					add_building = cathedral
 				}
+				add_treasury = -10
+			}
+			else = {
+				add_treasury = 1000
 			}
 			if = {
 				limit = {

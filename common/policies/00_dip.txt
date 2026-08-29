@@ -166,12 +166,10 @@ the_importation_act = {
 	monarch_power = DIP
 
 	potential = {
-		has_idea_group = trade_ideas
-		has_idea_group = administrative_ideas
+		always = no
 	}
 	allow = {
-		full_idea_group = trade_ideas
-		full_idea_group = administrative_ideas
+		always = no
 	}
 	
 	trade_efficiency = 0.1
@@ -792,6 +790,7 @@ native_assimilation_act = {
 	
 	global_colonial_growth = 10
 	native_assimilation = 0.5
+	colonist_placement_chance = 0.05
 	
 	effect = {}
 	removed_effect = {}
@@ -823,6 +822,9 @@ the_foreign_aid_act = {
 	
 	diplomatic_upkeep = 1
 	diplomatic_reputation = 1
+	diplomatic_annexation_cost = -0.15
+	vassal_income = 0.2
+	reduced_liberty_desire_on_same_continent = 10
 	
 	effect = {}
 	removed_effect = {}
@@ -920,12 +922,10 @@ colonial_administration_act = {
 	monarch_power = DIP
 	
 	potential = {
-		has_idea_group = administrative_ideas
-		has_idea_group = exploration_ideas
+		always = no
 	}
 	allow = {
-		full_idea_group = administrative_ideas
-		full_idea_group = exploration_ideas
+		always = no
 	}
 	
 	global_colonial_growth = 10
@@ -951,13 +951,11 @@ naval_school_act = {
 	monarch_power = DIP
 
 	potential = {
-		has_idea_group = administrative_ideas
-		has_idea_group = maritime_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = administrative_ideas
-		full_idea_group = maritime_ideas
+		always = no
 	}
 
 	navy_tradition = 1
