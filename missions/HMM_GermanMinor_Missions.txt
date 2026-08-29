@@ -664,8 +664,10 @@ hmm_german_minor_3 = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						culture = hannoverian
-						culture = hessian
+						OR = {
+							culture = hannoverian
+							culture = hessian
+						}
 						NOT = { owned_by = ROOT }
 						NOT = { owned_by = BRA }
 						NOT = { owned_by = PRU }
