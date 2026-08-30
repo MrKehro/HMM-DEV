@@ -3600,9 +3600,6 @@ boyars_army_reform = {
 		nobles_influence_modifier = 0.1
 		nobles_privilege_slots = 1
 	}
-	custom_attributes = {
-		unlock_boyars_military_privileges = yes
-	}
 	
 	ai = {
 		factor = 1

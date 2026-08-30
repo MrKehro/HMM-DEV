@@ -18296,6 +18296,7 @@ AUH_ideas = {
 	
 	bonus = {
 		no_religion_penalty = yes
+		land_forcelimit_modifier = 0.25
 	}
 	
 	trigger = {

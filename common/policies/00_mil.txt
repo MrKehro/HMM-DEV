@@ -129,12 +129,12 @@ horse_artillery = {
 	
 	potential = {
 		has_idea_group = offensive_ideas
-		has_idea_group = economic_ideas
+		has_idea_group = infrastructure_ideas
 	}
 	
 	allow = {
 		full_idea_group = offensive_ideas
-		full_idea_group = economic_ideas
+		full_idea_group = infrastructure_ideas
 	}
 	artillery_power = 0.1
 
@@ -157,49 +157,6 @@ horse_artillery = {
 		modifier = {
 			factor = 1.5
 			artillery_fraction = 0.45
-		}
-	}
-}
-
-public_road_act = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = offensive_ideas
-		has_idea_group = trade_ideas
-	}
-	
-	allow = {
-		full_idea_group = offensive_ideas
-		full_idea_group = trade_ideas
-	}
-	
-	movement_speed = 0.10
-	trade_efficiency = 0.10
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.6
-			NOT = { trade_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
 		}
 	}
 }
@@ -321,12 +278,12 @@ the_garrison_act = {
 	monarch_power = MIL
 	
 	potential = {
-		has_idea_group = innovativeness_ideas
+		has_idea_group = economic_ideas
 		has_idea_group = quantity_ideas
 	}
 	
 	allow = {
-		full_idea_group = innovativeness_ideas
+		full_idea_group = economic_ideas
 		full_idea_group = quantity_ideas
 	}
 	
@@ -631,49 +588,6 @@ local_militias = {
 	}
 }
 
-foreign_conscription_centers = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = influence_ideas
-		has_idea_group = offensive_ideas
-	}
-	
-	allow = {
-		full_idea_group = influence_ideas
-		full_idea_group = offensive_ideas
-	}	
-	
-	reinforce_cost_modifier = -0.25
-	diplomatic_upkeep = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}	
-	}
-}
-
 guerilla_warfare = {
 	monarch_power = MIL
 	
@@ -709,7 +623,7 @@ weapon_quality_standards = {
 		full_idea_group = quality_ideas
 	}
 	
-	discipline = 0.037
+	discipline = 0.04
 	
 	effect = {}
 	removed_effect = {}
@@ -854,54 +768,13 @@ military_allotment_act = {
 	}
 
 	global_manpower_modifier = 0.2
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8
-	}
-}
-
-mandatory_service = {
-	monarch_power = MIL
-	potential = {
-		has_idea_group = plutocracy_ideas
-		has_idea_group = economic_ideas
-	}
-	
-	allow = {
-		full_idea_group = plutocracy_ideas
-		full_idea_group = economic_ideas
-	}
-	
-	global_regiment_cost = -0.1
-	global_manpower_modifier = 0.1
+	global_regiment_cost = -0.05
 	may_recruit_female_generals = yes
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0
-			NOT = { trade_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
+		factor = 0.8
 	}
 }
 
@@ -1022,7 +895,7 @@ otto_per_mille = {
 	}
 
 	manpower_in_true_faith_provinces = 0.15
-	recover_army_morale_speed = 0.1
+	morale_damage_received = -0.05
 	
 	effect = {}
 	removed_effect = {}
@@ -1065,13 +938,11 @@ the_three_sisters_policy = {
 	monarch_power = MIL
 
 	potential = {
-		has_idea_group = indigenous_ideas
-		has_idea_group = economic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = indigenous_ideas
-		full_idea_group = economic_ideas
+		always = no
 	}
 
 	land_morale = 0.05
@@ -1118,13 +989,11 @@ war_on_our_terms_policy = {
 	monarch_power = MIL
 
 	potential = {
-		has_idea_group = indigenous_ideas
-		has_idea_group = exploration_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = indigenous_ideas
-		full_idea_group = exploration_ideas
+		always = no
 	}
 
 	discipline = 0.025
@@ -1233,8 +1102,8 @@ my_word_is_my_bond_policy = {
 		full_idea_group = spy_ideas
 	}
 
-	siege_ability = 0.1
-	artillery_level_modifier = 1
+	fire_damage_received = -0.05
+	shock_damage_received = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -1253,17 +1122,18 @@ mobile_siege_engines_act = {
 	monarch_power = MIL
 	
 	potential = {
-		has_idea_group = infrastructure_ideas
+		has_idea_group = economic_ideas
 		has_idea_group = offensive_ideas 
 	}
 	
 	allow = {
-		full_idea_group = infrastructure_ideas
+		full_idea_group = economic_ideas
 		full_idea_group = offensive_ideas 
 	}
 	
 	movement_speed = 0.05
 	artillery_levels_available_vs_fort = 2
+	artillery_level_modifier = 1
 
 	effect = {}
 	removed_effect = {}
@@ -1308,7 +1178,7 @@ handpicked_recruits_act = {
 		full_idea_group = quality_ideas 
 	}
 	
-	drill_gain_modifier = 0.33
+	drill_decay_modifier = -0.33
 	yearly_army_professionalism = 0.0025
 
 	effect = {}
@@ -1479,29 +1349,6 @@ special_forces_act = {
 	}
 }
 
-plentiful_materials_act = { 
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = court_ideas
-		has_idea_group = quantity_ideas  
-	}
-	
-	allow = {
-		full_idea_group = court_ideas
-		full_idea_group = quantity_ideas 
-	}
-	
-	artillery_cost = -0.15
-	infantry_cost = -0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
 dutiful_mercenaries_act = { 
 	monarch_power = MIL
 	
@@ -1566,6 +1413,33 @@ cultural_recognition_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+plutocratic_ethos_act = { 
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = court_ideas
+		has_idea_group = plutocracy_ideas 
+	}
+	
+	allow = {
+		full_idea_group = court_ideas
+		full_idea_group = plutocracy_ideas 
+	}
+	
+	morale_damage = 0.05
+	army_tradition = 0.5
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			has_final_tier_reforms_trigger = yes
+		}
 	}
 }
 

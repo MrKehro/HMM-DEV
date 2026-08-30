@@ -380,5 +380,6 @@ country_event = {
 			DIP = 4
 			MIL = 4
 		}
+		add_republican_tradition = 25
 	}
 }
