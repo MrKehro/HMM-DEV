@@ -270,7 +270,7 @@ indigenous_ideas = {
 	}
 
 	trigger = {
-		has_government_attribute = enables_natives_idea_group
+		always = no
 	}
 
 	indigenous_bountiful_land = {

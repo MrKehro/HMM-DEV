@@ -706,7 +706,7 @@ hmm_german_minor_3 = {
 					}
 					add_aggressive_expansion = {
 						who = ROOT
-						value = -25
+						value = -10
 					}
 				}
 				every_province = {
@@ -1325,11 +1325,12 @@ hmm_german_minor_5 = {
 			OR = {
 				AND = {
 					OR = {
-						province_id = 85
+						province_id = 67
 						province_id = 75
+						province_id = 78
 						province_id = 63
 						province_id = 1876
-						province_id = 69
+						province_id = 1758
 					}
 					OR = {
 						NOT = { owned_by = ROOT }
@@ -1350,11 +1351,12 @@ hmm_german_minor_5 = {
 		}
 		
 		trigger = {
-			owns_core_province = 85	# Koln
+			owns_core_province = 67	# Nuremberg
 			owns_core_province = 75	# Strasbourg
+			owns_core_province = 78	# Mainz
 			owns_core_province = 63	# Erfurt
 			owns_core_province = 1876	# Frankfurt
-			owns_core_province = 69	# Dortmund
+			owns_core_province = 1758 # Hannover
 			1876 = {
 				is_strongest_trade_power = ROOT
 				trade_share = {

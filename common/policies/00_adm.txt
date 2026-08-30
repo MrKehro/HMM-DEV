@@ -1645,13 +1645,11 @@ disruptive_innovation_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = innovativeness_ideas
-		has_idea_group = indigenous_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = innovativeness_ideas
-		full_idea_group = indigenous_ideas
+		always = no
 	}
 	
 	development_cost = -0.05
@@ -1668,13 +1666,11 @@ ancestor_worship_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = religious_ideas
-		has_idea_group = indigenous_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = religious_ideas
-		full_idea_group = indigenous_ideas
+		always = no
 	}
 	
 	missionaries = 1
@@ -2058,13 +2054,11 @@ indigenous_development_act = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = indigenous_ideas
-		has_idea_group = infrastructure_ideas   
+		always = no 
 	}
 	
 	allow = {
-		full_idea_group = indigenous_ideas
-		full_idea_group = infrastructure_ideas 
+		always = no
 	}
 	
 	development_cost = -0.05
