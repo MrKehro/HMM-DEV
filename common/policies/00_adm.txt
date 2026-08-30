@@ -1455,127 +1455,6 @@ esprit_de_corps_policy = {
 	}
 }
 
-omne_datum_optimum_policy = {
-	monarch_power = ADM
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	core_creation = -0.05
-	years_of_nationalism = -5
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 4
-		}			
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 6
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 8
-		}
-	}
-}
-
-religious_spread_policy = {
-	monarch_power = ADM
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	global_missionary_strength = 0.01
-	tolerance_own = 1 
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			religious_unity = 1
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.8 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.6 }
-		}			
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.4 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.2 }
-		}	
-	}
-}
-
-render_unto_caesar_policy = {
-	monarch_power = ADM
-	
-	potential = {
-		has_idea_group = innovativeness_ideas
-		has_idea_group = theocracy_gov_ideas
-	}
-	
-	allow = {
-		full_idea_group = innovativeness_ideas
-		full_idea_group = theocracy_gov_ideas
-	}
-	
-	global_manpower_modifier = 0.1
-	land_forcelimit_modifier = 0.5
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0
-			NOT = { production_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.5
-		}	
-	}
-}
 
 administration_of_sacred_land_policy = {
 	monarch_power = ADM
@@ -1773,32 +1652,6 @@ mandatory_service = {
 	}
 }
 
-theocratic_rule_act = { 
-	monarch_power = ADM
-	
-	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = theocracy_gov_ideas 
-	}
-	
-	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = theocracy_gov_ideas 
-	}
-	
-	build_cost = -0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			religious_unity = 1
-		}
-	}
-}
-
 
 head_of_state_act = { 
 	monarch_power = ADM
@@ -1938,31 +1791,6 @@ humanitarian_administration_act = {
 	}
 }
 
-otto_per_mille = {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = economic_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = economic_ideas
-	}
-
-	manpower_in_true_faith_provinces = 0.15
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
 
 military_innovation_act = { 
 	monarch_power = ADM
@@ -2067,6 +1895,179 @@ indigenous_development_act = {
 	development_cost = -0.05
 	global_institution_spread = 0.33
 
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+otto_per_mille = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = economic_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = economic_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	core_creation = -0.05
+	years_of_nationalism = -5
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 4
+		}			
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 8
+		}
+	}
+}
+
+religious_spread_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = expansion_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = expansion_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	global_missionary_strength = 0.01
+	tolerance_own = 1 
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religious_unity = 1
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.6 }
+		}			
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.2 }
+		}	
+	}
+}
+
+omnism_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = humanist_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = humanist_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	tolerance_heathen = 2
+	tolerance_heretic = 2
+	
+	effect = {}
+	removed_effect = {}
+}
+
+ora_et_labora_policy = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = innovativeness_ideas
+		has_idea_group = theocracy_gov_ideas
+	}
+	
+	allow = {
+		full_idea_group = innovativeness_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	global_trade_goods_size_modifier = 0.05
+	land_attrition = -0.2
+	
+	effect = {}
+	removed_effect = {}
+}
+
+theocratic_rule_act = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = infrastructure_ideas
+		has_idea_group = theocracy_gov_ideas 
+	}
+	
+	allow = {
+		full_idea_group = infrastructure_ideas
+		full_idea_group = theocracy_gov_ideas 
+	}
+	
+	missionaries = 1 
+	prestige_per_development_from_conversion = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religious_unity = 1
+		}
+	}
+}
+
+blessed_construction_act = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = court_ideas
+		has_idea_group = theocracy_gov_ideas 
+	}
+	
+	allow = {
+		full_idea_group = court_ideas
+		full_idea_group = theocracy_gov_ideas 
+	}
+	
+	build_cost = -0.1 
+	
+
+	effect = {}
+	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 	}

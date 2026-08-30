@@ -810,31 +810,7 @@ the_best_defense_policy = {
 	}
 }
 
-wielders_of_the_flaming_sword_policy = { 
-	monarch_power = MIL
 
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = religious_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = religious_ideas
-	}
-
-	land_morale = 0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
 
 the_three_sisters_policy = { 
 	monarch_power = MIL
@@ -991,32 +967,7 @@ kharash_policy = {
 	}
 }
 
-my_word_is_my_bond_policy = { 
-	monarch_power = MIL
 
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = spy_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = spy_ideas
-	}
-
-	fire_damage_received = -0.05
-	shock_damage_received = -0.05
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
 
 #1.35 Additions#
 
@@ -1272,23 +1223,7 @@ plutocratic_rule_act = {
 	}
 }
 
-omnism_policy = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = theocracy_gov_ideas
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = theocracy_gov_ideas
-	}
-	
-	discipline = 0.025
-	devotion = 1
-	
-}
+
 
 new_naval_tactis = {
 	monarch_power = MIL
@@ -1362,6 +1297,113 @@ streamlined_galley_production = {
 		modifier = {
 			factor = 0
 			NOT = { navy_size = 20 }
+		}
+	}
+}
+
+omne_datum_optimum_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = administrative_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = administrative_ideas
+	}
+
+	manpower_in_true_faith_provinces = 0.15
+	recover_army_morale_speed = 0.1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+wielders_of_the_flaming_sword_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = religious_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = religious_ideas
+	}
+
+	land_morale = 0.1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+my_word_is_my_bond_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = spy_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = spy_ideas
+	}
+
+	siege_ability = 0.1
+	artillery_level_modifier = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+render_unto_caesar_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = exploration_ideas
+	}
+	
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = exploration_ideas
+	}
+
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
 		}
 	}
 }
