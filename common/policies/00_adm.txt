@@ -39,6 +39,29 @@ the_combination_act = {
 	}
 }
 
+the_witchcraft_act = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = aristocracy_ideas 
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = aristocracy_ideas 
+	}
+	
+	nobles_loyalty_modifier = 0.1
+	regiment_manpower_usage = -0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
 the_recruiting_act = {
 	monarch_power = ADM
 
@@ -140,15 +163,15 @@ agricultural_cultivations = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovativeness_ideas
+		has_idea_group = economic_ideas
 		has_idea_group = quantity_ideas
 	}
 	
 	allow = {
-		full_idea_group = innovativeness_ideas
+		full_idea_group = economic_ideas
 		full_idea_group = quantity_ideas
-	}		
-	
+	}
+
 	land_maintenance_modifier = -0.05
 	land_forcelimit_modifier = 0.1
 
@@ -256,12 +279,12 @@ public_welfare_act = {
 
 	potential = {
 		has_idea_group = defensive_ideas
-		has_idea_group = economic_ideas
+		has_idea_group = innovativeness_ideas
 	}
 	
 	allow = {
 		full_idea_group = defensive_ideas
-		full_idea_group = economic_ideas
+		full_idea_group = innovativeness_ideas
 	}
 	
 	development_cost_in_primary_culture = -0.1
@@ -862,29 +885,6 @@ the_liberation_act = {
 			factor = 1.5
 			average_effective_unrest = 8
 		}
-	}
-}
-
-visionary_thinkers = {
-	monarch_power = ADM
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = quality_ideas
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = quality_ideas
-	}	
-	
-	innovativeness_gain = 0.5
-	army_tradition_decay = -0.01
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.6
 	}
 }
 
@@ -1534,48 +1534,21 @@ religious_spread_policy = {
 	}
 }
 
-ora_et_labora_policy = { 
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = innovativeness_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = innovativeness_ideas
-	}
-
-	manpower_in_true_faith_provinces = 0.15
-	land_forcelimit_modifier = 0.05
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
 render_unto_caesar_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = exploration_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = theocracy_gov_ideas
 	}
 	
 	allow = {
-		full_idea_group = exploration_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = theocracy_gov_ideas
 	}
 	
-	global_trade_goods_size_modifier = 0.05
-	land_attrition = -0.2
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.5
 	
 	effect = {}
 	removed_effect = {}
@@ -1736,25 +1709,26 @@ aristocratic_rule_act = {
 	}
 }
 
-plutocratic_rule_act = { 
+the_education_act = {
 	monarch_power = ADM
-	
+
 	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = plutocracy_ideas 
+		has_idea_group = innovativeness_ideas
+		has_idea_group = plutocracy_ideas
 	}
 	
 	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = plutocracy_ideas 
+		full_idea_group = innovativeness_ideas
+		full_idea_group = plutocracy_ideas
 	}
-	
-	global_prov_trade_power_modifier = 0.25
+
+	prestige = 0.5
+	advisor_cost = -0.1
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 0.8
 	}
 }
 
@@ -1964,28 +1938,29 @@ humanitarian_administration_act = {
 	}
 }
 
-
-
-blessed_construction_act = { 
+otto_per_mille = {
 	monarch_power = ADM
-	
+
 	potential = {
-		has_idea_group = court_ideas
-		has_idea_group = theocracy_gov_ideas 
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = economic_ideas
 	}
 	
 	allow = {
-		full_idea_group = court_ideas
-		full_idea_group = theocracy_gov_ideas 
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = economic_ideas
 	}
-	
-	max_absolutism = 10
-	yearly_absolutism = 2.5
 
+	manpower_in_true_faith_provinces = 0.15
+	
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
 	}
 }
 
