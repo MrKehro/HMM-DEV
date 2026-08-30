@@ -1301,33 +1301,6 @@ streamlined_galley_production = {
 	}
 }
 
-omne_datum_optimum_policy = { 
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = administrative_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = administrative_ideas
-	}
-
-	manpower_in_true_faith_provinces = 0.15
-	recover_army_morale_speed = 0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
 wielders_of_the_flaming_sword_policy = { 
 	monarch_power = MIL
 
@@ -1367,8 +1340,8 @@ my_word_is_my_bond_policy = {
 		full_idea_group = spy_ideas
 	}
 
-	siege_ability = 0.1
-	artillery_level_modifier = 1
+	fire_damage_received = -0.05
+	shock_damage_received = -0.05
 
 	effect = {}
 	removed_effect = {}
@@ -1386,16 +1359,16 @@ render_unto_caesar_policy = {
 
 	potential = {
 		has_idea_group = theocracy_gov_ideas
-		has_idea_group = exploration_ideas
+		has_idea_group = humanist_ideas
 	}
 	
 	allow = {
 		full_idea_group = theocracy_gov_ideas
-		full_idea_group = exploration_ideas
+		full_idea_group = humanist_ideas
 	}
 
-	global_manpower_modifier = 0.1
-	land_forcelimit_modifier = 0.05
+	discipline = 0.025
+	devotion = 1
 
 	effect = {}
 	removed_effect = {}
@@ -1405,5 +1378,28 @@ render_unto_caesar_policy = {
 			factor = 1.5
 			is_at_war = yes
 		}
+	}
+}
+
+omnism_policy = { 
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = court_ideas
+		has_idea_group = theocracy_gov_ideas 
+	}
+	
+	allow = {
+		full_idea_group = court_ideas
+		full_idea_group = theocracy_gov_ideas 
+	}
+	
+	morale_damage_received = -0.1
+	recover_army_morale_speed = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
 	}
 }

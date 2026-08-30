@@ -2021,13 +2021,11 @@ faith_advisors_policy = {
 	monarch_power = DIP
 	
 	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = diplomatic_ideas
+		always = no
 	}
 	
 	papal_influence = 1
@@ -2059,8 +2057,8 @@ one_and_true = {
 		full_idea_group = influence_ideas
 	}
 	
-	reduced_liberty_desire = 10
-	global_missionary_strength = 0.01
+	reduced_liberty_desire = 15
+	global_missionary_strength = 0.02
 
 	effect = {}
 	removed_effect = {}
@@ -2082,7 +2080,7 @@ maritime_scribes = {
 		full_idea_group = maritime_ideas
 	}
 	
-	naval_tradition_from_battle = 0.5
+	naval_tradition_from_battle = 1
 	prestige_from_naval = 1
 
 	effect = {}
@@ -2092,7 +2090,7 @@ maritime_scribes = {
 	}
 }
 
-solidarity_policy = { #change name
+solidarity_policy = {
 	monarch_power = DIP
 	
 	potential = {
@@ -2105,8 +2103,7 @@ solidarity_policy = { #change name
 		full_idea_group = trade_ideas
 	}
 	
-	improve_relation_modifier = 0.15
-	trade_efficiency = 0.1
+	trade_efficiency = 0.15
 
 	effect = {}
 	removed_effect = {}
