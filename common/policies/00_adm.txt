@@ -39,6 +39,49 @@ the_combination_act = {
 	}
 }
 
+the_recruiting_act = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = maritime_ideas
+		has_idea_group = economic_ideas
+	}
+	
+	allow = {
+		full_idea_group = maritime_ideas
+		full_idea_group = economic_ideas
+	}
+	
+	global_sailors_modifier = 0.25
+	allowed_marine_fraction = 0.1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.6
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 20 }
+		}
+		modifier = {
+			factor = 1.5
+			navy_size = 50
+		}
+		modifier = {
+			factor = 1.5
+			navy_size = 100
+		}			
+		modifier = {
+			factor = 1.5
+			navy_size = 150
+		}
+		modifier = {
+			factor = 1.5
+			navy_size = 200
+		}		
+	}	
+}
+
 the_court_of_wards_and_liveries = {
 	monarch_power = ADM
 
@@ -205,48 +248,6 @@ the_royal_commission_act = {
 	ai_will_do = {
 		factor = 0.6
 	}
-}
-
-edict_of_resistance = {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = defensive_ideas
-		has_idea_group = religious_ideas
-	}
-	
-	allow = {
-		full_idea_group = defensive_ideas
-		full_idea_group = religious_ideas
-	}
-
-
-	global_unrest = -1
-	hostile_attrition = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 4
-		}			
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 6
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 8
-		}
-	}
-
 }
 
 public_welfare_act = {
@@ -797,16 +798,43 @@ enlightened_aristocracy = {
 	}
 }
 
+hold_the_weather_gauge = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = innovativeness_ideas
+		has_idea_group = maritime_ideas
+	}
+	
+	allow = {
+		full_idea_group = innovativeness_ideas
+		full_idea_group = maritime_ideas
+	}
+	
+	leader_naval_manuever = 1
+	navy_tradition = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { navy_size = 20 }
+		}
+	}
+}
+
 the_liberation_act = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = humanist_ideas
+		has_idea_group = court_ideas
 		has_idea_group = offensive_ideas
 	}
 	
 	allow = {
-		full_idea_group = humanist_ideas
+		full_idea_group = court_ideas
 		full_idea_group = offensive_ideas
 	}	
 	
