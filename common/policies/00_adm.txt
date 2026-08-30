@@ -93,53 +93,16 @@ the_court_of_wards_and_liveries = {
 	}
 }
 
-trade_kontor_network = {
-	monarch_power = ADM
-
-
-	potential = {
-		has_idea_group = plutocracy_ideas
-		has_idea_group = trade_ideas
-	}
-	
-	allow = {
-		full_idea_group = plutocracy_ideas
-		full_idea_group = trade_ideas
-	}	
-
-	merchants = 1
-	reelection_cost = -0.10
-	female_advisor_chance = 0.25
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.75
-			NOT = { tax_income_percentage = 0.25 }
-		}			
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.45
-		}
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.7
-		}
-	}
-}
-
 agricultural_cultivations = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = economic_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = quantity_ideas
 	}
 	
 	allow = {
-		full_idea_group = economic_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = quantity_ideas
 	}		
 	
@@ -534,29 +497,6 @@ land_inheritance_act = {
 			factor = 1.5
 			tax_income_percentage = 0.7
 		}
-	}
-}
-
-the_education_act = {
-	monarch_power = ADM
-
-	potential = {
-		has_idea_group = spy_ideas
-		has_idea_group = plutocracy_ideas
-	}
-	
-	allow = {
-		full_idea_group = spy_ideas
-		full_idea_group = plutocracy_ideas
-	}
-
-	prestige = 0.5
-	advisor_cost = -0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8
 	}
 }
 
@@ -1207,7 +1147,7 @@ chaplains_of_the_fleet = {
 }
 
 diplomatic_cooperation_act = {
-	monarch_power = DIP
+	monarch_power = ADM
 
 
 	potential = {
@@ -1791,6 +1731,47 @@ plutocratic_rule_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+mandatory_service = {
+	monarch_power = ADM
+	potential = {
+		has_idea_group = plutocracy_ideas
+		has_idea_group = economic_ideas
+	}
+	
+	allow = {
+		full_idea_group = plutocracy_ideas
+		full_idea_group = economic_ideas
+	}
+	
+	global_tax_modifier = 0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.6
+		modifier = {
+			factor = 0
+			NOT = { trade_income_percentage = 0.1 }
+		}			
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
+		}
 	}
 }
 

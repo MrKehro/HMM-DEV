@@ -20,29 +20,63 @@ innovative_payment_techniques_act = {
 	}
 }
 
-plutocratic_ethos_act = { 
+trade_kontor_network = {
 	monarch_power = DIP
-	
+
+
 	potential = {
-		has_idea_group = court_ideas
-		has_idea_group = plutocracy_ideas 
+		has_idea_group = plutocracy_ideas
+		has_idea_group = trade_ideas
 	}
 	
 	allow = {
-		full_idea_group = court_ideas
-		full_idea_group = plutocracy_ideas 
-	}
-	
-	reform_progress_growth = 0.25
-	
+		full_idea_group = plutocracy_ideas
+		full_idea_group = trade_ideas
+	}	
+
+	merchants = 1
+	reelection_cost = -0.10
+	female_advisor_chance = 0.25
+
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 0
-			has_final_tier_reforms_trigger = yes
+			factor = 0.75
+			NOT = { tax_income_percentage = 0.25 }
+		}			
+		modifier = {
+			factor = 1.5
+			tax_income_percentage = 0.45
 		}
+		modifier = {
+			factor = 1.5
+			tax_income_percentage = 0.7
+		}
+	}
+}
+
+the_education_act = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = spy_ideas
+		has_idea_group = plutocracy_ideas
+	}
+	
+	allow = {
+		full_idea_group = spy_ideas
+		full_idea_group = plutocracy_ideas
+	}
+
+	prestige = 0.5
+	advisor_cost = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.8
 	}
 }
 
@@ -1169,6 +1203,92 @@ the_pioneer_policy = {
 	}
 }
 
+public_road_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = offensive_ideas
+		has_idea_group = trade_ideas
+	}
+	
+	allow = {
+		full_idea_group = offensive_ideas
+		full_idea_group = trade_ideas
+	}
+	
+	movement_speed = 0.10
+	trade_efficiency = 0.10
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.6
+			NOT = { trade_income_percentage = 0.1 }
+		}			
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
+		}
+	}
+}
+
+foreign_conscription_centers = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = influence_ideas
+		has_idea_group = offensive_ideas
+	}
+	
+	allow = {
+		full_idea_group = influence_ideas
+		full_idea_group = offensive_ideas
+	}	
+	
+	reinforce_cost_modifier = -0.25
+	diplomatic_upkeep = 1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { vassal = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
+		}			
+		modifier = {
+			factor = 1.5
+			vassal = 4
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 5
+		}	
+	}
+}
+
 trained_marines_act = {
 	monarch_power = DIP
 	
@@ -1632,8 +1752,9 @@ diplomatic_consolidation_act = {
 		full_idea_group = influence_ideas 
 	}
 	
-	monthly_favor_modifier = 0.5
-	can_chain_claim = yes 
+	diplomatic_upkeep = 1
+	liberty_desire_from_subject_development = -0.15
+	vassal_naval_forcelimit_bonus = 1
 
 	effect = {}
 	removed_effect = {}
