@@ -2716,8 +2716,8 @@ merc_keshig = {
 	}
 }
 
-mercs_tunis = {
-    regiments_per_development = 0.03
+hmm_mercs_tunis = {
+    regiments_per_development = 0.04
 	cavalry_weight = 0
 	artillery_weight = 0
 	cost_modifier = 1
@@ -2736,12 +2736,12 @@ mercs_tunis = {
 		government = monarchy
 	}
     modifier = {
-		prestige_from_land = 0.1
+		fire_damage_received = -0.1
 	}
 }
 
-mercs_tripoli = {
-    regiments_per_development = 0.04
+hmm_mercs_tripoli = {
+    regiments_per_development = 0.03
 	cavalry_weight = 0
 	artillery_weight = 0
 	cost_modifier = 1
@@ -2764,7 +2764,7 @@ mercs_tripoli = {
 	}
 }
 
-mercs_titteri = {
+hmm_mercs_titteri = {
     regiments_per_development = 0.05
 	cavalry_weight = 0
 	artillery_weight = 0

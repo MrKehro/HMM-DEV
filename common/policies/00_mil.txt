@@ -27,7 +27,7 @@ privy_council_establishment_act = {
 }
 
 the_wooden_wall = {
-	monarch_power = DIP
+	monarch_power = MIL
 	potential = {
 		has_idea_group = maritime_ideas
 		has_idea_group = quantity_ideas
@@ -230,7 +230,6 @@ superior_fortification_act = {
 	
 	defensiveness = 0.1
 	fort_maintenance_modifier = -0.33
-
 
 	effect = {}
 	removed_effect = {}
@@ -738,6 +737,7 @@ military_allotment_act = {
 	}
 
 	global_manpower_modifier = 0.2
+	may_recruit_female_generals = yes
 
 	effect = {}
 	removed_effect = {}
@@ -1252,7 +1252,7 @@ new_naval_tactis = {
 	}
 }
 
-trained_marines_act = {
+naval_armament_act = {
 	monarch_power = MIL
 
 	potential = {
@@ -1266,7 +1266,6 @@ trained_marines_act = {
 	}
 	
 	sunk_ship_morale_hit_recieved = -0.1
-	allowed_marine_fraction = 0.1
 	
 	effect = {}
 	removed_effect = {}
@@ -1327,33 +1326,6 @@ wielders_of_the_flaming_sword_policy = {
 	}
 }
 
-my_word_is_my_bond_policy = { 
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = spy_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = spy_ideas
-	}
-
-	fire_damage_received = -0.05
-	shock_damage_received = -0.05
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
 render_unto_caesar_policy = { 
 	monarch_power = MIL
 
@@ -1381,25 +1353,29 @@ render_unto_caesar_policy = {
 	}
 }
 
-omnism_policy = { 
-	monarch_power = ADM
-	
+my_word_is_my_bond_policy = { 
+	monarch_power = MIL
+
 	potential = {
+		has_idea_group = theocracy_gov_ideas
 		has_idea_group = court_ideas
-		has_idea_group = theocracy_gov_ideas 
 	}
 	
 	allow = {
+		full_idea_group = theocracy_gov_ideas
 		full_idea_group = court_ideas
-		full_idea_group = theocracy_gov_ideas 
 	}
-	
-	morale_damage_received = -0.1
-	recover_army_morale_speed = 0.1
+
+	fire_damage_received = -0.05
+	shock_damage_received = -0.05
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
 	}
 }

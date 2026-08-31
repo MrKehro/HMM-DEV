@@ -75,8 +75,8 @@ sturdy_argument_act = {
 		full_idea_group = defensive_ideas 
 	}
 	
-	land_attrition = -0.25
-	war_exhaustion = -0.25
+	land_attrition = -0.10
+	war_exhaustion = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -100,7 +100,6 @@ plutocratic_ethos_act = {
 
 	global_prov_trade_power_modifier = 0.25
 	female_advisor_chance = 0.25
-	may_recruit_female_generals = yes
 	
 	effect = {}
 	removed_effect = {}
@@ -634,7 +633,7 @@ plentiful_materials_act = {
 		full_idea_group = quantity_ideas 
 	}
 	
-	artillery_cost = -0.15
+	artillery_cost = -0.1
 	infantry_cost = -0.1
 
 	effect = {}
@@ -658,6 +657,8 @@ guerilla_warfare = {
 	}	
 	
 	liberty_desire_from_subject_development = -0.15
+	vassal_forcelimit_bonus = 0.25
+	vassal_naval_forcelimit_bonus = 0.25
 	
 	effect = {}
 	removed_effect = {}
@@ -925,54 +926,6 @@ native_assimilation_act = {
 		}
 	}
 }
-
-exchange_of_ideas = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = trade_ideas
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = trade_ideas
-	}	
-	
-	idea_cost = -0.1
-	trade_efficiency = 0.15
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8
-	}
-}
-
-the_foreign_aid_act = {
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = humanist_ideas
-		has_idea_group = influence_ideas
-	}
-	
-	allow = {
-		full_idea_group = humanist_ideas
-		full_idea_group = influence_ideas
-	}	
-	
-	diplomatic_annexation_cost = -0.15
-	vassal_income = 0.25
-	reduced_liberty_desire_on_same_continent = 10
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.9
-	}
-}
-
 cultural_unity = {
 	monarch_power = DIP
 	
@@ -1112,30 +1065,6 @@ naval_school_act = {
 
 }
 
-the_foreign_support_act = {
-	monarch_power = DIP
-
-
-	potential = {
-		has_idea_group = spy_ideas
-		has_idea_group = economic_ideas
-	}
-	
-	allow = {
-		full_idea_group = spy_ideas
-		full_idea_group = economic_ideas
-	}
-
-	rebel_support_efficiency = 0.50
-	diplomats = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
 the_stamp_act = {
 	monarch_power = DIP
 	
@@ -1198,6 +1127,46 @@ black_chamber_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 0.6
+	}
+}
+
+the_liberation_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = court_ideas
+		has_idea_group = offensive_ideas
+	}
+	
+	allow = {
+		full_idea_group = court_ideas
+		full_idea_group = offensive_ideas
+	}	
+	
+	years_of_nationalism = -5
+	reinforce_speed = 0.1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 4
+		}			
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 8
+		}
 	}
 }
 
@@ -1310,7 +1279,7 @@ public_road_act = {
 		full_idea_group = trade_ideas
 	}
 	
-	movement_speed = 0.10
+	movement_speed = 0.05
 	trade_efficiency = 0.10
 
 	effect = {}
@@ -1629,29 +1598,6 @@ canoe_expertise_policy = {
 
 #1.35 Policies#
 
-the_spy_network_act = { 
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = spy_ideas
-	}
-	
-	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = spy_ideas
-	}
-	
-	envoy_travel_time = -0.25
-	spy_offence = 0.5
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
 the_smooth_integration_act = { 
 	monarch_power = DIP
 	
@@ -1674,29 +1620,6 @@ the_smooth_integration_act = {
 			factor = 0.1
 			NOT = { religion_group = christian }
 		}
-	}
-}
-
-global_trade_networks_act = { 
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = trade_ideas 
-	}
-	
-	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = trade_ideas 
-	}
-	
-	global_trade_goods_size_modifier = 0.1
-	global_trade_power = 0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
 	}
 }
 
@@ -1737,53 +1660,6 @@ sailor_efficiency_act = {
 	
 	sailor_maintenance_modifer = -0.2
 	global_ship_repair = 0.25
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-diplomatic_consolidation_act = { 
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = influence_ideas 
-	}
-	
-	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = influence_ideas 
-	}
-	
-	diplomatic_upkeep = 1
-	liberty_desire_from_subject_development = -0.15
-	vassal_naval_forcelimit_bonus = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-centralization_power_act = { 
-	monarch_power = DIP
-	
-	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = court_ideas 
-	}
-	
-	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = court_ideas 
-	}
-	
-	max_absolutism = 10 
-	yearly_corruption = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -1895,6 +1771,7 @@ maritime_expertise_act = {
 		full_idea_group = maritime_ideas 
 	}
 	
+	global_sailors_modifier = -0.1
 	allowed_marine_fraction = 0.1
 	global_ship_cost = -0.1
 	
