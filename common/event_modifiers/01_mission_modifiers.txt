@@ -14890,6 +14890,10 @@ hmm_mission_timed_buff = {
 	land_maintenance_modifier = -0.10
 }
 
+hmm_mission_timed2_buff = {
+	manpower_recovery_speed = 0.33
+}
+
 kon_naval_bonus = {
 	ship_durability = 0.10
 	sailor_maintenance_modifer = -0.25

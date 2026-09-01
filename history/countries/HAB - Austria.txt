@@ -9,7 +9,7 @@ historical_friend = HUN
 historical_rival = TUR
 historical_rival = FRA
 elector = yes
-
+add_army_professionalism = 0.1
 add_accepted_culture = slovene
 
 1439.10.27 = {
@@ -20,6 +20,14 @@ add_accepted_culture = slovene
 		adm = 3
 		dip = 3
 		mil = 3
+		leader = {
+			name = "Friedrich III"
+			type = general
+			fire = 2
+			shock = 4
+			manuever = 3
+			siege = 1
+		}
 	}
 	
 	clear_scripted_personalities = yes

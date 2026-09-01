@@ -868,7 +868,6 @@ WoC_austria_2 = {
 			}
 		}
 		effect = {
-			add_manpower = 36 # Compensation for loosing 36k starting manpower and half the starting army
 			if = {
 				limit = {
 					ai = yes
@@ -886,6 +885,8 @@ WoC_austria_2 = {
 			}
 
 			custom_tooltip = SEPERATOR_TOOLTIP
+			add_manpower = 36 # Compensation for loosing 36k starting manpower and half the starting army
+			custom_tooltip = SEPERATOR_TOOLTIP
 
 			if = {
 				limit = {
@@ -900,8 +901,8 @@ WoC_austria_2 = {
 					months = 300
 					target = BOH
 				}
-#			}
-#			else = {
+			}
+			else = {
 				bohemia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -923,6 +924,14 @@ WoC_austria_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_core = ROOT
 			}
 
 			custom_tooltip = SEPERATOR_TOOLTIP
@@ -1724,6 +1733,7 @@ WoC_austria_2_1 = {
 					valid_for_personal_unions_trigger = yes
 					HUN = {
 						valid_for_personal_unions_trigger = yes
+						ai = yes
 					}
 				}
 				add_casus_belli = {
@@ -1774,6 +1784,10 @@ WoC_austria_2_1 = {
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
+				}
+				add_country_modifier = {
+					name = "hmm_mission_timed_buff"
+					duration = 1825
 				}
 			}
 		}
@@ -3037,7 +3051,11 @@ WoC_austria_4 = {
 					hidden_effect = { boh_integrate_silesian_subjects = yes }
 
 					custom_tooltip = SEPERATOR_TOOLTIP
-
+					BOH = {
+						add_core = 265
+						add_core = 4237
+						add_core = 4726
+					}
 					add_country_modifier = {
 						name = hab_union_with_bohemia
 						duration = 5475
@@ -3105,7 +3123,7 @@ WoC_austria_4 = {
 					}
 					army_strength = {
 						who = PLC
-						value = 2
+						value = 1
 					}
 				}
 				else_if = {
@@ -3114,7 +3132,7 @@ WoC_austria_4 = {
 					}
 					army_strength = {
 						who = POL
-						value = 2
+						value = 1
 					}
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -3129,14 +3147,34 @@ WoC_austria_4 = {
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_POLAND_BELOW_300_DEV
-				first_limit = "
-					surpass_poland_complex_scripted_trigger = yes
-				"
-				first_effect = "
-					austria_surpass_poland_effect = yes
-				"
+			if {
+				limit = {
+					OR = {
+						POL = {
+							exists = yes
+							ai = no
+						}
+						PLC = {
+							exists = yes
+							ai = no
+						}
+					}
+				}
+				add_country_modifier = {
+					name = "hmm_mission_timed2_buff"
+					duration = 1825
+				}
+			}
+			else {
+				complex_dynamic_effect = {
+					first_custom_tooltip = HAB_IF_POLAND_BELOW_300_DEV
+					first_limit = "
+						surpass_poland_complex_scripted_trigger = yes
+					"
+					first_effect = "
+						austria_surpass_poland_effect = yes
+					"
+				}
 			}
 		} 
 	}
@@ -3861,11 +3899,15 @@ WoC_austria_5 = {
 			}
 		} 
 		effect = {
+			give_claims = { region = iberia_region }
+			custom_tooltip = SEPERATOR_TOOLTIP
+
 			if = {
 				limit = {
 					exists = SPA
 					SPA = { valid_for_personal_unions_trigger = yes }
 					valid_for_personal_unions_trigger = yes
+					SPA = { ai = yes }
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
@@ -3880,6 +3922,7 @@ WoC_austria_5 = {
 					exists = CAS
 					CAS = { valid_for_personal_unions_trigger = yes }
 					valid_for_personal_unions_trigger = yes
+					CAS = { ai = yes }
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
@@ -3889,13 +3932,17 @@ WoC_austria_5 = {
 
 				custom_tooltip = SEPERATOR_TOOLTIP
 			}
-
-			custom_tooltip = HAB_AS_LONG_AS_WE_HAVE_PU_CB_ON_CAS_OR_SPA_ALLOW_IBERIAN_PU_DECISION
-			set_country_flag = hab_iberian_union_flag
+			else = {
+				add_country_modifier = {
+					name = "spa_rb_morale"
+					duration = 1825
+				}
+			}
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
-			give_claims = { region = iberia_region }
+			custom_tooltip = HAB_AS_LONG_AS_WE_HAVE_PU_CB_ON_CAS_OR_SPA_ALLOW_IBERIAN_PU_DECISION
+			set_country_flag = hab_iberian_union_flag
 		}
 	}
 
@@ -3939,7 +3986,7 @@ WoC_austria_5 = {
 				name = hab_crown_of_iberia
 				age = age_of_reformation
 				else = "
-					add_dip_power = 100
+					add_dip_power = 1000
 				"
 			}
 
