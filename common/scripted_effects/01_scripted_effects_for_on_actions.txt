@@ -5370,87 +5370,81 @@ on_age_ability_taken = {
 }
 
 on_battle_over_hmm_effect = {
-	if = {
-		limit = {
-			always = yes
+	ROOT = {
+		export_to_variable = {
+			variable_name = hmm_battle_force_limit_var
+			value = land_forcelimit
+			who = ROOT
 		}
-		ROOT = {
-			export_to_variable = {
-				variable_name = battle_force_limit_var
-				value = land_forcelimit
-				who = ROOT
-			}
-
-			if = {
-				limit = {
-					check_variable = {
-						which = battle_force_limit_var
-						value = 1
-					}
-				}
-
-				# Kills scaling: 1x forcelimit killed -> +1 professionalism (1%)
-				set_variable = {
-					which = battle_prof_killed_var
-					which = land_units_killed
-				}
-				divide_variable = {
-					which = battle_prof_killed_var
-					which = battle_force_limit_var
-				}
-				divide_variable = {
-					which = battle_prof_killed_var
-					value = 1000
-				}
-				multiply_variable = {
-					which = battle_prof_killed_var
-					value = 1000
-				}
-				while = {
-					limit = {
-						check_variable = {
-							which = battle_prof_killed_var
-							value = 1
-						}
-					}
-					subtract_variable = {
-						which = battle_prof_killed_var
-						value = 1
-					}
-					add_army_professionalism = 0.00001
-				}
-
-				# Loss scaling disabled for now (no professionalism loss from battle losses)
-				# set_variable = {
-				# 	which = battle_prof_lost_var
-				# 	which = land_units_lost
-				# }
-				# divide_variable = {
-				# 	which = battle_prof_lost_var
-				# 	which = battle_force_limit_var
-				# }
-				# divide_variable = {
-				# 	which = battle_prof_lost_var
-				# 	value = 1000
-				# }
-				# multiply_variable = {
-				# 	which = battle_prof_lost_var
-				# 	value = 1000
-				# }
-				# while = {
-				# 	limit = {
-				# 		check_variable = {
-				# 			which = battle_prof_lost_var
-				# 			value = 1
-				# 		}
-				# 	}
-				# 	subtract_variable = {
-				# 		which = battle_prof_lost_var
-				# 		value = 1
-				# 	}
-				# 	add_army_professionalism = -0.00005
-				# }
-			}
+		multiply_variable = {
+			which = hmm_battle_force_limit_var
+			value = 1000
 		}
+		set_variable = {
+			which = hmm_land_units_killed_var
+			which = land_units_lost
+		}
+		divide_variable = {
+			which = hmm_land_units_killed_var
+			which = hmm_battle_force_limit_var
+		}
+		multiply_variable = {
+			which = hmm_land_units_killed_var
+			value = 100
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = hmm_land_units_killed_var
+					value = 1
+				}
+			}
+			subtract_variable = {
+				which = hmm_land_units_killed_var
+				value = 1
+			}
+			add_army_professionalism = 0.0001
+		}
+		add_prestige = 100
+	}
+}
+
+on_battle_over_hmm2_effect = {
+	ROOT = {
+		export_to_variable = {
+			variable_name = hmm_battle_force_limit_var
+			value = land_forcelimit
+			who = ROOT
+		}
+		multiply_variable = {
+			which = hmm_battle_force_limit_var
+			value = 1000
+		}
+		set_variable = {
+			which = hmm_land_units_killed_var
+			which = land_units_lost
+		}
+		divide_variable = {
+			which = hmm_land_units_killed_var
+			which = hmm_battle_force_limit_var
+		}
+		multiply_variable = {
+			which = hmm_land_units_killed_var
+			value = 100
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = hmm_land_units_killed_var
+					value = 1
+				}
+			}
+			subtract_variable = {
+				which = hmm_land_units_killed_var
+				value = 1
+			}
+			add_army_professionalism = 0.0001
+		}
+		add_prestige = 50
 	}
 }

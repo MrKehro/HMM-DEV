@@ -598,7 +598,6 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	on_battle_ended_effect = yes
 	on_battle_won_country_effect = yes
-	on_battle_over_hmm_effect = yes
 	#Hungary Achievement -> this triggers first
 	if = {
 		limit = {
@@ -627,7 +626,6 @@ on_battle_won_country = {
 # root = loser country, from = winner country
 on_battle_lost_country = {
 	on_battle_ended_effect = yes
-	on_battle_over_hmm_effect = yes
 	battle_cult_spreading_effect = yes #Scripted effect for fetishist cult mechanics.
 	random_events = {
 		90 = 0

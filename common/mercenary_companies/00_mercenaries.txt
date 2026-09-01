@@ -1000,7 +1000,7 @@ merc_mesopotamian_mamluks = {
     regiments_per_development = 0.05
     cavalry_weight = 1
     artillery_weight = 0
-	cavalry_cap = 6
+	cavalry_cap = 0
 	home_province = 410
 	cost_modifier = 1.1
 	sprites = { dlc080_alh_sprite_pack muslimgfx_sprite_pack }
@@ -1027,14 +1027,12 @@ merc_mesopotamian_mamluks = {
 # Nile Mamluks
 merc_nile_mamluks = {
     regiments_per_development = 0.05
-    cavalry_weight = 0.5
+    cavalry_weight = 1
     home_province = 361
-	cost_modifier = 1.5
+	cost_modifier = 1.1
 	sprites = { dlc002_mam_sprite_pack dlc058_mam_sprite_pack muslimgfx_sprite_pack }
     trigger = {
 		is_allowed_to_recruit_mercenaries = yes
-		NOT = { tag = MAM }
-		NOT = { was_tag = MAM }
 		capital_scope = {
 			OR = {
 				region = mashriq_region

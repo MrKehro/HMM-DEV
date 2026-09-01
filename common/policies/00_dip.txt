@@ -1120,8 +1120,8 @@ black_chamber_act = {
 		full_idea_group = offensive_ideas
 	}
 	
+	assault_fort_ability = 0.20
 	spy_offence = 0.25
-	diplomats = 1
 
 	effect = {}
 	removed_effect = {}
@@ -1185,14 +1185,33 @@ diplomatic_defence_act = {
 	
 	effect = {}
 	removed_effect = {}
-	ai_will_do = {
-		factor = 0.7
-		modifier = {
-			factor = 0
-			NOT = { num_of_cities = 10 }
-		}		
+}
+
+privy_council_establishment_act = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = spy_ideas
+		has_idea_group = defensive_ideas
 	}
 	
+	allow = {
+		full_idea_group = spy_ideas
+		full_idea_group = defensive_ideas
+	}
+
+	defensiveness = 0.15
+	yearly_corruption = -0.1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.6
+		modifier = {
+			factor = 0.2
+			is_at_war = yes
+		}
+	}
 }
 
 armed_neutrality_act = {
