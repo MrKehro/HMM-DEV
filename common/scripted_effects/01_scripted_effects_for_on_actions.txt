@@ -1238,38 +1238,25 @@ burgundian_inheritance_start_effect = {
 	if = {
 		limit = {
 			tag = BUR
-			has_country_modifier = burgundian_succession_crisis
-			NOT = { has_country_flag = burgundian_succession_has_already_fired }
-			is_subject = no
-			is_lesser_in_union = no
+			has_country_flag = charles_is_ruler_flag
 		}
-		#Fire an event which checks on the current state of Burgundy to see if they are already in a normal PU or not
-		country_event = {
-			id = incidents_bur_inheritance.1000
-			days = 1
-		}
+		set_country_flag = charles_died
+		clr_country_flag = charles_is_ruler_flag
+		remove_country_modifier = burgundian_succession_crisis
 	}
 	else_if = {
 		limit = {
 			tag = BUR
 			has_regency = no
 			has_ruler_flag = is_charles_of_burg_flag #this flag is assigned in the history file of Burgundy
-			NOT = { has_country_modifier = burgundian_succession_crisis } 
-			NOT = { has_country_flag = burgundian_succession_has_already_fired }
+			NOT = { has_country_flag = charles_died }
 		}
 		clr_ruler_flag = is_charles_of_burg_flag
+		set_country_flag = charles_is_ruler_flag
 		add_country_modifier = { #country modifier used to weaken Charles's fertility, is also used as a trigger for the inheritance event above.
 			name = burgundian_succession_crisis
 			duration = -1
-			hidden = yes
-		}
-	}
-	#Burgundian marriage cleaner
-	if = {
-		limit = { tag = BUR }
-		country_event = {
-			id = incidents_bur_inheritance.1001
-			days = 3
+			hidden = no
 		}
 	}
 }
