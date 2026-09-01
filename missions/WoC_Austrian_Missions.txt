@@ -885,7 +885,7 @@ WoC_austria_2 = {
 			}
 
 			custom_tooltip = SEPERATOR_TOOLTIP
-			add_manpower = 36 # Compensation for loosing 36k starting manpower and half the starting army
+			add_manpower = 50 # Compensation for loosing 36k starting manpower and half the starting army
 			custom_tooltip = SEPERATOR_TOOLTIP
 
 			if = {
