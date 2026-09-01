@@ -17,50 +17,32 @@ swe_scandinavian_colonialism_mission_slot = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
-	swe_engelbrekt_rebellion = { #aka. build troops
-		icon = mission_engelbrekt
-		position = 1
-		required_missions = {  }
+
+	swe_declare_independence = {
+		icon = mission_swedish_independence
+		position = 2
+		required_missions = { swe_engelbrekt_rebellion }
 		provinces_to_highlight = {}
 		trigger = {
-			army_size_percentage = 1
-			OR = {
-				is_subject = no
-				liberty_desire = 100
-				any_hired_mercenary_company = {
-					custom_trigger_tooltip = {
-						tooltip = is_free_merc_company_tt
-						OR = {
-							template = merc__local_free_city_company
-							template = merc__local_small_company
-						}
-					}
-				}
-			}
+			is_subject = no
 		}
 		effect = {
-			if = {
+			add_stability_or_adm_power = yes
+			skaneland_area = {
 				limit = {
-					is_subject = yes
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				country_event = {
-					id = flavor_swe.102
-				}
+				add_permanent_claim = ROOT
 			}
-			else = {
-				add_manpower = 5
-			}
+			id = flavor_swe.121
 		}
 	}
 	
 	swe_conquer_scania = {
 		icon = mission_conquer_skaneland
 		position = 3
-		required_missions = { 
-			swe_engelbrekt_rebellion
-			swe_declare_independence
-		}
+		required_missions = { swe_declare_independence swe_military_advisor }
 		provinces_to_highlight = {
 			area = skaneland_area
 			NOT = { owned_by = ROOT }
@@ -762,90 +744,10 @@ swe_diplomacy_mission_slot = {
 	}
 	has_country_shield = yes
 	
-	swe_swedish_allies = {
-		icon = mission_alliances
-		position = 1
-		required_missions = { }
-		provinces_to_highlight = {
-			owner = {
-				OR = {
-					is_rival = DAN
-					is_enemy = DAN
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					is_subject = yes
-					is_subject_of = DAN
-				}
-				OR = {
-					calc_true_if = {
-						desc = swe_swedish_allies_at
-						all_known_country = {
-							OR = {
-								is_rival = DAN
-								is_enemy = DAN
-							}
-							has_opinion = {
-								who = ROOT
-								value = 100
-							}
-						}
-						amount = 2
-					}
-					liberty_desire = 100
-				}
-			}
-			else_if = {
-				limit = {
-					is_subject = yes
-					NOT = { is_subject_of = DAN }
-				}
-				OR = {
-					overlord = {
-						calc_true_if = {
-						desc = swe_swedish_allies_bt
-							all_known_country = {
-								OR = {
-									is_rival = PREV
-									is_enemy = PREV
-								}
-								has_opinion = {
-									who = ROOT
-									value = 100
-								}
-							}
-							amount = 2
-						}
-					}
-					liberty_desire = 80
-				}
-			}
-			else = {
-				is_subject = no
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				country_event = {
-					id = flavor_swe.106
-				}
-			}
-			else = {
-				add_dip_power = 50
-			}
-		}
-	}
-	
 	swe_swedish_pommerania = {
 		icon = mission_conquer_pomerania
 		position = 3
-		required_missions = { swe_declare_independence }
+		required_missions = { swe_military_advisor }
 		provinces_to_highlight = {
 			OR = {
 				area = hinter_pommern_area
@@ -1032,7 +934,7 @@ swe_diplomacy_mission_slot = {
 			}
 		}
 		effect = {
-			#Maybe a new event for Lï¿½beck?
+			#Maybe a new event for Lübeck?
 			if = {
 				limit = {
 					owns_or_non_sovereign_subject_of = 45
@@ -1326,63 +1228,60 @@ swe_kalmar_union_mission_slot = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
-	swe_declare_independence = {
-		icon = mission_swedish_independence
-		position = 2
-		required_missions = {
-			swe_engelbrekt_rebellion
-			swe_military_advisor
-			swe_swedish_allies
-			swe_gain_support_from_estates
-		}
+
+	swe_engelbrekt_rebellion = { #aka. build troops
+		icon = mission_engelbrekt
+		position = 1
+		required_missions = { }
 		provinces_to_highlight = {}
 		trigger = {
-			is_subject = no
+			army_size_percentage = 1
+			OR = {
+				is_subject = no
+				liberty_desire = 100
+				any_hired_mercenary_company = {
+					custom_trigger_tooltip = {
+						tooltip = is_free_merc_company_tt
+						OR = {
+							template = merc__local_free_city_company
+							template = merc__local_small_company
+						}
+					}
+				}
+			}
 		}
 		effect = {
-			add_stability_or_adm_power = yes
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				custom_tooltip = swe_declare_independence_ct
-				hidden_effect = {
-					set_country_flag = swe_declared_independence_war
-				}
-			}
-			else_if = {
-				limit = {
-					is_subject = no
-					is_at_war = yes
-				}
-				custom_tooltip = swe_declare_independence_ct
-				hidden_effect = {
-					set_country_flag = swe_declared_independence_war
-				}
-			}
-			else_if = {
-				limit = {
-					is_subject = no
-				}
-				country_event = {
-					id = flavor_swe.121
+			add_manpower = 10
+		}
+	}
+
+	swe_military_advisor = {
+		icon = mission_swedish_military_advise
+		position = 2
+		required_missions = { swe_engelbrekt_rebellion }
+		provinces_to_highlight = {
+			owned_by = DAN
+		}
+		trigger = {
+			has_mil_advisor = yes
+			OR = {
+				NOT = { exists = DAN }
+				has_won_war_against = {
+					who = DAN
+					max_years_since = 25
 				}
 			}
-			skaneland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_mil_power = 100
 		}
 	}
 	
 	swe_the_livonian_order = {
 		icon = mission_the_livonians
 		position = 3
-		required_missions = { swe_declare_independence }
+		required_missions = { swe_military_advisor  }
 		provinces_to_highlight = {
 			OR = {
 				area = estonia_ingria_area
@@ -2071,50 +1970,10 @@ swe_internal_slot = {
 	}
 	has_country_shield = yes
 	
-	swe_military_advisor = {
-		icon = mission_swedish_military_advise
-		position = 1
-		required_missions = {  }
-		provinces_to_highlight = {}
-		trigger = {
-			has_mil_advisor = yes
-			OR = {
-				is_subject = no
-				custom_trigger_tooltip = {
-					tooltip = swe_military_advisor_tt
-					has_country_modifier = swe_vasa_leads_the_rebellion
-				}
-				liberty_desire = 100
-				estate_territory = {
-					estate = estate_nobles
-					territory = 30
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						has_country_modifier = swe_vasa_leads_the_rebellion
-						is_subject = no
-					}
-				}
-				add_mil_power = 50
-			}
-			else = {
-				country_event = {
-					id = flavor_swe.104
-				}
-			}
-		}
-	}
-	
 	swe_conquest_of_novgorod = {
 		icon = mission_novgorod_the_great
 		position = 3
-		required_missions = {
-			swe_declare_independence
-		}
+		required_missions = { swe_military_advisor }
 		provinces_to_highlight = {
 			OR = {
 				province_id = 33
@@ -2148,8 +2007,8 @@ swe_internal_slot = {
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = novgorodian value = 100 }
 			310 = {
-				change_province_name = "Hï¿½lmgarï¿½r"
-				rename_capital = "Hï¿½lmgarï¿½r"
+				change_province_name = "Hólmgarðr"
+				rename_capital = "Hólmgarðr"
 				custom_tooltip = will_upgrade_center_of_trade_to_level_2_tt
 				hidden_effect = {
 					if = {
@@ -2517,85 +2376,74 @@ swe_swedish_military_mission_slot = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
+
+	swe_swedish_allies = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { swe_engelbrekt_rebellion }
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				is_great_power = yes
+				any_great_power = {
+					alliance_with = ROOT
+				}
+				any_great_power = {
+					custom_trigger_tooltip = {
+						tooltip = rivalled_or_rival_of
+						OR = {
+							is_rival = root
+							root = { is_rival = prev }
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 100
+		}
+	}
 	
 	swe_gain_support_from_estates = {
 		icon = mission_have_two_subjects
-		position = 1
-		required_missions = {}
+		position = 3
+		required_missions = { swe_military_advisor swe_swedish_allies }
 		provinces_to_highlight = {}
 		trigger = {
 			OR = {
 				custom_trigger_tooltip = {
-					tooltip = swe_gain_support_from_estates_ct
-					OR = {
-						AND = {
-							num_of_estate_privileges = { estate = estate_nobles value = 3 }
-							num_of_estate_privileges = { estate = estate_church value = 3 }
-						}
-						AND = {
-							num_of_estate_privileges = { estate = estate_nobles value = 3 }
-							num_of_estate_privileges = { estate = estate_burghers value = 3 }
-						}
-						AND = {
-							num_of_estate_privileges = { estate = estate_church value = 3 }
-							num_of_estate_privileges = { estate = estate_burghers value = 3 }
-						}
+					tooltip = "Have at least 3 Privileges granted to at least 3 estates"
+					AND = {
+						num_of_estate_privileges = { estate = estate_nobles value = 3 }
+						num_of_estate_privileges = { estate = estate_church value = 3 }
+						num_of_estate_privileges = { estate = estate_burghers value = 3 }
 					}
 				}
 				calc_true_if = {
 					NOT = { has_estate = estate_nobles }
 					NOT = { has_estate = estate_burghers }
 					NOT = { has_estate = estate_church }
-					amount = 2
-				}
-				AND = {
-					is_subject = yes
-					liberty_desire = 100
-					custom_trigger_tooltip = {
-						tooltip = swe_gain_support_from_estates_tt
-						has_country_flag = dan_had_stockholm_bloodbath
-					}
-				}
-				AND = {
-					is_free_or_tributary_trigger = yes
-					is_at_war = no
+					amount = 1
 				}
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					is_free_or_tributary_trigger = yes
-				}
-				add_adm_power = 50
-#				add_dip_power = 50
-#				add_mil_power = 50
-			}
-			else = {
-				if = {
-					limit = {
-						has_country_flag = dan_had_stockholm_bloodbath
-					}
-					country_event = {
-						id = flavor_swe.1080
-					}
-				}
-				else = {
-					custom_tooltip = swe_gain_support_from_estates_at
-					country_event = {
-						id = flavor_swe.108
-					}
-				}
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			country_event = {
+				id = flavor_swe.108
+				days = 10
 			}
 		}
 	}
 	
 	swe_a_new_dynasty = { #Get Stability and Legitimacy up
 		icon = mission_restore_faith_in_the_throne
-		position = 3
+		position = 4
 		required_missions = { 
 			swe_gain_support_from_estates
-			swe_declare_independence
 		}
 		provinces_to_highlight = {}
 		trigger = {
