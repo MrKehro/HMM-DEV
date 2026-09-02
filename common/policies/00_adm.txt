@@ -217,8 +217,7 @@ the_espionage_act = {
 		full_idea_group = spy_ideas
 	}
 
-	stability_cost_modifier = -0.25
-	diplomats = 1
+	technology_cost = -0.5
 	
 	effect = {}
 	removed_effect = {}
@@ -353,6 +352,7 @@ enforce_religious_law = {
 	}
 
 	global_missionary_strength = 0.02
+	missionaries = 1
 	
 	effect = {}
 	removed_effect = {}
@@ -816,7 +816,7 @@ the_spy_network_act = {
 		full_idea_group = spy_ideas
 	}
 	
-	envoy_travel_time = -0.25
+	build_cost = -0.05
 	spy_offence = 0.5
 
 	effect = {}
@@ -1740,44 +1740,25 @@ the_education_act = {
 	}
 }
 
-mandatory_service = {
+plutocratic_rule_act = { 
 	monarch_power = ADM
+	
 	potential = {
-		has_idea_group = plutocracy_ideas
-		has_idea_group = economic_ideas
+		has_idea_group = infrastructure_ideas
+		has_idea_group = plutocracy_ideas 
 	}
 	
 	allow = {
-		full_idea_group = plutocracy_ideas
-		full_idea_group = economic_ideas
+		full_idea_group = infrastructure_ideas
+		full_idea_group = plutocracy_ideas 
 	}
 	
-	global_tax_modifier = 0.2
+	global_tax_modifier = 0.25
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0.6
-		modifier = {
-			factor = 0
-			NOT = { trade_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
+		factor = 1
 	}
 }
 
@@ -1795,8 +1776,8 @@ the_foreign_support_act = {
 		full_idea_group = economic_ideas
 	}
 
-	rebel_support_efficiency = 0.50
-	diplomats = 1
+	interest = -0.5
+	spy_offence = 0.5
 	
 	effect = {}
 	removed_effect = {}
@@ -2052,32 +2033,6 @@ indigenous_development_act = {
 	}
 }
 
-omne_datum_optimum_policy = { 
-	monarch_power = MIL
-
-	potential = {
-		has_idea_group = theocracy_gov_ideas
-		has_idea_group = economic_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = economic_ideas
-	}
-
-	manpower_in_true_faith_provinces = 0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
 otto_per_mille = {
 	monarch_power = ADM
 	
@@ -2138,17 +2093,17 @@ omnism_policy = {
 	monarch_power = ADM
 	
 	potential = {
-		has_idea_group = exploration_ideas
+		has_idea_group = humanist_ideas
 		has_idea_group = theocracy_gov_ideas
 	}
 	
 	allow = {
-		full_idea_group = exploration_ideas
+		full_idea_group = humanist_ideas
 		full_idea_group = theocracy_gov_ideas
 	}
 	
-	tolerance_heathen = 2
-	tolerance_heretic = 2
+	tolerance_heathen = 3
+	tolerance_heretic = 3
 	
 	effect = {}
 	removed_effect = {}
@@ -2209,8 +2164,7 @@ theocratic_rule_act = {
 		full_idea_group = theocracy_gov_ideas 
 	}
 	
-	missionaries = 1 
-	prestige_per_development_from_conversion = 0.5
+	manpower_in_true_faith_provinces = 0.15
 
 	effect = {}
 	removed_effect = {}

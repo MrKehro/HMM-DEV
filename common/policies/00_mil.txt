@@ -682,7 +682,8 @@ military_allotment_act = {
 		full_idea_group = plutocracy_ideas
 	}
 
-	global_manpower_modifier = 0.2
+	fire_damage = 0.05
+	shock_damage = 0.05
 	may_recruit_female_generals = yes
 
 	effect = {}
@@ -1148,20 +1149,19 @@ cultural_recognition_act = {
 	}
 }
 
-plutocratic_rule_act = { 
+mandatory_service = {
 	monarch_power = MIL
-	
 	potential = {
-		has_idea_group = infrastructure_ideas
-		has_idea_group = plutocracy_ideas 
+		has_idea_group = plutocracy_ideas
+		has_idea_group = economic_ideas
 	}
 	
 	allow = {
-		full_idea_group = infrastructure_ideas
-		full_idea_group = plutocracy_ideas 
+		full_idea_group = plutocracy_ideas
+		full_idea_group = economic_ideas
 	}
 	
-	infantry_power = 0.05
+	infantry_power = 0.1
 	army_tradition = 0.5
 
 	effect = {}
@@ -1170,7 +1170,6 @@ plutocratic_rule_act = {
 		factor = 1
 	}
 }
-
 
 
 new_naval_tactis = {
@@ -1274,22 +1273,21 @@ wielders_of_the_flaming_sword_policy = {
 	}
 }
 
-render_unto_caesar_policy = { 
+omne_datum_optimum_policy = { 
 	monarch_power = MIL
 
 	potential = {
 		has_idea_group = theocracy_gov_ideas
-		has_idea_group = humanist_ideas
+		has_idea_group = economic_ideas
 	}
 	
 	allow = {
 		full_idea_group = theocracy_gov_ideas
-		full_idea_group = humanist_ideas
+		full_idea_group = economic_ideas
 	}
 
-	discipline = 0.025
-	devotion = 1
-
+	morale_damage_received = -0.1
+	
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
