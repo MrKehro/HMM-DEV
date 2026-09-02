@@ -1913,6 +1913,28 @@ autonomous_estates = {
 	}
 }
 
+the_colonial_nobility_act = {
+	monarch_power = DIP
+	potential = {
+		has_idea_group = aristocracy_ideas
+		has_idea_group = exploration_ideas
+	}
+	
+	allow = {
+		full_idea_group = aristocracy_ideas
+		full_idea_group = exploration_ideas
+	}
+
+	nobles_loyalty_modifier = 0.1
+	state_maintenance_modifier = -0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.8
+	}
+}
+
 faith_advisors_policy = { 
 	monarch_power = DIP
 	

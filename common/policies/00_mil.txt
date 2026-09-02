@@ -148,6 +148,7 @@ modern_siege_weapons = {
 	
 	siege_ability = 0.2
 	leader_siege = 1
+	leader_land_fire = 1
 
 	effect = {}
 	removed_effect = {}
@@ -568,25 +569,25 @@ noble_loyalty_act = {
 	}
 }
 
-the_colonial_nobility_act = {
+the_witchcraft_act = { 
 	monarch_power = MIL
 	potential = {
-		has_idea_group = aristocracy_ideas
-		has_idea_group = exploration_ideas
+		has_idea_group = religious_ideas
+		has_idea_group = aristocracy_ideas 
 	}
 	
 	allow = {
-		full_idea_group = aristocracy_ideas
-		full_idea_group = exploration_ideas
+		full_idea_group = religious_ideas
+		full_idea_group = aristocracy_ideas 
 	}
-
-	global_manpower_modifier = 0.25
-	movement_speed = 0.05
+	
+	global_manpower_modifier = 0.20
+	leader_land_shock = 1
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0.8
+		factor = 1
 	}
 }
 
