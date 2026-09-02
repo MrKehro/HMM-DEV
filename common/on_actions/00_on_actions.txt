@@ -2167,7 +2167,68 @@ on_siberian_pulse = {
 
 # country random events
 on_monthly_pulse = {
+	if = {
+		limit = {
+			is_emperor = yes
+			NOT = { has_country_modifier = hmm_emperor_heir }
+		}
+		add_country_modifier = { name = hmm_emperor_heir duration = -1 hidden = yes }
+	}
+	if = {
+		limit = {
+			NOT = { is_emperor = yes }
+			has_country_modifier = hmm_emperor_heir
+		}
+		remove_country_modifier = hmm_emperor_heir
+	}
+	if = {
+		limit = {
+			was_player = yes
+			ai = yes
+			NOT = {
+				AND = {
+					is_subject = yes
+					overlord = { ai = no }
+				}
+			}
+			NOT = { has_country_modifier = hmm_former_player_nation_viability }
+		}
+		add_country_modifier = { name = hmm_former_player_nation_viability duration = -1 }
+	}
+	if = {
+		limit = {
+			has_country_modifier = hmm_former_player_nation_viability
+			OR = {
+				NOT = { was_player = yes }
+				NOT = { ai = yes }
+				AND = {
+					is_subject = yes
+					overlord = { ai = no }
+				}
+			}
+		}
+		remove_country_modifier = hmm_former_player_nation_viability
+	}
+	if = {
+		limit = {
+			is_colonial_nation = yes
+			ai = no
+			NOT = { has_country_modifier = hmm_colonial_player_nation }
+		}
+		add_country_modifier = { name = hmm_colonial_player_nation duration = -1 hidden = yes }
+	}
+	if = {
+		limit = {
+			has_country_modifier = hmm_colonial_player_nation
+			OR = {
+				NOT = { is_colonial_nation = yes }
+				ai = yes
+			}
+		}
+		remove_country_modifier = hmm_colonial_player_nation
+	}
 }
+
 on_yearly_pulse = {
 	events = {
 		flavor_mos.3 #Yearly Tatar Yoke Tribute

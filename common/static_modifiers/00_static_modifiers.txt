@@ -2449,3 +2449,24 @@ may_dynastic_influence_modifier = {
 	legitimacy = 0.25 
 	land_forcelimit = 3
 }
+
+hmm_emperor_heir = {
+	heir_chance = 2.5
+}
+
+hmm_colonial_player_nation = {
+	development_cost = 0.10
+}
+
+hmm_former_player_nation_viability = {
+	manpower_recovery_speed = 5
+	land_forcelimit_modifier = 0.5
+	mercenary_manpower = 1
+	war_exhaustion = -5
+	global_unrest = -25
+	interest = -5
+	global_tax_modifier = 1
+	trade_efficiency = 1
+	production_efficiency = 1
+	reduced_liberty_desire = 100
+}
