@@ -2185,6 +2185,7 @@ on_monthly_pulse = {
 		limit = {
 			was_player = yes
 			ai = yes
+			NOT = { is_colonial_nation = yes }
 			NOT = {
 				AND = {
 					is_subject = yes
@@ -2201,6 +2202,7 @@ on_monthly_pulse = {
 			OR = {
 				NOT = { was_player = yes }
 				NOT = { ai = yes }
+				is_colonial_nation = yes
 				AND = {
 					is_subject = yes
 					overlord = { ai = no }
@@ -6600,6 +6602,22 @@ on_colony_finished = { #ROOT - Province
 		owner = {
 			country_event = { id = fetishist_flavor.404 }
 		}
+	}
+
+	# Colonial nations auto-cede colonies finished outside their home region to their overlord
+	if = {
+		limit = {
+			owner = {
+				is_colonial_nation = yes
+				NOT = { capital_scope = { region = root } }
+			}
+		}
+		owner = {
+			overlord = {
+				save_global_event_target_as = hmm_colony_cede_overlord
+			}
+		}
+		cede_province = event_target:hmm_colony_cede_overlord
 	}
 }
 
