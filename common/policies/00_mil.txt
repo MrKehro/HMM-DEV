@@ -1186,7 +1186,7 @@ new_naval_tactis = {
 		full_idea_group = offensive_ideas
 	}
 
-	ship_durability = 0.05
+	naval_morale = 0.05
 	siege_blockade_progress = 1
 	
 	effect = {}

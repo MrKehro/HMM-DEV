@@ -3051,11 +3051,6 @@ WoC_austria_4 = {
 					hidden_effect = { boh_integrate_silesian_subjects = yes }
 
 					custom_tooltip = SEPERATOR_TOOLTIP
-					BOH = {
-						add_core = 265
-						add_core = 4237
-						add_core = 4726
-					}
 					add_country_modifier = {
 						name = hab_union_with_bohemia
 						duration = 5475
