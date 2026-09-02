@@ -350,23 +350,17 @@ WoC_austria_1_germany = {
 					}
 				}
 			}
-
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_BREISGAU_CONNECTED
-				first_limit = "
-					72 = {
-						is_in_capital_area = yes
+			if = {
+				limit = {
+					owns_core_province = 73
+				}
+				73 = {
+					add_or_upgrade_fort_building = yes
+					add_province_modifier = {
+						name = hab_fort_of_breisgau
+						duration = -1
 					}
-				"
-				first_effect = "
-					72 = {
-						add_or_upgrade_fort_building = yes
-						add_province_modifier = {
-							name = hab_fort_of_breisgau
-							duration = -1
-						}
-					}
-				"
+				}
 			}
 		} 
 	}
