@@ -77,5 +77,27 @@ country_decisions = {
 		}
 		effect = {
 		}
-	}	
+	}
+	HMM_theocracy_disinherit_heir_decision = {
+		major = yes
+		potential = {
+			government = theocracy
+			has_heir = yes
+		}
+		allow = {
+			prestige = -25
+			custom_trigger_tooltip = {
+				tooltip = HMM_theocracy_disinherit_heir_decision_tt
+				always = yes
+			}
+		}
+		effect = {
+			kill_heir = { allow_new_heir = yes }
+			add_prestige = -25
+			custom_tooltip = HMM_theocracy_disinherit_heir_decision_tt
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

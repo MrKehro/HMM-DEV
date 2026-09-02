@@ -6609,7 +6609,7 @@ on_colony_finished = { #ROOT - Province
 		limit = {
 			owner = {
 				is_colonial_nation = yes
-				NOT = { capital_scope = { region = root } }
+				NOT = { capital_scope = { colonial_region = root } }
 			}
 		}
 		owner = {
