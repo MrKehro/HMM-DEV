@@ -243,3 +243,5 @@
         hmm_gm_raise_army_tt:0 "Gain a permanent claim on every Province of Westphalian and Rhenish culture NOT owned by you, Brandeburg/Prussia or the Emperor."
         hmm_gm_cologne_tt:0 "The greedy man is really not rich, but poor. He does not control his money but is controlled by it."
         hmm_gm_ae:0 "Sanctioned Expansion"
+        hmm_british_isles_node:0 "British Isles"
+        hmm_low_countries_node:0 "Low Countries"

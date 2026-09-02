@@ -1602,7 +1602,7 @@ ivory_coast={
 		}
 	}
 	#outgoing={
-	#	name="english_channel"
+	#	name="hmm_low_countries_node"
 	#	path={
 	#		1467 1468 1470 1471 1566 1563 1272 97
 	#	}
@@ -1611,7 +1611,7 @@ ivory_coast={
 	#	}
 	#}
 	outgoing={
-		name="north_sea"
+		name="hmm_british_isles_node"
 		path={
 			1467 1468 1470 1471 1566 1563 1288 1285 239 237 236
 		}
@@ -1855,7 +1855,7 @@ rheinland={
 		}
 	}
 	outgoing={
-		name="english_channel"
+		name="hmm_low_countries_node"
 		path={
 			83 97
 		}
@@ -1882,7 +1882,7 @@ carribean_trade={
 		}
 	}
 	outgoing={
-		name="english_channel"
+		name="hmm_low_countries_node"
 		path={
 			488 490 1526 1575 1583 1580 1567 1272 1269 97
 		}
@@ -1900,7 +1900,7 @@ carribean_trade={
 		}
 	}
 	#outgoing={
-	#	name="north_sea"
+	#	name="hmm_british_isles_node"
 	#	path={
 	#		488 490 1526 1575 1583 1580 1567 1563 1288 1285 239 237 236
 	#	}
@@ -1936,7 +1936,7 @@ chesapeake_bay={
 		}
 	}
 	outgoing={
-		name="english_channel"
+		name="hmm_low_countries_node"
 		path={
 			1570 1572 1582 1568 1564 1563 1272 97
 		}
@@ -1945,7 +1945,7 @@ chesapeake_bay={
   		}
 	}
 	outgoing={
-		name="north_sea"
+		name="hmm_british_isles_node"
 		path={
 			1570 1573 1569 1288 1285 239 237 236
 		}
@@ -1972,7 +1972,7 @@ st_lawrence={
 		193 192 14 
 	}
 	outgoing={
-		name="north_sea"
+		name="hmm_british_isles_node"
 		path={
 			1493 1496 1497 1498 1478 1283 1284 4375 4372 237 236
 		}
@@ -2002,13 +2002,13 @@ st_lawrence={
 		969 971 980 981 982 983 984 985 986 990 992 993 994 995 996 997 1104 1105 1490 1804 2012 2013 2563 2565 2566 2567 2568 2569 2570 2571 2572 2573 2574 2575 2576 2577 2578 2579 2580 2581 2582 2583 2584 4871 4873 4890 4891 4892 4893 4894 4895 4896 4897 
 	}
 }
-north_sea={
+hmm_british_isles_node={
 	location=236
 	color={
 		210 46 28
 	}
 	outgoing={
-		name="english_channel"
+		name="hmm_low_countries_node"
 		path={
 			1270 1269 97
 		}
@@ -2026,7 +2026,7 @@ lubeck={
 		36 182 69 
 	}
 	outgoing={
-		name="english_channel"
+		name="hmm_low_countries_node"
 		path={
 			1874 1931 100 97
 		}
@@ -2090,7 +2090,7 @@ champagne={
 		}
 	}
 	outgoing={
-		name="english_channel"
+		name="hmm_low_countries_node"
 		path={
 			181 1866 92 1744 97 
 		}
@@ -2140,7 +2140,7 @@ venice={
 	}
 	end=yes
 }
-english_channel={
+hmm_low_countries_node={
 	location=97
 	color={
 		220 138 57 
