@@ -261,7 +261,7 @@ hmm_german_minor_1 = {
 	}
 
 	hmm_gm_english_channel_dominance = {
-		icon = mission_control_the_channel
+		icon = mission_dominate_home_trade_node
 		position = 6
 		required_missions = { hmm_gm_integrate_low_countries } 
 		provinces_to_highlight = {
@@ -1078,7 +1078,7 @@ hmm_german_minor_4 = {
 	}
 
 	hmm_gm_dominate_lubeck = {
-		icon = mission_dominate_home_trade_node 
+		icon = mission_develop_nevas_port 
 		position = 3
 		required_missions = { hmm_gm_hansa wes_rheinland_end hmm_gm_peasants }
 		provinces_to_highlight = {
