@@ -273,14 +273,13 @@ hmm_german_minor_1 = {
 				}
 			}
 		} 
-		trigger = {  
+		trigger = {
 			1269 = {
 				trade_share = {
 					country = ROOT
 					share = 60
 				}
 			}
-			num_of_light_ship = 30
 		} 
 
 		effect = {
@@ -1085,6 +1084,7 @@ hmm_german_minor_4 = {
 			province_id = 45
 		}
 		trigger = {
+			num_of_light_ship = 30
 			45 = {
 				is_strongest_trade_power = ROOT
 				trade_share = {
