@@ -8252,7 +8252,7 @@ kiev_pechersk_lavra = {
 	}
 }
 
-#pena_palace = { #Replaced by Bel�m Tower, as requested by community
+#pena_palace = {
 	# province it starts in
 	# start = 227
 	
@@ -11166,7 +11166,7 @@ bara_katra = {
 }
 
 bran_castle = {
-	start = 4128 #Kir�lyf�ld
+	start = 4128
 	date = 1357.01.01
 	time = { months = 0	}
 	build_cost = 0
@@ -16327,7 +16327,7 @@ white_house = {
 }
 
 tikal = {
-	start = 842 #Pet�n
+	start = 842
 	date = 10.01.01
 	time = { months = 0	}
 	build_cost = 0
@@ -19392,7 +19392,7 @@ imperial_city_kyoto = {
 
 kazan_kremlin = {
 	start = 1082 
-	date = 1214.12.2 #Built: 10th�16th centuries
+	date = 1214.12.2
 	time = { months = 0	}
 	build_cost = 0
 	can_be_moved = no

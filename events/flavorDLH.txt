@@ -1,7 +1,5 @@
 ########################################
 # Flavor Events for Delhi
-#
-# Scripted by Sara Wendel-�rtqvist
 ########################################
 
 namespace = flavor_dlh

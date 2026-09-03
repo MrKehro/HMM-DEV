@@ -1,7 +1,5 @@
 ########################################
 # Flavor Events for Papal States
-#
-# Scripted by Sara Wendel-�rtqvist
 ########################################
 
 namespace = flavor_pap

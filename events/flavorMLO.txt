@@ -310,7 +310,7 @@ country_event = {
 		define_advisor = {
 			type = philosopher
 			culture = tuscan
-			name = "Niccolï¿½ Machiavelli"
+			name = "Niccolò Machiavelli"
 			discount = yes
 			location = 116
 			skill = 2
@@ -327,7 +327,7 @@ country_event = {
 		}
 		define_advisor = {
 			type = statesman
-			name = "Niccolï¿½ Machiavelli"
+			name = "Niccolò Machiavelli"
 			culture = tuscan
 			discount = yes
 			location = 116
