@@ -925,7 +925,7 @@ WoC_austria_2 = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_core = ROOT
+				add_core = 130
 			}
 
 			custom_tooltip = SEPERATOR_TOOLTIP
