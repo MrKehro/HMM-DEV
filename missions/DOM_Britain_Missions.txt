@@ -4286,21 +4286,28 @@ gbr_ave_row_1 = {
 		}		
 		trigger = {
 			if = {
-				limit = { is_random_new_world = no }
+				limit = { is_random_new_world = yes }
+				236 = {
+					highest_value_trade_node = yes
+					trade_share = {
+						country = ROOT
+						share = 60
+					}
+				}
+			}
+			else = {
+				1500 = {
+					trade_share = {
+						country = ROOT
+						share = 40
+					}
+				}
 				OR = {
-					AND = {
-						1500 = {
-							trade_share = {
-								country = ROOT
-								share = 40
-							}
-						}
-						236 = {
-							highest_value_trade_node = yes
-							trade_share = {
-								country = ROOT
-								share = 60
-							}
+					236 = {
+						highest_value_trade_node = yes
+						trade_share = {
+							country = ROOT
+							share = 60
 						}
 					}
 					97 = {
@@ -4309,15 +4316,6 @@ gbr_ave_row_1 = {
 							country = ROOT
 							share = 60
 						}
-					}
-				}
-			}
-			else = {
-				236 = {
-					highest_value_trade_node = yes
-					trade_share = {
-						country = ROOT
-						share = 60
 					}
 				}
 			}

@@ -266,13 +266,7 @@ hmm_german_minor_1 = {
 		position = 6
 		required_missions = { hmm_gm_integrate_low_countries } 
 		provinces_to_highlight = {
-			province_id = 1269
-			NOT = {
-				trade_share = {
-					country = ROOT
-					share = 60
-				}
-			}
+			province_id = 97
 		} 
 		trigger = {
 			97 = {
@@ -1051,9 +1045,12 @@ hmm_german_minor_4 = {
 		position = 3
 		required_missions = { hmm_gm_saxony_expansion hmm_gm_braunschweig }
 		provinces_to_highlight = {
-			province_id = 44
-			province_id = 45
-			province_id = 1874
+			OR = {
+				province_id = 44
+				province_id = 45
+				province_id = 1874
+			}
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			owns_core_province = 44
@@ -1123,11 +1120,31 @@ hmm_german_minor_4 = {
 		required_missions = { hmm_gm_universities }
 		provinces_to_highlight = {
 			owned_by = ROOT
-			region = north_german_region
-			has_terrain = woods
+			OR = {
+				region = north_german_region
+				region = south_german_region
+			}
+			OR = {
+					has_terrain = woods
+					has_terrain = forest
+			}
+			OR = {
+				has_building = workshop
+				has_building = counting_house
+			}
 		}
 		trigger = {
-			workshop = 15
+			num_of_owned_provinces_with = {
+				value = 25
+				OR = {
+					region = north_german_region
+					region = south_german_region
+				}
+				OR = {
+					has_terrain = woods
+					has_terrain = forest
+				}
+			}
 		}
 		effect = {
 			custom_tooltip = hmm_gm_umgestaltung_tt
@@ -1139,8 +1156,14 @@ hmm_german_minor_4 = {
 							region = north_german_region
 							region = south_german_region
 						}
-						has_building = workshop
-						has_terrain = woods
+						OR = {
+							has_building = workshop
+							has_building = counting_house
+						}
+						OR = {
+							has_terrain = woods
+							has_terrain = forest
+						}
 						owned_by = ROOT
 					}
 					add_province_modifier = {

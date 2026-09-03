@@ -2778,8 +2778,8 @@ merc_hmm_mor = {
 		infantry_power = 0.1
 		shock_damage_received = -0.1
 	}
-	min_size = 25
-	max_size = 30
+	min_size = 21
+	max_size = 21
 	manpower_pool = 100
 }
 
