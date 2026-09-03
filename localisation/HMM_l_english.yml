@@ -260,6 +260,7 @@
         hmm_gm_ae:0 "Sanctioned Expansion"
         hmm_british_isles_node:0 "British Isles"
         hmm_low_countries_node:0 "Amsterdam"
+        hmm_frankfurt_node:0 "Frankfurt"
         hmm_mor_algiers_tt:0 "Build §Y5§! Mosques in our Algerian Provinces"
         hmm_ned_gain_diplo_power_per_english_tt:0 "For every §YCenter of Trade§! Province in §YAmsterdam§! we own, we will gain §G+25§! Diplomatic Power"
         hmm_amsterdam_market_modifier:0 "Stapelmarkt"

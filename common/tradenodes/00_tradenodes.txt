@@ -1763,7 +1763,7 @@ krakow={
 		}
 	}
 	outgoing={
-		name="rheinland"
+		name="hmm_frankfurt_node"
 		path={
 			263 264 1876 
 		}
@@ -1800,7 +1800,7 @@ wien={
 		}
 	}
 	outgoing={
-		name="rheinland"
+		name="hmm_frankfurt_node"
 		path={
 			133 64 1757 67 66 79 1876 
 		}
@@ -1830,7 +1830,7 @@ baltic_sea={
 		1 2 3 4 5 8 9 11 18 19 25 27 28 29 31 35 36 37 38 39 40 41 42 43 270 271 273 767 1834 1841 1842 1926 1930 1935 1936 1985 2958 2997 4113 4114 4123 4152 4166 4241 4534 
 	}
 }
-rheinland={
+hmm_frankfurt_node={
 	location=1876
 	color={
 		114 171 184 
