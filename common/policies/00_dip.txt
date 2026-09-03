@@ -1755,7 +1755,7 @@ merchants_hire_act = {
 	}
 }
 
-transportation_act = { 
+hired_expeditions_act = { 
 	monarch_power = DIP
 	
 	potential = {
@@ -1867,6 +1867,29 @@ nobles_in_navy_act = {
 			factor = 0
 			NOT = { navy_size = 20 }
 		}		
+	}
+}
+
+universal_serfdom_act = {
+	monarch_power = DIP
+
+	potential = {
+		has_idea_group = court_ideas
+		has_idea_group = aristocracy_ideas
+	}
+	
+	allow = {
+		full_idea_group = court_ideas
+		full_idea_group = aristocracy_ideas
+	}
+
+	leader_land_shock = 1
+	max_absolutism_effect = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
 	}
 }
 

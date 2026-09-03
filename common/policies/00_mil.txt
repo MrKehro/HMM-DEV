@@ -582,7 +582,7 @@ the_witchcraft_act = {
 	}
 	
 	global_manpower_modifier = 0.20
-	leader_land_shock = 1
+	shock_damage = 0.05
 
 	effect = {}
 	removed_effect = {}
@@ -591,63 +591,25 @@ the_witchcraft_act = {
 	}
 }
 
-universal_serfdom_act = {
+enlightened_aristocracy = {
 	monarch_power = MIL
-
+	
 	potential = {
-		has_idea_group = court_ideas
+		has_idea_group = humanist_ideas
 		has_idea_group = aristocracy_ideas
 	}
 	
 	allow = {
-		full_idea_group = court_ideas
+		full_idea_group = humanist_ideas
 		full_idea_group = aristocracy_ideas
-	}
+	}	
 	
-	shock_damage = 0.05
-	max_absolutism_effect = 0.1
+	fire_damage_received = -0.1
 
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			religious_unity = 1
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.8 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.6 }
-		}			
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.4 }
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { religious_unity = 0.2 }
-		}
-		
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 4
-		}			
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 6
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 8
-		}
+		factor = 1	
 	}
 }
 
@@ -744,8 +706,7 @@ the_best_defense_policy = {
 		full_idea_group = innovativeness_ideas
 	}
 
-	shock_damage = 0.05
-	fire_damage = 0.05
+	shock_damage = 0.15
 	
 	effect = {}
 	removed_effect = {}
@@ -1031,6 +992,29 @@ mercenary_tactical_movement_act = {
 	}
 	
 	mercenary_discipline = 0.05
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+transportation_act = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = mercenary_ideas
+		has_idea_group = economic_ideas   
+	}
+	
+	allow = {
+		full_idea_group = mercenary_ideas
+		full_idea_group = economic_ideas 
+	}
+	
+	force_march_free = yes
+	shock_damage_received = -0.1
 
 	effect = {}
 	removed_effect = {}
