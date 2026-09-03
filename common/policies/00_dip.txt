@@ -214,77 +214,6 @@ clan_unity_act = {
 	}
 }
 
-the_importation_act = {
-	monarch_power = DIP
-
-	potential = {
-		always = no
-	}
-	allow = {
-		always = no
-	}
-	
-	trade_efficiency = 0.1
-	mercantilism_cost = -0.2
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.2
-		modifier = {
-			factor = 0
-			NOT = { trade_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
-	}
-}
-
-colonial_expansions = {
-
-	monarch_power = DIP
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}		
-
-	global_colonial_growth = 15
-	native_uprising_chance = -0.5
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
-		}
-	}
-}
-
-
 beneficial_neglect = {
 	monarch_power = DIP
 
@@ -400,49 +329,6 @@ restrictions_for_colonies = {
 			factor = 1.25
 			NOT = { religious_unity = 0.2 }
 		}			
-	}
-}
-
-naval_infrastructure_act = {
-	monarch_power = DIP
-
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-
-	naval_forcelimit_modifier = 0.33
-
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size_percentage = 0.9 }
-		}			
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 1.1
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 1.5
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 2
-		}
-		modifier = {
-			factor = 1.5
-			navy_size_percentage = 2.5
-		}				
 	}
 }
 
@@ -693,85 +579,6 @@ the_mercenary_registration_act = {
 	}
 }
 
-encouragement_of_merchant_navy = {
-	monarch_power = DIP
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	trade_efficiency = 0.1
-	trade_steering = 0.2
- 
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}		
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
-	}
-}
-
-
-
-commercial_embassies = {
-	monarch_power = DIP
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	global_trade_power = 0.1
-	diplomatic_reputation = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8		
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
-	}
-}
-
 formalized_measures = {
 	monarch_power = DIP
 	potential = {
@@ -793,29 +600,6 @@ formalized_measures = {
 		factor = 0
 	}
 }
-
-
-professional_diplomatic_corps = {
-	monarch_power = DIP
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	diplomatic_reputation = 1
-	war_exhaustion = -0.05
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.7
-	}
-
-}
-
 
 
 colonial_companies_act = {
@@ -871,27 +655,6 @@ protected_shipping_lanes = {
 			factor = 0
 			NOT = { num_of_light_ship = 10 }
 		}
-	}
-}
-
-multilingual_diplomats = {
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}	
-	
-	num_accepted_cultures = 1
-	improve_relation_modifier = 0.2
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
 	}
 }
 
@@ -989,80 +752,6 @@ the_integrated_administration_act = {
 			vassal = 5
 		}			
 	}
-}
-
-record_keeping_act = {
-	monarch_power = DIP
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	diplomats = 1
-	global_autonomy = -0.05
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-colonial_administration_act = {
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	allow = {
-		always = no
-	}
-	
-	global_colonial_growth = 10
-	colonist_placement_chance = 0.05
-
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
-		}
-	}
-}
-
-naval_school_act = {
-	monarch_power = DIP
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	navy_tradition = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.6
-			NOT = { navy_size = 20 }
-		}		
-	}
-
 }
 
 the_stamp_act = {
@@ -1168,23 +857,6 @@ the_liberation_act = {
 			average_effective_unrest = 8
 		}
 	}
-}
-
-diplomatic_defence_act = {
-	monarch_power = DIP
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	diplomats = 1
-	improve_relation_modifier = 0.2
-	
-	effect = {}
-	removed_effect = {}
 }
 
 privy_council_establishment_act = {
@@ -1506,142 +1178,6 @@ passport_to_merchants_policy = {
 	}
 }
 
-appeal_to_old_powers_policy = {
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	diplomatic_reputation = 1
-	improve_relation_modifier = 0.15
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-	}
-}
-
-indirect_approach_policy = {
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	movement_speed = 0.1
-	land_attrition = -0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-loyalty_to_the_land_policy = {
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	diplomatic_upkeep = 1
-	liberty_desire_from_subject_development = -0.15
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-commercial_tribes_policy = { 
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	trade_range_modifier = 0.15
-	range = 0.25
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-canoe_expertise_policy = {
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	disengagement_chance = 0.25
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-
-#1.35 Policies#
-
-the_smooth_integration_act = { 
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no 
-	}
-	
-	diplomatic_reputation = 1 
-	years_to_integrate_personal_union = -10
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.1
-			NOT = { religion_group = christian }
-		}
-	}
-}
-
 colonial_boost_act = { 
 	monarch_power = DIP
 	
@@ -1705,26 +1241,6 @@ loyal_conduct_act = {
 	global_spy_defence = 0.33
 	defensiveness = 0.15
 
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-diplomatic_arms_act = { 
-	monarch_power = DIP
-	
-	potential = {
-		always = no   
-	}
-	
-	allow = {
-		always = no 
-	}
-	
-	diplomatic_upkeep = 2
-	
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
@@ -1821,26 +1337,6 @@ client_state_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 1
-	}
-}
-
-native_emissaries_act = {
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	monthly_federation_favor_growth = 0.2
-	ae_impact = -0.1
-	
-
-	ai_will_do = {
-		factor = 1.0
 	}
 }
 
@@ -1955,33 +1451,6 @@ the_colonial_nobility_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 0.8
-	}
-}
-
-faith_advisors_policy = { 
-	monarch_power = DIP
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	papal_influence = 1
-	church_power_modifier = 0.15
-	monthly_fervor_increase = 1
-	yearly_patriarch_authority = 0.005
-	yearly_harmony = 0.5
-	yearly_karma_decay = 0.05
-	monthly_piety = 0.001
-	diplomatic_reputation = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1	
 	}
 }
 

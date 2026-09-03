@@ -24,56 +24,7 @@ the_wooden_wall = {
 	}	
 }
 
-the_provincial_taxation_system = {
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	land_maintenance_modifier = -0.05
-	manpower_recovery_speed = 0.15
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-	
-}
-
-the_mining_act = {
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	allow = {
-		always = no
-	}
-	
-	leader_land_fire = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-the_liquor_act = {
+transportation_act  = {
 	monarch_power = MIL
 	
 	
@@ -295,47 +246,6 @@ field_priests = {
 	}
 }
 
-pen_rely_on_sword_act = {
-	monarch_power = MIL
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	diplomatic_reputation = 1
-	land_forcelimit_modifier = 0.1
-
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { army_size_percentage = 0.9 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 1.1
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 1.5
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 2
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 2.5
-		}
-	}
-}
-
 naval_secrecy_act = {
 	monarch_power = MIL
 	potential = {
@@ -353,77 +263,6 @@ naval_secrecy_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 1
-	}
-}
-
-underhanded_diplomacy_act = {
-	monarch_power = MIL
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	spy_offence = 0.33
-	diplomatic_reputation = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-	
-		
-the_tenures_abolition_act = {
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	army_tradition = 0.5
-	diplomats = 1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.6
-	}	
-}
-
-colonial_garrisons = {
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	land_forcelimit_modifier = 0.1
-	global_colonial_growth = 10
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8
-		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
-		}
 	}
 }
 
@@ -613,25 +452,6 @@ enlightened_aristocracy = {
 	}
 }
 
-the_licensing_of_the_press_act = {
-	monarch_power = MIL
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	global_manpower_modifier = 0.2
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8
-	}
-}
-
 military_allotment_act = {
 	monarch_power = MIL
 
@@ -656,7 +476,7 @@ military_allotment_act = {
 	}
 }
 
-war_horses_policy = { 
+the_best_defense_policy = { 
 	monarch_power = MIL
 
 	potential = {
@@ -693,7 +513,7 @@ war_horses_policy = {
 	}
 }
 
-the_best_defense_policy = { 
+fear_tactics_policy = {
 	monarch_power = MIL
 
 	potential = {
@@ -719,85 +539,7 @@ the_best_defense_policy = {
 	}
 }
 
-
-
-the_three_sisters_policy = { 
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	land_morale = 0.05
-	infantry_cost = -0.15
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-by_the_people_for_the_people_policy = {
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	defensiveness = 0.25
-	garrison_size = 0.1
-	land_maintenance_modifier = -0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-war_on_our_terms_policy = {
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	discipline = 0.025
-	land_morale = 0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1.0
-		modifier = {
-			factor = 2.5
-			is_at_war = yes
-		}
-	}
-}
-
-fear_tactics_policy = {
+war_horses_policy = {
 	monarch_power = MIL
 
 	potential = {
@@ -1000,7 +742,7 @@ mercenary_tactical_movement_act = {
 	}
 }
 
-transportation_act = {
+the_liquor_act = {
 	monarch_power = MIL
 	
 	potential = {
@@ -1090,28 +832,7 @@ dutiful_mercenaries_act = {
 	}
 }
 
-hired_expeditions_act = { 
-	monarch_power = MIL
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	force_march_free = yes 
-	recover_army_morale_speed = 0.15
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-cultural_recognition_act = {
+by_the_people_for_the_people_policy = {
 	monarch_power = MIL
 	
 	potential = {
