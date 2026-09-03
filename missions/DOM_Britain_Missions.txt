@@ -4287,17 +4287,28 @@ gbr_ave_row_1 = {
 		trigger = {
 			if = {
 				limit = { is_random_new_world = no }
-				1500 = {
-					trade_share = {
-						country = ROOT
-						share = 40
+				OR = {
+					AND = {
+						1500 = {
+							trade_share = {
+								country = ROOT
+								share = 40
+							}
+						}
+						236 = {
+							highest_value_trade_node = yes
+							trade_share = {
+								country = ROOT
+								share = 60
+							}
+						}
 					}
-				}
-				236 = {
-					highest_value_trade_node = yes
-					trade_share = {
-						country = ROOT
-						share = 60
+					97 = {
+						highest_value_trade_node = yes
+						trade_share = {
+							country = ROOT
+							share = 60
+						}
 					}
 				}
 			}
@@ -4310,7 +4321,7 @@ gbr_ave_row_1 = {
 					}
 				}
 			}
-		}	
+		}
 		effect = {
 			add_country_modifier = {
 				name = "eng_channel_dominance"
@@ -4331,20 +4342,20 @@ gbr_ave_row_1 = {
 		}
 		position = 12
 		provinces_to_highlight = {
-			province_id = 1269
+			province_id = 97
 		}		
 		trigger = { 
-			1269 = {
+			97 = {
 				is_strongest_trade_power = ROOT
 			}
-			1269 = {
+			97 = {
 				highest_value_trade_node = yes
 			}
-			1269 = {
+			97 = {
 				trade_node_value = 500
 			}
 			reform_level = 8
-		}	
+		}
 		effect = {
 			unlock_government_reform = {
 				government_reform = commercial_trade_empire_reform

@@ -14162,6 +14162,10 @@ TIM_full_army_prof = {
 	yearly_army_professionalism = 0.01 
 }
 
+hmm_amsterdam_market_modifier = {
+	province_trade_power_value = 20
+}
+
 #Perisna Influence Counter
 used_persian_influece_interaction_1 = { influence_to_vassal_elevation_cost = -20 }
 used_persian_influece_interaction_2 = { influence_to_vassal_elevation_cost = -40 }

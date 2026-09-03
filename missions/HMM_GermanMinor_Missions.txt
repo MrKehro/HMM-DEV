@@ -194,6 +194,7 @@ hmm_german_minor_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = frisia_area
+				area = north_brabant_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -274,7 +275,7 @@ hmm_german_minor_1 = {
 			}
 		} 
 		trigger = {
-			1269 = {
+			97 = {
 				trade_share = {
 					country = ROOT
 					share = 60
@@ -283,7 +284,7 @@ hmm_german_minor_1 = {
 		} 
 
 		effect = {
-			custom_tooltip = NED_GAIN_DIPLO_POWER_PER_ENGLISH_COT
+			custom_tooltip = hmm_ned_gain_diplo_power_per_english_tt
 			custom_tooltip = " "
 			hidden_effect = {
 				1269 = {
@@ -654,11 +655,13 @@ hmm_german_minor_3 = {
 		} 
 		effect = { 
 			create_general_with_pips = { tradition = 75 add_shock = 1 }
+			custom_tooltip = SEPERATOR_TOOLTIP
 			add_casus_belli = {
 				type = cb_vassalize_mission
 				months = 180
 				target = BRU
 			}
+			custom_tooltip = SEPERATOR_TOOLTIP
 			custom_tooltip = hmm_gm_raise_army_tt
 			hidden_effect = {
 				every_province = {
