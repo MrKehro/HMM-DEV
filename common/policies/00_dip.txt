@@ -579,29 +579,6 @@ the_mercenary_registration_act = {
 	}
 }
 
-formalized_measures = {
-	monarch_power = DIP
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	reelection_cost = -0.10
-	global_manpower_modifier = 0.1
-	may_recruit_female_generals = yes
-	female_advisor_chance = 0.25
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-
 colonial_companies_act = {
 	monarch_power = DIP
 	potential = {

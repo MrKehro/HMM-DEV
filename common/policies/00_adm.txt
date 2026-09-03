@@ -568,31 +568,6 @@ hold_the_weather_gauge = {
 	}
 }
 
-the_colonial_nobility_act = {
-	monarch_power = ADM
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	legitimacy = 1
-	republican_tradition = 0.25
-	devotion = 1
-	horde_unity = 1
-	meritocracy = 0.5
-	reform_progress_growth = 0.2
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.8
-	}	
-}
-
 the_statute_of_monopolies = {
 	monarch_power = ADM
 
@@ -1239,64 +1214,6 @@ mercenary_registration_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 1
-	}
-}
-
-peace_keeping_force_act = { 
-	monarch_power = ADM
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	merc_maintenance_modifier = -0.2
-	may_build_supply_depot = yes
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-
-otto_per_mille = {
-	monarch_power = ADM
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	core_creation = -0.05
-	years_of_nationalism = -5
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 4
-		}			
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 6
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 8
-		}
 	}
 }
 

@@ -3,7 +3,149 @@
 # the_best_defense_policy
 # gentle_conquest_act
 
-by_the_people_for_the_people_policy = {
+cultural_recognition_act
+efficient_war_taxes_act
+fortified_trading_posts
+harbour_administration
+naval_competence_act
+skilled_cartographers
+supply_convoys
+terms_of_surrender_statute
+the_cooperation_act
+the_maritime_intelligencer_unit
+the_nautic_education_act
+the_naval_inspection_act
+the_naval_supremacy_act
+the_transportation_act
+zealous_captains
+
+peace_keeping_force_act = { 
+	monarch_power = ADM
+	
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		full_idea_group = mercenary_ideas
+		full_idea_group = humanist_ideas
+	}
+	
+	merc_maintenance_modifier = -0.2
+	may_build_supply_depot = yes
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+otto_per_mille = {
+	monarch_power = ADM
+	
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		full_idea_group = economic_ideas
+		full_idea_group = theocracy_gov_ideas
+	}
+	
+	core_creation = -0.05
+	years_of_nationalism = -5
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 4
+		}			
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 8
+		}
+	}
+}
+
+formalized_measures = {
+	monarch_power = DIP
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		full_idea_group = diplomatic_ideas
+		full_idea_group = plutocracy_ideas
+	}
+	
+	reelection_cost = -0.10
+	global_manpower_modifier = 0.1
+	may_recruit_female_generals = yes
+	female_advisor_chance = 0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+the_liquor_act  = {
+	monarch_power = MIL
+	
+	
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		full_idea_group = quality_ideas
+		full_idea_group = administrative_ideas
+	}	
+	
+	recover_army_morale_speed = 0.15
+	reinforce_speed = 0.15
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.6
+	}
+}
+
+naval_secrecy_act = {
+	monarch_power = MIL
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		full_idea_group = exploration_ideas
+		full_idea_group = defensive_ideas
+	}
+
+	sunk_ship_morale_hit_recieved = -0.1
+	naval_morale = 0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+the_best_defense_policy = { 
 	monarch_power = MIL
 
 	potential = {
@@ -11,7 +153,69 @@ by_the_people_for_the_people_policy = {
 	}
 	
 	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = innovativeness_ideas
+	}
+
+	army_tradition = 0.5
+	shock_damage = 0.1
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 0.75
+		modifier = {
+			factor = 0
+			NOT = { army_tradition = 2 }
+		}			
+		modifier = {
+			factor = 1.5
+			army_tradition = 30
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 50
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 80
+		}
+	}
+}
+
+gentle_conquest_act = { 
+	monarch_power = MIL
+	
+	potential = {
 		always = no
+	}
+	
+	allow = {
+		full_idea_group = infrastructure_ideas
+		full_idea_group = horde_gov_ideas
+	}
+	
+	global_monthly_devastation = -0.25
+	land_maintenance_modifier = -0.1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+
+trained_marines_act = {
+	monarch_power = MIL
+
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = humanist_ideas
 	}
 
 	defensiveness = 0.25
@@ -96,7 +300,7 @@ the_spy_discovery_act = {
 	effect = {}
 	removed_effect = {}
 	ai_will_do = {
-		factor = 0.6 #Keep in mind lower stab cost is probably pretty weak given this costs ADM...
+		factor = 0.6 # Keep in mind lower stab cost is probably pretty weak given this costs ADM...
 	}
 }
 
@@ -142,7 +346,7 @@ vassal_taxation_policy = {
 	}
 }
 
-the_pioneer_policy = {
+letters_of_marque = {
 	monarch_power = ADM
 
 	potential = {
@@ -638,7 +842,7 @@ ancestor_worship_policy = {
 	}
 }
 
-#1.35 Additions#
+# 1.35 Additions# 
 
 subject_obligations_act = { 
 	monarch_power = ADM
@@ -1175,7 +1379,7 @@ canoe_expertise_policy = {
 }
 
 
-#1.35 Policies#
+# 1.35 Policies# 
 
 the_smooth_integration_act = { 
 	monarch_power = DIP

@@ -24,28 +24,6 @@ the_wooden_wall = {
 	}	
 }
 
-transportation_act  = {
-	monarch_power = MIL
-	
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}	
-	
-	recover_army_morale_speed = 0.15
-	reinforce_speed = 0.15
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
 horse_artillery = {
 	monarch_power = MIL
 	
@@ -243,26 +221,6 @@ field_priests = {
 			factor = 1.5
 			is_at_war = yes
 		}
-	}
-}
-
-naval_secrecy_act = {
-	monarch_power = MIL
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	sunk_ship_morale_hit_recieved = -0.1
-	naval_morale = 0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
 	}
 }
 
@@ -473,43 +431,6 @@ military_allotment_act = {
 	removed_effect = {}
 	ai_will_do = {
 		factor = 0.8
-	}
-}
-
-the_best_defense_policy = { 
-	monarch_power = MIL
-
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-
-	army_tradition = 0.5
-	shock_damage = 0.1
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 0.75
-		modifier = {
-			factor = 0
-			NOT = { army_tradition = 2 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_tradition = 30
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 50
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 80
-		}
 	}
 }
 
@@ -757,27 +678,6 @@ the_liquor_act = {
 	
 	force_march_free = yes
 	shock_damage_received = -0.1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-gentle_conquest_act = { 
-	monarch_power = MIL
-	
-	potential = {
-		always = no
-	}
-	
-	allow = {
-		always = no
-	}
-	
-	global_monthly_devastation = -0.25
-	land_maintenance_modifier = -0.1
 
 	effect = {}
 	removed_effect = {}
