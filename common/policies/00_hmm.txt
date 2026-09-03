@@ -28,7 +28,7 @@ peace_keeping_force_act = {
 	
 	allow = {
 		full_idea_group = mercenary_ideas
-		full_idea_group = humanist_ideas
+		full_idea_group = administrative_ideas
 	}
 	
 	merc_maintenance_modifier = -0.2
@@ -131,7 +131,7 @@ naval_secrecy_act = {
 	}
 	
 	allow = {
-		full_idea_group = exploration_ideas
+		full_idea_group = expansion
 		full_idea_group = defensive_ideas
 	}
 
@@ -498,7 +498,7 @@ vassal_integration_act = {
 	}
 	
 	allow = {
-		full_idea_group = influence_ideas
+		full_idea_group = diplomatic_ideas
 		full_idea_group = administrative_ideas
 	}	
 	
@@ -542,7 +542,7 @@ overseas_dominions = {
 	}
 	
 	allow = {
-		full_idea_group = influence_ideas
+		full_idea_group = diplomatic_ideas
 		full_idea_group = expansion_ideas
 	}	
 	
