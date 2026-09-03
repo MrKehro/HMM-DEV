@@ -437,7 +437,7 @@ gc_morocco_2 = {
 	
 	gc_mor_privateer = {
 		icon = mission_raid_christian_trade
-		required_missions = { gc_mor_imperial_cities }
+		required_missions = { gc_mor_wattasid }
 		position = 2
 		
 		provinces_to_highlight = {
@@ -448,7 +448,7 @@ gc_morocco_2 = {
 			1293 = {
 				privateer_power = {
 					country = ROOT
-					share = 1
+					share = 5
 				}
 			}
 		}
@@ -668,14 +668,30 @@ gc_morocco_3 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
-		
+
 		effect = {
-			add_country_modifier = {
-				name = hmm_mission_timed_buff
-				duration = 1825
+			custom_tooltip = hmm_mor_algiers_tt
+			for = {
+				effect = "
+				random_owned_province = {
+					limit = {
+						OR = {
+							area = algiers_area
+							area = barbary_coast_area
+							area = hautes_plaines_area
+							area = tafilalt_area
+						}
+						NOT = { 
+							has_building = temple
+						}
+					}
+					add_building = temple
+				}"
+				amount = 5
 			}
 		}
 	}
+
 	gc_mor_pirates = {
 		icon = mission_pirate_havens
 		required_missions = { gc_mor_algiers gc_mor_privateer }
@@ -696,7 +712,7 @@ gc_morocco_3 = {
 				1298 = {
 					privateer_power = {
 						country = ROOT
-						share = 1
+						share = 5
 					}
 				}
 			}
@@ -822,7 +838,7 @@ gc_morocco_3 = {
 			236 = {
 				privateer_power = {
 					country = ROOT
-					share = 5
+					share = 10
 				}
 			}
 			kingdom_of_the_isles_area = {
@@ -858,6 +874,62 @@ gc_morocco_4 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
+
+	hmm_mor_unlock_deathwar_corps = {
+		icon = mission_castillian_aggression
+		required_missions = { }
+
+		provinces_to_highlight = {
+			province_id = 224
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			exists = CAS
+			war_with = CAS
+			exists = POR
+			war_with = POR
+		}
+
+		effect = {
+			set_country_flag = merc_hmm_mor_flag
+			if = {
+				limt = {
+					1751 = { controlled_by = MOR }
+				}
+				1751 = {
+					create_units_of_type_in_province = {
+						custom_tooltip = hmm_spawn_5_carracks_for_root
+						who = ROOT
+						amount = 5
+						unit_type = early_carrack
+					}	
+				}
+			} 
+			else = {
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					create_units_of_type_in_province = {
+						custom_tooltip = spawn_20_galleys_for_root
+						who = ROOT
+						amount = 20
+						unit_type = galley
+					}
+				}
+			}
+			custom_tooltip = SEPERATOR_TOOLTIP
+			add_country_modifier = {
+				name = hmm_mission_timed_buff
+				duration = 1825
+			}
+			add_country_modifier = {
+				name = hmm_mission_timed_naval_buff
+				duration = 1825
+			}
+		}
+	}
 	
 	gc_mor_ceuta = {
 		icon = mission_reconquer_ceuta
@@ -880,7 +952,7 @@ gc_morocco_4 = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_core = ROOT
 			}
 		}
 	}

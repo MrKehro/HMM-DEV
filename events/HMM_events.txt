@@ -197,7 +197,7 @@ country_event = { # state edicts
 	}
 }
 
-country_event = { # state edicts
+country_event = {
 	id = HMM_events.29
 	title = HMM_events.29.t
 	desc = HMM_events.29.d
@@ -266,24 +266,75 @@ country_event = { # state edicts
 	}
 }
 
-# Break PU
 country_event = {
 	id = HMM_events.30
 	title = HMM_events.30.t
 	desc = HMM_events.30.d
-	picture = DIPLOMACY_eventPicture
-	is_triggered_only = yes
-	immediate = {
-		save_event_target_as = HMM_forced_pu_junior
-		overlord = {
-			save_event_target_as = HMM_forced_pu_overlord
+	picture = GENERALS_DISCUSSING_eventPicture
+	trigger = {
+		has_country_flag = merc_hmm_mor_flag
+		OR = {
+			owns = 224
+			is_year = 1500
+			AND = {
+				is_at_war = no
+				truce_with = CAS
+			}
 		}
 	}
-	option = {
-		name = HMM_events.30.1
-		event_target:HMM_forced_pu_overlord = {
-			break_union = event_target:HMM_forced_pu_junior
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					any_hired_mercenary_company = {
+						template = merc_hmm_mor
+					}
+				}
+				random_hired_mercenary_company = {
+					limit = {
+						template = merc_hmm_mor
+					}
+					disband_mercenary_company = THIS
+				}
+			}
+			clr_country_flag = merc_hmm_mor_flag
 		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		trigger = {
+			owns = 224
+		}
+		name = HMM_events.30.1
+		add_prestige = 15
+	}
+	option = {
+		trigger = {
+			is_year = 1500
+		}
+		name = HMM_events.30.2
+	}
+	option = {
+		trigger = {
+			OR = {
+				alliance_with = CAS
+				alliance_with = POR
+			}
+		}
+		name = HMM_events.30.3
+		add_prestige = -15
+	}
+	option = {
+		trigger = {
+			is_at_war = no
+			truce_with = CAS
+			NOT = { owns = 224 }
+			NOT = { is_year = 1500 }
+			NOT = { alliance_with = CAS }
+		}
+		name = HMM_events.30.4
 	}
 }
 
@@ -381,5 +432,26 @@ country_event = {
 			MIL = 4
 		}
 		add_republican_tradition = 25
+	}
+}
+
+# Break PU
+country_event = {
+	id = HMM_events.33
+	title = HMM_events.33.t
+	desc = HMM_events.33.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		save_event_target_as = HMM_forced_pu_junior
+		overlord = {
+			save_event_target_as = HMM_forced_pu_overlord
+		}
+	}
+	option = {
+		name = HMM_events.33.1
+		event_target:HMM_forced_pu_overlord = {
+			break_union = event_target:HMM_forced_pu_junior
+		}
 	}
 }

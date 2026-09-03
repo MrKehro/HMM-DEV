@@ -2739,7 +2739,7 @@ hmm_mercs_tunis = {
 }
 
 hmm_mercs_tripoli = {
-    regiments_per_development = 0.03
+    regiments_per_development = 0.04
 	cavalry_weight = 0
 	artillery_weight = 0
 	cost_modifier = 1
@@ -2762,28 +2762,25 @@ hmm_mercs_tripoli = {
 	}
 }
 
-hmm_mercs_titteri = {
+merc_hmm_mor = {
     regiments_per_development = 0.05
 	cavalry_weight = 0
-	artillery_weight = 0
-	cost_modifier = 1
-    home_province = 2456 # Titteri
+	cavalry_cap = 0
+	mercenary_desc_key = MERC_HMM_BUR
+	cost_modifier = 0.25
+	counts_towards_force_limit = no
 	sprites = { dlc058_mor_sprite_pack muslimgfx_sprite_pack }
-	trigger = { 
-		capital_scope = { 
-			AND = {
-				OR = {
-					region = iberia_region
-					region = maghreb_region
-				}
-				religion_group = muslim
-			}
-		}
-		government = monarchy
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		has_country_flag = merc_hmm_mor_flag
 	}
-    modifier = {
-		may_recruit_female_generals = yes
+	modifier = { 
+		infantry_power = 0.1
+		shock_damage_received = -0.1
 	}
+	min_size = 25
+	max_size = 30
+	manpower_pool = 100
 }
 
 merc_hmm_bur = {
@@ -2804,7 +2801,7 @@ merc_hmm_bur = {
 	}
 	min_size = 20
 	max_size = 20
-	manpower_pool = 60
+	manpower_pool = 100
 }
 
 rnw_modifier_weights = {
