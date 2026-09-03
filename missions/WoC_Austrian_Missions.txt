@@ -919,14 +919,6 @@ WoC_austria_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			carinthia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_core = 130
-			}
 
 			custom_tooltip = SEPERATOR_TOOLTIP
 
@@ -3031,7 +3023,12 @@ WoC_austria_4 = {
 		}
 		effect = {
 			give_claims = { area = silesia_area }
-
+			if = {
+				limit = {
+					NOT = { owns_core_province = 130 }
+				}
+				add_core = 130
+			}
 			custom_tooltip = SEPERATOR_TOOLTIP
 
 			complex_dynamic_effect = {
