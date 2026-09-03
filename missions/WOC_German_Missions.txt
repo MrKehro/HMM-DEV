@@ -67,7 +67,7 @@ JHC_GER_1 = {
 					
 					custom_tooltip = \" \"
 					
-					1269 = {
+					97 = {
 						add_trade_modifier = {
 							who = ROOT
 							duration = -1
