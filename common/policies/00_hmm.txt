@@ -2,22 +2,22 @@
 # pen_rely_on_sword_act
 # the_best_defense_policy
 # gentle_conquest_act
-
-cultural_recognition_act
-efficient_war_taxes_act
-fortified_trading_posts
-harbour_administration
-naval_competence_act
-skilled_cartographers
-supply_convoys
-terms_of_surrender_statute
-the_cooperation_act
-the_maritime_intelligencer_unit
-the_nautic_education_act
-the_naval_inspection_act
-the_naval_supremacy_act
-the_transportation_act
-zealous_captains
+# missing
+#cultural_recognition_act
+#efficient_war_taxes_act
+#fortified_trading_posts
+#harbour_administration
+#naval_competence_act
+#skilled_cartographers
+#supply_convoys
+#terms_of_surrender_statute
+#the_cooperation_act
+#the_maritime_intelligencer_unit
+#the_nautic_education_act
+#the_naval_inspection_act
+#the_naval_supremacy_act
+#the_transportation_act
+#zealous_captains
 
 peace_keeping_force_act = { 
 	monarch_power = ADM
