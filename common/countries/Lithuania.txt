@@ -10,8 +10,9 @@ historical_score = 150
 
 historical_idea_groups = {
 	aristocracy_ideas
-	economic_ideas
+	spy_ideas
 	quality_ideas
+	economic_ideas
 	defensive_ideas
 	trade_ideas	
 	quantity_ideas

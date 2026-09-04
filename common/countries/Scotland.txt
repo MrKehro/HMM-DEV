@@ -8,12 +8,11 @@ revolutionary_colors = { 15 0 15 }
 preferred_religion = reformed
 
 historical_idea_groups = {
-	economic_ideas
-	quality_ideas
+	defensive_ideas
 	exploration_ideas
-	trade_ideas
-	innovativeness_ideas
 	maritime_ideas
+	offensive_ideas
+	trade_ideas
 }
 
 historical_units = {
