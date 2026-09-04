@@ -265,3 +265,7 @@
         hmm_ned_gain_diplo_power_per_english_tt:0 "For every §YCenter of Trade§! Province in §YAmsterdam§! we own, we will gain §G+25§! Diplomatic Power"
         hmm_amsterdam_market_modifier:0 "Stapelmarkt"
         desc_hmm_amsterdam_market_modifier:0 "Amsterdam's Stapelmarkt served as the great warehouse and exchange of northern Europe. Baltic grain, timber, salt, textiles, spices, and colonial goods flowed through its quays and warehouses, where Dutch merchants connected producers and buyers across the world."
+        hmm_judaism_events.1.t:0 "A Return to the Covenant"
+        hmm_judaism_events.1.d:0 "The Protestant Reformation has unsettled the religious order of our lands. In many of our major cities Jewish scholars and communities have offered a different path - a return to the faith of the ancient Hebrews. We must decide whether to embrace this revival or preserve the catholic faith."
+        hmm_judaism_events.1.a:0 "Shema Yisrael, Adonai Eloheinu, Adonai Echad"
+        hmm_judaism_events.1.b:0 "Extra Ecclesiam Nulla Salus"

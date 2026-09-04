@@ -14166,6 +14166,11 @@ hmm_amsterdam_market_modifier = {
 	province_trade_power_value = 20
 }
 
+hmm_refused_jewish_question_modifier = {
+	tolerance_own = 3
+	papal_influence = 1
+}
+
 #Perisna Influence Counter
 used_persian_influece_interaction_1 = { influence_to_vassal_elevation_cost = -20 }
 used_persian_influece_interaction_2 = { influence_to_vassal_elevation_cost = -40 }

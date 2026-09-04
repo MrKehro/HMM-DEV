@@ -1,0 +1,70 @@
+namespace = hmm_judaism_events
+
+# A Jewish revival in the Polish-Lithuanian Commonwealth
+country_event = {
+	id = hmm_judaism_events.1
+	title = hmm_judaism_events.1.t
+	desc = hmm_judaism_events.1.d
+	picture = JUDAISM_eventPicture
+
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = POL
+			tag = PLC
+		}
+		current_age = age_of_reformation
+		religion = catholic
+		is_defender_of_faith = no
+		is_religion_enabled = protestant
+		religion_years = {
+			protestant = 5
+		}
+        NOT = { has_country_flag = had_jewish_question }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = {
+		set_country_flag = had_jewish_question
+		if = {
+			limit = {
+				262 = {
+					owned_by = ROOT
+					controlled_by = ROOT
+				}
+			}
+			262 = { save_event_target_as = jewish_revival_province }
+		}
+		else = {
+			random_owned_province = {
+				save_event_target_as = jewish_revival_province
+			}
+		}
+	}
+
+	option = {
+		name = hmm_judaism_events.1.a
+		enable_religion = jewish
+		change_religion = jewish
+		event_target:jewish_revival_province = {
+			change_religion = jewish
+		}
+		add_country_modifier = {
+			name = "conversion_zeal"
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = hmm_judaism_events.1.b
+        add_country_modifier = {
+			name = "hmm_refused_jewish_question_modifier"
+			duration = 3650
+		}
+	}
+}
