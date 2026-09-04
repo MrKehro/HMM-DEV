@@ -2438,8 +2438,8 @@ jewish_group = {
 		icon = 20
 		color = { 0 156 231 }
 		country = {
-			tolerance_own = 2
 			advisor_pool = 1
+			advisor_cost = -0.1
 		}
 		country_as_secondary = {
 			advisor_pool = 1
@@ -2521,8 +2521,8 @@ jewish_group = {
 						has_government_attribute = loyalty_from_celebration
 					}
 					add_estate_loyalty = {
-						estate = estate_church
-						loyalty = 20
+						estate = all
+						loyalty = 10
 					}
 				}
 				hidden_effect = {
