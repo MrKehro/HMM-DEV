@@ -896,7 +896,7 @@ gc_morocco_4 = {
 			custom_tooltip = hmm_mor_unlock_deathwar_corps_tt
 			custom_tooltip = SEPERATOR_TOOLTIP
 			if = {
-				limt = {
+				limit = {
 					1751 = { controlled_by = MOR }
 				}
 				1751 = {

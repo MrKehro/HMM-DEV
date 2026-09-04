@@ -1510,7 +1510,7 @@ render_unto_caesar_policy = {
 	}
 
 	native_assimilation = 0.5
-	native_aggressiveness = -0.5
+	native_uprising_chance = -0.5
 
 	effect = {}
 	removed_effect = {}

@@ -102,13 +102,3 @@ vassal = { #Syrian Territories
 	start_date = 1444.1.1
 	end_date = 1517.1.1
 }
-
-#Amir al Arab
-vassal = {
-	first = MAM
-	second = FAD
-	start_date = 1444.11.10
-	end_date = 1516.8.24
-}
-
-

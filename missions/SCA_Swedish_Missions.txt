@@ -35,7 +35,9 @@ swe_scandinavian_colonialism_mission_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			id = flavor_swe.121
+			country_event = {
+				id = flavor_swe.121
+			}
 		}
 	}
 	

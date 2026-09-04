@@ -277,3 +277,4 @@
         desc_hmm_refused_jewish_question_modifier:0 "This province resists attempts to convert its people from the Catholic faith."
         hmm_heathen_conversion_zeal:0 "Religious Zeal"
         desc_hmm_heathen_conversion_zeal:0 "After converting to a new faith, our missionaries are feeling more zealous than usual."
+        hmm_judaism_events_1b_tt:0 "Every owned Province gains '§YUna Fides§!' for §Y50 years§!, giving the following Effects\nLocal Resistsance to Reformation §G+50%§!"

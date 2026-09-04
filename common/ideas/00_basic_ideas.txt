@@ -608,9 +608,9 @@ trade_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 5
+		factor = 3
 		modifier = {
-			factor = 100
+			factor = 200
 			overlord = {
 				ai = no
 			}
@@ -710,16 +710,15 @@ exploration_ideas = {
 			has_colonist = yes	
 		}
 		modifier = {
-			factor = 1000
+			factor = 10000
 			OR = {
 				tag = POR
 				tag = CAS
 				tag = SPA
 				tag = GBR
+				tag = ENG
 				tag = NED
 				tag = HOL
-				tag = ENG
-				tag = FRA
 				tag = BRI
 				tag = SCO
 				tag = NOR
@@ -777,24 +776,23 @@ maritime_ideas = {
 			NOT = { num_of_ports = 1 }
 		}
 		modifier = {
-			factor = 15 
-			capital_scope = {
-				is_island = yes 
-			}
-		}
-		modifier = {
-			factor = 500
+			factor = 250
 			OR = {
+				capital_scope = {
+					is_island = yes 
+				}
 				tag = POR
 				tag = CAS
 				tag = SPA
 				tag = GBR
+				tag = ENG
+				tag = HSA
 				tag = NED
 				tag = HOL
-				tag = ENG
 				tag = BRI
 				tag = SCO
 				tag = NOR
+				tag = KON
 			}
 		}
 	}

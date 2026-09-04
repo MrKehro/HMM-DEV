@@ -52,17 +52,20 @@ country_event = {
 			change_religion = jewish
 		}
 		add_country_modifier = {
-			name = "conversion_zeal"
+			name = "hmm_heathen_conversion_zeal"
 			duration = 3650
 		}
 	}
 	option = {
 		name = hmm_judaism_events.1.b
-        every_owned_province = {
-			add_province_modifier = {
-				name = "hmm_refused_jewish_question_modifier"
-				duration = 3650
-			}
-		}
+        custom_tooltip = hmm_judaism_events_1b_tt
+        hidden_effect = {
+            every_owned_province = {
+                add_province_modifier = {
+                    name = "hmm_refused_jewish_question_modifier"
+                    duration = 18250
+                }
+            }
+        }
 	}
 }
