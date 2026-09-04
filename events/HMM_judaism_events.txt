@@ -1,6 +1,6 @@
 namespace = hmm_judaism_events
 
-# A Jewish revival in the Polish-Lithuanian Commonwealth
+# A Jewish revival in Europe
 country_event = {
 	id = hmm_judaism_events.1
 	title = hmm_judaism_events.1.t
@@ -11,17 +11,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = POL
-			tag = PLC
+		ai = no
+		capital_scope = {
+			continent = europe
 		}
 		current_age = age_of_reformation
 		religion = catholic
 		is_defender_of_faith = no
 		is_religion_enabled = protestant
-		religion_years = {
-			protestant = 5
-		}
         NOT = { has_country_flag = had_jewish_question }
 	}
 
@@ -33,12 +30,12 @@ country_event = {
 		set_country_flag = had_jewish_question
 		if = {
 			limit = {
-				262 = {
+				capital_scope = {
 					owned_by = ROOT
 					controlled_by = ROOT
 				}
 			}
-			262 = { save_event_target_as = jewish_revival_province }
+			capital_scope = { save_event_target_as = jewish_revival_province }
 		}
 		else = {
 			random_owned_province = {
@@ -59,12 +56,13 @@ country_event = {
 			duration = 3650
 		}
 	}
-
 	option = {
 		name = hmm_judaism_events.1.b
-        add_country_modifier = {
-			name = "hmm_refused_jewish_question_modifier"
-			duration = 3650
+        every_owned_province = {
+			add_province_modifier = {
+				name = "hmm_refused_jewish_question_modifier"
+				duration = 3650
+			}
 		}
 	}
 }

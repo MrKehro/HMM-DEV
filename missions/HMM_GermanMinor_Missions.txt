@@ -902,14 +902,20 @@ hmm_german_minor_3 = {
 		provinces_to_highlight = {
 			owned_by = ROOT
 			region = north_german_region
-			has_terrain = woods
+			OR = {
+				has_terrain = woods
+				has_terrain = forest
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
 				AND = {
 					region = north_german_region
-					has_terrain = woods
+					OR = {
+						has_terrain = woods
+						has_terrain = forest
+					}
 				}
 			}
 		}
@@ -1120,10 +1126,7 @@ hmm_german_minor_4 = {
 		required_missions = { hmm_gm_universities }
 		provinces_to_highlight = {
 			owned_by = ROOT
-			OR = {
-				region = north_german_region
-				region = south_german_region
-			}
+			region = north_german_region
 			OR = {
 					has_terrain = woods
 					has_terrain = forest
@@ -1135,14 +1138,10 @@ hmm_german_minor_4 = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 25
+				value = 15
 				OR = {
-					region = north_german_region
-					region = south_german_region
-				}
-				OR = {
-					has_terrain = woods
-					has_terrain = forest
+					has_building = workshop
+					has_building = counting_house
 				}
 			}
 		}
@@ -1152,10 +1151,7 @@ hmm_german_minor_4 = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						OR = {
-							region = north_german_region
-							region = south_german_region
-						}
+						region = north_german_region
 						OR = {
 							has_building = workshop
 							has_building = counting_house
@@ -1225,10 +1221,9 @@ hmm_german_minor_5 = {
 		
 		trigger = {
 			1876 = {
-				is_strongest_trade_power = ROOT
 				trade_share = {
 					country = ROOT
-					share = 10
+					share = 20
 				}
 			}
 		}
@@ -1343,7 +1338,7 @@ hmm_german_minor_5 = {
 		}
 	}
 	
-	wes_rheinland_end = {
+	hmm_rheinland_end = {
 		icon = mission_conquer_50_development
 		required_missions = { wes_rheinland_mid }
 		
@@ -1369,7 +1364,7 @@ hmm_german_minor_5 = {
 						NOT = { is_strongest_trade_power = ROOT }
 						trade_share = {
 							country = ROOT
-							share = 33
+							share = 50
 						}
 					}
 				}
@@ -1381,13 +1376,13 @@ hmm_german_minor_5 = {
 			owns_core_province = 75	# Strasbourg
 			owns_core_province = 78	# Mainz
 			owns_core_province = 63	# Erfurt
-			owns_core_province = 1876	# Frankfurt
+			owns_core_province = 1876 # Frankfurt
 			owns_core_province = 1758 # Hannover
 			1876 = {
 				is_strongest_trade_power = ROOT
 				trade_share = {
 					country = ROOT
-					share = 33
+					share = 50
 				}
 			}
 		}
@@ -1395,6 +1390,7 @@ hmm_german_minor_5 = {
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = hessian free = yes }
 			add_accepted_culture_or_dip_power = { culture = hannoverian free = yes }
+			add_accepted_culture_or_dip_power = { culture = franconian free = yes }
 			add_country_modifier = { 
 				name = westphalia_integrate_rheinland
 				duration = -1 

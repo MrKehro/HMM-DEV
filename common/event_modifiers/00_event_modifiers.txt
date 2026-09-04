@@ -14167,8 +14167,12 @@ hmm_amsterdam_market_modifier = {
 }
 
 hmm_refused_jewish_question_modifier = {
-	tolerance_own = 3
-	papal_influence = 1
+	local_religious_conversion_resistance = 0.5
+}
+
+hmm_heathen_conversion_zeal = {
+	global_heathen_missionary_strength = 0.10
+	missionary_maintenance_cost = -0.33
 }
 
 #Perisna Influence Counter

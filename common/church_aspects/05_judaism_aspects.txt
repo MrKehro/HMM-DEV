@@ -208,9 +208,7 @@ judaism_diplomatic_rabbi_aspect = {	#DIP aspect
 		}
 	}
 	modifier = {
-		#improve_relation_modifier = 0.2
 		development_cost = -0.05
-		trade_efficiency = 0.01
 	}
 	monarch_power = dip
 	ai_will_do = {
@@ -221,9 +219,7 @@ judaism_diplomatic_rabbi_aspect = {	#DIP aspect
 judaism_yom_kippur_aspect = {	#MIL aspect
 	cost = 100
 	modifier = {
-		infantry_cost = -0.15
-		artillery_cost = -0.15
-		cavalry_cost = -0.15
+		global_regiment_cost = -0.15
 	}
 	monarch_power = mil
 	ai_will_do = {

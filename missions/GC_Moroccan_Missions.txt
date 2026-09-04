@@ -893,6 +893,8 @@ gc_morocco_4 = {
 
 		effect = {
 			set_country_flag = merc_hmm_mor_flag
+			custom_tooltip = hmm_mor_unlock_deathwar_corps_tt
+			custom_tooltip = SEPERATOR_TOOLTIP
 			if = {
 				limt = {
 					1751 = { controlled_by = MOR }

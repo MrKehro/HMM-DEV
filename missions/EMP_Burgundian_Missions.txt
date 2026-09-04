@@ -273,6 +273,8 @@ emp_burgundy_1 = {
 
 		effect = {
 			set_country_flag = merc_hmm_bur_flag
+			custom_tooltip = hmm_bur_unlock_deathwar_corps_tt
+			custom_tooltip = SEPERATOR_TOOLTIP
 			add_country_modifier = {
 				name = hmm_mission_timed_buff
 				duration = 1825
