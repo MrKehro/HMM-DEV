@@ -137,28 +137,28 @@ merc_local_horse_army = {
     # No home province means local mercenary company
 }
 
-merc_ideas_local_reformation_army = {
-    regiments_per_development = 0.025
-    cavalry_weight = 0
-    artillery_weight = 0
-    cost_modifier = 1
-    trigger = {
-        full_idea_group = mercenary_ideas
-        is_allowed_to_recruit_mercenaries = yes
-        OR = {
-            current_age = age_of_reformation
-            current_age = age_of_absolutism
-            current_age = age_of_revolutions 
-        }
-    }
-    # No home province means local mercenary company
-}
+#merc_ideas_local_reformation_army = {
+#    regiments_per_development = 0.025
+#    cavalry_weight = 0
+#    artillery_weight = 0
+#    cost_modifier = 1
+#    trigger = {
+#        full_idea_group = mercenary_ideas
+#        is_allowed_to_recruit_mercenaries = yes
+#        OR = {
+#            current_age = age_of_reformation
+#            current_age = age_of_absolutism
+#            current_age = age_of_revolutions 
+#       }
+#    }
+#    # No home province means local mercenary company
+#}
 
 merc_ideas_local_absolutism_army = {
-    regiments_per_development = 0.05
+    regiments_per_development = 0.25
     cavalry_weight = 0
     artillery_weight = 0
-    cost_modifier = 1
+    cost_modifier = 0.75
     trigger = {
         full_idea_group = mercenary_ideas
         is_allowed_to_recruit_mercenaries = yes
@@ -171,10 +171,10 @@ merc_ideas_local_absolutism_army = {
 }
 
 merc_ideas_local_revolution_army = {
-    regiments_per_development = 0.09
+    regiments_per_development = 0.5
     cavalry_weight = 0
     artillery_weight = 0
-    cost_modifier = 1
+    cost_modifier = 0.5
     trigger = {
         full_idea_group = mercenary_ideas
         is_allowed_to_recruit_mercenaries = yes
@@ -184,10 +184,10 @@ merc_ideas_local_revolution_army = {
 }
 
 merc_ideas_local_revolution2_army = {
-    regiments_per_development = 0.09
+    regiments_per_development = 0.5
     cavalry_weight = 0
     artillery_weight = 0
-    cost_modifier = 1
+    cost_modifier = 0.5
     trigger = {
         full_idea_group = mercenary_ideas
         is_allowed_to_recruit_mercenaries = yes

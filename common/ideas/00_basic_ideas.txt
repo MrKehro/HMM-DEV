@@ -777,6 +777,10 @@ maritime_ideas = {
 		}
 		modifier = {
 			factor = 250
+			has_idea_group = exploration_ideas
+		}
+		modifier = {
+			factor = 125
 			OR = {
 				capital_scope = {
 					is_island = yes 
@@ -1164,7 +1168,7 @@ mercenary_ideas = {
 		merc_leader_army_tradition = 0.5
 	}
 	seasoned_veterans = {
-		artillery_power = 0.1	
+		artillery_power = 0.1
 	}
 	organised_mercenary_recruitment = { 
 		mercenary_manpower = 0.3
