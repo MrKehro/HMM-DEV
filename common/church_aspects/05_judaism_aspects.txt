@@ -25,7 +25,6 @@ judaism_sukkot_aspect = {	#ADM aspect
 	cost = 100
 	modifier = {
 		interest = -1
-		inflation_reduction = -0.05
 	}
 	monarch_power = adm
 	ai_will_do = {

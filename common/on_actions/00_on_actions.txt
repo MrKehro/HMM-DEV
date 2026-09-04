@@ -5889,13 +5889,14 @@ on_trade_good_changed = {
 	}
 }
 
+# has_church_aspect = judaism_sukkot_aspect
 # this = country
 on_loan_repaid = {
 	on_loan_repaid_estate_privileges_effect = yes
 	if = {
 		limit = { 
 			THIS = {
-				has_idea = debt_and_loans
+				economic_ideas = 4 
 			}
 		}
 		THIS = { add_inflation = -0.05 }
