@@ -6,15 +6,6 @@ judaism_rosh_hashanah_aspect = {	#ADM aspect
 	monarch_power = adm
 	ai_will_do = {
 		factor = 10
-		modifier = {
-			factor = 2
-			NOT = { religious_unity = 0.8 }
-		}
-		modifier = {
-			factor = 2
-			unrest = 4
-			NOT = { stability = 0 }
-		}
 	}
 }
 
@@ -25,7 +16,7 @@ judaism_simchat_torah_aspect = {	#ADM aspect
 	}
 	monarch_power = adm
 	ai_will_do = {
-		factor = 15
+		factor = 10
 	}
 }
 
@@ -36,15 +27,7 @@ judaism_sukkot_aspect = {	#ADM aspect
 	}
 	monarch_power = adm
 	ai_will_do = {
-		factor = 5
-		modifier = {
-			factor = 4
-			num_of_loans = 2
-		}
-		modifier = {
-			factor = 7
-			num_of_loans = 6
-		}
+		factor = 10
 	}
 }
 
@@ -110,15 +93,7 @@ judaism_communities_aspect = {	#DIP aspect
 	}
 	monarch_power = dip
 	ai_will_do = {
-		factor = 15
-		modifier = {
-			factor = 10
-			dominant_religion = jewish
-		}
-		modifier = {
-			factor = 0.01
-			NOT = { dominant_religion = jewish }
-		}
+		factor = 10
 	}
 }
 
@@ -177,15 +152,7 @@ jewish_abrahamic_aspect = {	#DIP aspect
 	}
 	monarch_power = dip
 	ai_will_do = {
-		factor = 15
-		modifier = {
-			factor = 0
-			dominant_religion = jewish
-		}
-		modifier = {
-			factor = 10
-			NOT = { dominant_religion = jewish }
-		}
+		factor = 10
 	}
 }
 
@@ -246,7 +213,7 @@ judaism_diplomatic_rabbi_aspect = {	#DIP aspect
 	}
 	monarch_power = dip
 	ai_will_do = {
-		factor = 15
+		factor = 10
 	}
 }
 
@@ -258,15 +225,6 @@ judaism_yom_kippur_aspect = {	#MIL aspect
 	monarch_power = mil
 	ai_will_do = {
 		factor = 10
-		modifier = {
-			factor = 2
-			is_at_war = yes
-			NOT = { manpower_percentage = 0.9 }
-		}
-		modifier = {
-			factor = 2
-			NOT = { manpower_percentage = 0.5 }
-		}
 	}
 }
 
@@ -277,10 +235,9 @@ judaism_remember_passover_aspect = {	#MIL aspect
 	}
 	monarch_power = mil
 	ai_will_do = {
-		factor = 12
+		factor = 102
 		modifier = {
-			factor = 2
-			is_at_war = yes
+			factor = 200
 		}
 	}
 }
@@ -293,10 +250,9 @@ judaism_purim_teachings_aspect = {	#MIL aspect
 	}
 	monarch_power = mil
 	ai_will_do = {
-		factor = 12
+		factor = 102
 		modifier = {
-			factor = 2
-			is_at_war = yes
+			factor = 200
 		}
 	}
 }
