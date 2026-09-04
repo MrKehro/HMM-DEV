@@ -2513,8 +2513,8 @@ jewish_group = {
 					limit = {
 						has_church_aspect = judaism_sukkot_aspect
 					}
-					add_years_of_income = 0.3
-					add_inflation = -1
+					add_years_of_income = 0.33
+					add_inflation = -2
 				}
 				if = {
 					limit = {

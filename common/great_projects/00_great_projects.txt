@@ -71,7 +71,6 @@ kiel_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 10
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -80,7 +79,6 @@ kiel_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.01
 		}
 
 		#what effects happen when this tier is achieved
@@ -101,7 +99,6 @@ kiel_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 20
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -110,12 +107,10 @@ kiel_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.02
 		}
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
-			owner = { add_prestige = 30 }
 		}
 	}
 
@@ -132,7 +127,6 @@ kiel_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 30
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -141,7 +135,6 @@ kiel_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.03
 		}
 
 		#what effects happen when this tier is achieved
@@ -162,7 +155,7 @@ kiel_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 50
+			province_trade_power_value = 25
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -171,11 +164,11 @@ kiel_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.05
 		}
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
+			owner = { add_prestige = 30 }
 		}
 		conditional_modifier = {
 			trigger = {
@@ -193,7 +186,7 @@ suez_canal = {
 	start = 4316
 	
 	# date built in real life (so anything built during game time will be there if you start a game after that date)
-	date = 1444.11.11
+	date = 1869.11.17
 	
 	#time to build
 	time = {
@@ -201,7 +194,7 @@ suez_canal = {
 	}
 	
 	#how much to build one
-	build_cost = 0
+	build_cost = 1000
 
 	#can we move it?
 	can_be_moved = no
@@ -266,7 +259,6 @@ suez_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			#province_trade_power_value = 10
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -275,7 +267,6 @@ suez_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			#global_trade_power = 0.01
 		}
 
 		#what effects happen when this tier is achieved
@@ -291,12 +282,11 @@ suez_canal = {
 
 		#cost to upgrade to this level (0 for tier 0)
 		cost_to_upgrade = {
-			factor = 0
+			factor = 1000
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			#province_trade_power_value = 20
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -305,7 +295,6 @@ suez_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			#global_trade_power = 0.02
 		}
 		
 		conditional_modifier = {
@@ -318,13 +307,12 @@ suez_canal = {
 				}
 			}
 			modifier = {
-				global_trade_power = 0.1
+
 			}
 		}
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
-			#owner = { add_prestige = 40 }
 		}
 	}
 
@@ -336,12 +324,11 @@ suez_canal = {
 
 		#cost to upgrade to this level (0 for tier 0)
 		cost_to_upgrade = {
-			factor = 0
+			factor = 1000
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			#province_trade_power_value = 30
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -350,7 +337,6 @@ suez_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			#global_trade_power = 0.03
 		}
 		
 		conditional_modifier = {
@@ -363,7 +349,6 @@ suez_canal = {
 				}
 			}
 			modifier = {
-				global_trade_power = 0.1
 			}
 		}
 
@@ -380,12 +365,12 @@ suez_canal = {
 
 		#cost to upgrade to this level (0 for tier 0)
 		cost_to_upgrade = {
-			factor = 0
+			factor = 1000
 		}
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			#province_trade_power_value = 50
+			province_trade_power_value = 25
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -394,7 +379,6 @@ suez_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			#global_trade_power = 0.05
 		}
 		
 		conditional_modifier = {
@@ -407,7 +391,6 @@ suez_canal = {
 				}
 			}
 			modifier = {
-				global_trade_power = 0.1
 			}
 		}
 		conditional_modifier = {
@@ -421,6 +404,7 @@ suez_canal = {
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
+			owner = { add_prestige = 30 }
 		}
 	}
 }
@@ -499,7 +483,6 @@ panama_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 10
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -508,7 +491,6 @@ panama_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.01
 		}
 
 		#what effects happen when this tier is achieved
@@ -529,7 +511,6 @@ panama_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 20
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -538,12 +519,10 @@ panama_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.02
 		}
 
 		#what effects happen when this tier is achieved
 		on_upgraded = {
-			owner = { add_prestige = 50 }
 		}
 	}
 
@@ -560,7 +539,6 @@ panama_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 30
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -569,7 +547,6 @@ panama_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.03
 		}
 
 		#what effects happen when this tier is achieved
@@ -590,7 +567,7 @@ panama_canal = {
 
 		#what modifiers are added to the province when we have this project here on this tier
 		province_modifiers = {
-			province_trade_power_value = 50
+			province_trade_power_value = 25
 		}
 
 		#what modifiers are added to the provinces in the map area when we have this project here on this tier
@@ -599,7 +576,6 @@ panama_canal = {
 
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			global_trade_power = 0.05
 		}
 		
 		conditional_modifier = {
@@ -622,6 +598,7 @@ panama_canal = {
 		
 		#what effects happen when this tier is achieved
 		on_upgraded = {
+			owner = { add_prestige = 30 }
 		}
 	}
 }
