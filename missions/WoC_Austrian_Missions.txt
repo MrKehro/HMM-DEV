@@ -501,25 +501,66 @@ WoC_austria_1_1 = {
 					add_base_tax = 3
 				}
 			}
-
-			custom_tooltip = SEPERATOR_TOOLTIP
-
-			complex_dynamic_effect = {
-				first_custom_tooltip = HAB_IF_NAPLES_VALID_PU
-				first_limit = "
-					exists = NAP
-					valid_for_personal_unions_trigger = yes
-					NAP = {
+			if {
+				limit = {
+					OR = {
+						NAP = {
+							exists = no
+						}
+						NAP = {
+							exists = yes
+							ai = yes
+						}
+					}
+				}
+				emilia_romagna_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				tuscany_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				piedmont_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				liguria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				custom_tooltip = SEPERATOR_TOOLTIP
+				complex_dynamic_effect = {
+					first_custom_tooltip = HAB_IF_NAPLES_VALID_PU
+					first_limit = "
+						exists = NAP
 						valid_for_personal_unions_trigger = yes
-					}
-				"
-				first_effect = "
-					add_casus_belli = {
-						type = cb_restore_personal_union
-						months = 300
-						target = NAP
-					}
-				"
+						NAP = {
+							valid_for_personal_unions_trigger = yes
+						}
+					"
+					first_effect = "
+						add_casus_belli = {
+							type = cb_restore_personal_union
+							months = 300
+							target = NAP
+						}
+					"
+				}
 			}
 		}
 		ai_weight = {
@@ -895,6 +936,7 @@ WoC_austria_2 = {
 					months = 300
 					target = BOH
 				}
+				add_permanent_claim = 2967
 			}
 			else = {
 				bohemia_area = {

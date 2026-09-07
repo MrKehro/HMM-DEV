@@ -3849,6 +3849,39 @@ on_mercenary_recruited_effect = {
 			}
 			FROM = { add_army_professionalism = -0.025 }
 		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = hmm_spy_fifty_percent_merc_army_professionalism_cost
+				}
+				FROM = {
+					NOT = { has_country_flag = hmm_pluto_fifty_percent_merc_army_professionalism_cost }
+				}
+			}
+			FROM = { add_army_professionalism = -0.025 }
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					has_country_flag = hmm_pluto_fifty_percent_merc_army_professionalism_cost
+				}
+				FROM = {
+					NOT = { has_country_flag = hmm_spy_fifty_percent_merc_army_professionalism_cost }
+				}
+			}
+			FROM = { add_army_professionalism = -0.025 }
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					AND = {
+						has_country_flag = hmm_pluto_fifty_percent_merc_army_professionalism_cost
+						has_country_flag = hmm_spy_fifty_percent_merc_army_professionalism_cost
+					}
+				}
+			}
+			FROM = { add_army_professionalism = -0.0125 }
+		}
 		else = { 
 			FROM = { add_army_professionalism = -0.05 } 
 		}

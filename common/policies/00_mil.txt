@@ -36,6 +36,7 @@ horse_artillery = {
 		full_idea_group = offensive_ideas
 		full_idea_group = infrastructure_ideas
 	}
+
 	artillery_power = 0.1
 
 	effect = {}
@@ -61,23 +62,21 @@ horse_artillery = {
 	}
 }
 
-
-modern_siege_weapons = {
+anti_heresy_act = {
 	monarch_power = MIL
 	
 	potential = {
-		has_idea_group = innovativeness_ideas
+		has_idea_group = religious_ideas
 		has_idea_group = offensive_ideas
 	}
 	
 	allow = {
-		full_idea_group = innovativeness_ideas
+		full_idea_group = religious_ideas
 		full_idea_group = offensive_ideas
 	}
 	
-	siege_ability = 0.2
-	leader_siege = 1
 	leader_land_fire = 1
+	fire_damage = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -87,29 +86,6 @@ modern_siege_weapons = {
 			factor = 1.5
 			is_at_war = yes
 		}
-	}
-}
-
-superior_fortification_act = {
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = economic_ideas
-		has_idea_group = defensive_ideas
-	}
-	
-	allow = {
-		full_idea_group = economic_ideas
-		full_idea_group = defensive_ideas
-	}
-	
-	defensiveness = 0.1
-	fort_maintenance_modifier = -0.33
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
 	}
 }
 
@@ -251,21 +227,22 @@ inspirational_leaders = {
 	}
 }
 
-the_preparation_act = {
+bolstered_defence_act = {
 	monarch_power = MIL
 	
 	potential = {
 		has_idea_group = humanist_ideas
 		has_idea_group = defensive_ideas
 	}
-	
+
 	allow = {
 		full_idea_group = humanist_ideas
 		full_idea_group = defensive_ideas
 	}	
-	
-	morale_damage_received = -0.1
-	army_tradition = 0.5
+
+	discipline = 0.025
+	garrison_size = 0.25
+	garrison_damage = 0.25
 	
 	effect = {}
 	removed_effect = {}
@@ -275,6 +252,52 @@ the_preparation_act = {
 			factor = 1.5
 			is_at_war = yes
 		}
+	}
+}
+
+superior_fortification_act = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = economic_ideas
+		has_idea_group = defensive_ideas
+	}
+
+	allow = {
+		full_idea_group = economic_ideas
+		full_idea_group = defensive_ideas
+	}
+
+	defensiveness = 0.25
+	fort_maintenance_modifier = -0.25
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+the_preparation_act = { 
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = religious_ideas
+		has_idea_group = defensive_ideas 
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		full_idea_group = defensive_ideas
+	}
+
+	morale_damage_received = -0.1
+	army_tradition = 0.5
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
@@ -291,7 +314,7 @@ local_militias = {
 		has_idea_group = infrastructure_ideas
 	}	
 	
-	land_morale = 0.05
+	land_morale = 0.075
 	hostile_attrition = 1
 	max_hostile_attrition = 1
 	
@@ -395,7 +418,7 @@ enlightened_aristocracy = {
 		has_idea_group = humanist_ideas
 		has_idea_group = aristocracy_ideas
 	}
-	
+
 	allow = {
 		full_idea_group = humanist_ideas
 		full_idea_group = aristocracy_ideas
@@ -541,11 +564,9 @@ kharash_policy = {
 	}
 }
 
-
-
 #1.35 Additions#
 
-mobile_siege_engines_act = { 
+modern_siege_weapons = { 
 	monarch_power = MIL
 	
 	potential = {
@@ -558,33 +579,10 @@ mobile_siege_engines_act = {
 		full_idea_group = offensive_ideas 
 	}
 	
-	movement_speed = 0.05
-	artillery_levels_available_vs_fort = 2
+	leader_siege = 1
+	siege_ability = 0.2
 	artillery_level_modifier = 1
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-bolstered_defence_act = { 
-	monarch_power = MIL
-	
-	potential = {
-		has_idea_group = religious_ideas
-		has_idea_group = defensive_ideas 
-	}
-	
-	allow = {
-		full_idea_group = religious_ideas
-		full_idea_group = defensive_ideas 
-	}
-	
-	hostile_attrition = 1 
-	garrison_size = 0.25
-	garrison_damage = 0.25
+	artillery_levels_available_vs_fort = 1
 
 	effect = {}
 	removed_effect = {}
@@ -698,9 +696,9 @@ sharp_wits_act = {
 		full_idea_group = humanist_ideas
 		full_idea_group = offensive_ideas 
 	}
-	
+
+	morale_damage = 0.15
 	power_projection_from_insults = 0.25
-	fire_damage = 0.1
 
 	effect = {}
 	removed_effect = {}
@@ -892,7 +890,8 @@ omne_datum_optimum_policy = {
 		full_idea_group = economic_ideas
 	}
 
-	morale_damage_received = -0.1
+	land_morale = 0.05
+	shock_damage_received = -0.1
 	
 	effect = {}
 	removed_effect = {}
@@ -910,16 +909,16 @@ my_word_is_my_bond_policy = {
 
 	potential = {
 		has_idea_group = theocracy_gov_ideas
-		has_idea_group = court_ideas
-	}
-	
-	allow = {
-		full_idea_group = theocracy_gov_ideas
-		full_idea_group = court_ideas
+		has_idea_group = spy_ideas
 	}
 
-	fire_damage_received = -0.05
-	shock_damage_received = -0.05
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = spy_ideas
+	}
+
+	land_morale = 0.05
+	fire_damage_received = -0.1
 
 	effect = {}
 	removed_effect = {}
@@ -929,5 +928,28 @@ my_word_is_my_bond_policy = {
 			factor = 1.5
 			is_at_war = yes
 		}
+	}
+}
+
+war_on_our_terms_policy = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = humanist_ideas
+		has_idea_group = theocracy_gov_ideas 
+	}
+	
+	allow = {
+		full_idea_group = humanist_ideas
+		full_idea_group = theocracy_gov_ideas 
+	}
+	
+	discipline = 0.025
+	devotion = 1
+
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
 	}
 }

@@ -83,10 +83,10 @@ plutocracy_ideas = {
 	tradition_of_payment = {
 		mercenary_cost = -0.2
 		effect = {
-        	fifty_percent_merc_army_professionalism_cost = yes
+        	hmm_pluto_fifty_percent_merc_army_professionalism_cost = yes
 		}
 		removed_effect = {
-			clr_country_flag = fifty_percent_merc_army_professionalism_cost
+			clr_country_flag = hmm_pluto_fifty_percent_merc_army_professionalism_cost
 		}
 	}
 	shock_tactics = {
@@ -350,10 +350,10 @@ spy_ideas = {
 	privateers = {
 		capture_ship_chance = 0.25
 		effect = {
-        fifty_percent_merc_army_professionalism_cost = yes
+        hmm_spy_fifty_percent_merc_army_professionalism_cost = yes
 		}
 		removed_effect = {
-			clr_country_flag = fifty_percent_merc_army_professionalism_cost
+			clr_country_flag = hmm_spy_fifty_percent_merc_army_professionalism_cost
 		}
 	}
 	
@@ -710,7 +710,7 @@ exploration_ideas = {
 			has_colonist = yes	
 		}
 		modifier = {
-			factor = 10000
+			factor = 1000
 			OR = {
 				tag = POR
 				tag = CAS
