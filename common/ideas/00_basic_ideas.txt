@@ -809,7 +809,7 @@ quality_ideas = {
 	category = MIL
 
 	bonus = {
-		discipline = 0.04
+		discipline = 0.05
 		janissaries_loyalty_modifier = 0.1
 		ghulams_loyalty_modifier = 0.1
 	}
