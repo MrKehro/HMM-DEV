@@ -4,10 +4,10 @@
 owner = GLG
 controller = GLG
 culture = schlesian
-religion = hussite
+religion = catholic
 capital = "Liegnitz"
 trade_goods = glass
-hre = no
+hre = yes
 base_tax = 4
 base_production = 4
 is_city = yes 
