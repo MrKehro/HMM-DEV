@@ -75,8 +75,8 @@ anti_heresy_act = {
 		full_idea_group = offensive_ideas
 	}
 	
-	leader_land_fire = 1
-	fire_damage = 0.1
+	morale_damage = 0.15
+	power_projection_from_insults = 0.25
 
 	effect = {}
 	removed_effect = {}
@@ -697,8 +697,8 @@ sharp_wits_act = {
 		full_idea_group = offensive_ideas 
 	}
 
-	morale_damage = 0.15
-	power_projection_from_insults = 0.25
+	leader_land_fire = 1
+	fire_damage = 0.1
 
 	effect = {}
 	removed_effect = {}
