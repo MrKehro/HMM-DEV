@@ -129,9 +129,7 @@ country_decisions = {
 					limit = {
 						owned_by = BUR
 					}
-	  				remove_core = BUR
 	  				add_core = FRA
-	  				cede_province = FRA
 	  			}
 	  		}
 			if = {
@@ -156,10 +154,7 @@ country_decisions = {
 						limit = {
 							owned_by = PREV
 						}
-						remove_core = BUR
-						remove_core = PREV
 						add_core = FRA
-						cede_province = FRA
 					}
 				}
 	  		}
