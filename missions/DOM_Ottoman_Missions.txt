@@ -1167,11 +1167,15 @@ tur_african_conquest = {
 				limit = { NOT = { mil_tech = 7 } }
 				capital_scope = {
 					large_cast_bronze_mortar = ROOT
+					large_cast_bronze_mortar = ROOT
 				}
 				custom_tooltip = tur_guns_of_urban_ct
 			}
 			else = {
 				capital_scope = {
+					artillery = ROOT
+					artillery = ROOT
+					artillery = ROOT
 					artillery = ROOT
 				}
 			}

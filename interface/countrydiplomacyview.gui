@@ -5185,7 +5185,7 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
-			text = "0ÔøΩ"
+			text = "0ù"
 			maxWidth = 200
 			maxHeight = 26
 			format = right
