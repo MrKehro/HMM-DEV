@@ -1034,7 +1034,7 @@ influence_ideas = {
 	integrated_elites = {
 		diplomatic_annexation_cost = -0.25
 	}
-	diplomatic_corps = {
+	buffer_states = {
 		dip_tech_cost_modifier = -0.1
 	}
 	diplomatic_influence = {
