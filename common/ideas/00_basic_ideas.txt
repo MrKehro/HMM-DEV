@@ -266,14 +266,14 @@ innovativeness_ideas = {
 	}
 }
 
-
 religious_ideas = {
 	category = ADM
 
 	bonus = {
-		culture_conversion_cost = -0.25
-		brahmins_hindu_loyalty_modifier = 0.1
-		church_loyalty_modifier = 0.1
+		free_policy = 1
+		possible_adm_policy = 1
+		possible_dip_policy = 1
+		possible_mil_policy = 1
 	}
 
 	missionary_schools = {
@@ -288,6 +288,7 @@ religious_ideas = {
 	}
 	devoutness = {
 		tolerance_own = 2
+		culture_conversion_cost = -0.25
 	}
 	inquisition = {
 		papal_influence = 2
@@ -303,6 +304,8 @@ religious_ideas = {
 	}
 	religious_tradition = {
 		reverse_relation_with_same_religion = 10
+		brahmins_hindu_loyalty_modifier = 0.1
+		church_loyalty_modifier = 0.1
 	}
 	deus_vult = {
 		cb_on_religious_enemies = yes
@@ -1132,7 +1135,6 @@ court_ideas = {
 		yearly_absolutism = 2.5
 	}
 	court_embassies = {
-		free_policy = 1 
 		monarch_military_power = 1
 		monarch_diplomatic_power = 1
 		monarch_admin_power = 1
@@ -1183,9 +1185,8 @@ mercenary_ideas = {
 infrastructure_ideas = {
 	category = ADM
 	
-
 	bonus = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 
 	state_efficiency = {

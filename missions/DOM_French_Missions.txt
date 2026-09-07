@@ -2109,6 +2109,7 @@ french_missions_2_Continuation_b = {
 				capital_scope = {
 					large_cast_bronze_mortar = ROOT
 					large_cast_bronze_mortar = ROOT
+					large_cast_bronze_mortar = ROOT
 				}
 			}
 			else = {

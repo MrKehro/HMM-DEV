@@ -1,0 +1,514 @@
+hmm_adm_11 = {
+	monarch_power = ADM
+	
+	potential = {
+		OR = {
+			hmm_1_has_idea_groups_dip = yes
+			hmm_1_has_idea_groups_adm = yes
+		}
+	}
+	allow = {
+		hmm_1_completed_idea_groups_dip = yes
+		hmm_1_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_12_active }
+		NOT = { has_country_flag = hmm_adm_13_active }
+	}
+
+	build_cost = -0.05
+
+	effect = {
+		set_country_flag = hmm_adm_11_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_11_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_12 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			hmm_1_has_idea_groups_dip = yes
+			hmm_1_has_idea_groups_adm = yes
+		}
+	}
+	allow = {
+		hmm_1_completed_idea_groups_dip = yes
+		hmm_1_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_11_active }
+		NOT = { has_country_flag = hmm_adm_13_active }
+	}
+
+	monarch_lifespan = 0.25
+	
+	effect = {
+		set_country_flag = hmm_adm_12_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_12_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_13 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			hmm_1_has_idea_groups_dip = yes
+			hmm_1_has_idea_groups_adm = yes
+		}
+	}
+	allow = {
+		hmm_1_completed_idea_groups_dip = yes
+		hmm_1_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_11_active }
+		NOT = { has_country_flag = hmm_adm_12_active }
+	}
+
+	global_institution_spread = 0.5
+    embracement_cost = -0.3
+	
+	effect = {
+		set_country_flag = hmm_adm_13_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_13_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_21 = {
+	monarch_power = ADM
+	
+	potential = {
+		OR = {
+			AND = {
+				hmm_2_has_idea_groups_dip = yes
+				hmm_1_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_has_idea_groups_dip = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_2_completed_idea_groups_dip = yes
+				hmm_1_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_completed_idea_groups_dip = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_adm_22_active }
+		NOT = { has_country_flag = hmm_adm_23_active }
+	}
+
+	missionaries = 1
+    global_missionary_strength = 0.03
+
+	effect = {
+		set_country_flag = hmm_adm_21_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_21_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_22 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				hmm_2_has_idea_groups_dip = yes
+				hmm_1_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_has_idea_groups_dip = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_2_completed_idea_groups_dip = yes
+				hmm_1_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_completed_idea_groups_dip = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_adm_21_active }
+		NOT = { has_country_flag = hmm_adm_23_active }
+	}
+
+	religious_unity = 0.25
+
+	effect = {
+		set_country_flag = hmm_adm_22_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_22_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_23 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				hmm_2_has_idea_groups_dip = yes
+				hmm_1_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_has_idea_groups_dip = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_2_completed_idea_groups_dip = yes
+				hmm_1_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_completed_idea_groups_dip = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_adm_21_active }
+		NOT = { has_country_flag = hmm_adm_22_active }
+	}
+
+	papal_influence = 2
+	church_power_modifier = 0.30
+	monthly_fervor_increase = 2
+	yearly_patriarch_authority = 0.01
+	yearly_harmony = 1
+	yearly_karma_decay = 0.1
+	monthly_piety = 0.002
+
+	effect = {
+		set_country_flag = hmm_adm_23_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_23_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_31 = {
+	monarch_power = ADM
+	
+	potential = {
+		hmm_2_has_idea_groups_dip = yes
+		hmm_2_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_2_completed_idea_groups_dip = yes
+		hmm_2_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_32_active }
+		NOT = { has_country_flag = hmm_adm_33_active }
+	}
+
+	innovativeness_gain = 0.5
+
+	effect = {
+		set_country_flag = hmm_adm_31_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_31_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_32 = {
+	monarch_power = ADM
+
+	potential = {
+		hmm_2_has_idea_groups_dip = yes
+		hmm_2_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_2_completed_idea_groups_dip = yes
+		hmm_2_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_31_active }
+		NOT = { has_country_flag = hmm_adm_33_active }
+	}
+
+	reform_progress_growth = 0.5
+
+	effect = {
+		set_country_flag = hmm_adm_32_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_32_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_33 = {
+	monarch_power = ADM
+
+	potential = {
+		hmm_2_has_idea_groups_dip = yes
+		hmm_2_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_2_completed_idea_groups_dip = yes
+		hmm_2_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_31_active }
+		NOT = { has_country_flag = hmm_adm_32_active }
+	}
+
+	yearly_corruption = -0.2
+
+	effect = {
+		set_country_flag = hmm_adm_33_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_33_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_41 = {
+	monarch_power = ADM
+	
+	potential = {
+		OR = {
+			AND = {
+				hmm_3_has_idea_groups_dip = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_has_idea_groups_dip = yes
+				hmm_3_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_3_completed_idea_groups_dip = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_completed_idea_groups_dip = yes
+				hmm_3_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_adm_42_active }
+		NOT = { has_country_flag = hmm_adm_43_active }
+	}
+
+	advisor_cost = -0.15
+
+	effect = {
+		set_country_flag = hmm_adm_41_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_41_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_42 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				hmm_3_has_idea_groups_dip = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_has_idea_groups_dip = yes
+				hmm_3_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_3_completed_idea_groups_dip = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_completed_idea_groups_dip = yes
+				hmm_3_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_adm_41_active }
+		NOT = { has_country_flag = hmm_adm_43_active }
+	}
+
+	num_accepted_cultures = 2
+
+	effect = {
+		set_country_flag = hmm_adm_42_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_42_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_43 = {
+	monarch_power = ADM
+
+	potential = {
+		OR = {
+			AND = {
+				hmm_3_has_idea_groups_dip = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_has_idea_groups_dip = yes
+				hmm_3_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_3_completed_idea_groups_dip = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_completed_idea_groups_dip = yes
+				hmm_3_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_adm_41_active }
+		NOT = { has_country_flag = hmm_adm_42_active }
+	}
+
+	war_exhaustion = -0.2
+
+	effect = {
+		set_country_flag = hmm_adm_43_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_43_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_51 = {
+	monarch_power = ADM
+	
+	potential = {
+		hmm_3_has_idea_groups_dip = yes
+		hmm_3_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_3_completed_idea_groups_dip = yes
+		hmm_3_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_52_active }
+		NOT = { has_country_flag = hmm_adm_53_active }
+	}
+
+	build_cost = -0.5
+
+	effect = {
+		set_country_flag = hmm_adm_51_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_51_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_52 = {
+	monarch_power = ADM
+
+	potential = {
+		hmm_3_has_idea_groups_dip = yes
+		hmm_3_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_3_completed_idea_groups_dip = yes
+		hmm_3_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_51_active }
+		NOT = { has_country_flag = hmm_adm_53_active }
+	}
+
+	interest = -5
+
+	effect = {
+		set_country_flag = hmm_adm_52_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_52_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_adm_53 = {
+	monarch_power = ADM
+
+	potential = {
+		hmm_3_has_idea_groups_dip = yes
+		hmm_3_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_3_completed_idea_groups_dip = yes
+		hmm_3_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_adm_51_active }
+		NOT = { has_country_flag = hmm_adm_52_active }
+	}
+
+	administrative_efficiency = 0.3
+
+	effect = {
+		set_country_flag = hmm_adm_53_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_adm_53_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

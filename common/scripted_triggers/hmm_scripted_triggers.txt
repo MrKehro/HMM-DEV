@@ -135,3 +135,141 @@ hmm_3_completed_idea_groups_mil = {
 		amount = 3
 	}
 }
+
+hmm_1_has_idea_groups_adm = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_adm_tt
+		has_idea_group = innovativeness_ideas
+		has_idea_group = religious_ideas
+		has_idea_group = economic_ideas
+		has_idea_group = expansion_ideas
+		has_idea_group = administrative_ideas
+		has_idea_group = humanist_ideas
+		has_idea_group = infrastructure_ideas
+		amount = 1
+	}
+}
+
+hmm_1_has_idea_groups_dip = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_dip_tt
+		has_idea_group = spy_ideas
+		has_idea_group = diplomatic_ideas
+		has_idea_group = trade_ideas
+		has_idea_group = exploration_ideas
+		has_idea_group = maritime_ideas
+		has_idea_group = influence_ideas
+		has_idea_group = court_ideas
+		amount = 1
+	}
+}
+
+hmm_1_has_idea_groups_mil = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_mil_tt
+		has_idea_group = aristocracy_ideas
+		has_idea_group = offensive_ideas
+		has_idea_group = defensive_ideas
+		has_idea_group = quality_ideas
+		has_idea_group = quantity_ideas
+		has_idea_group = naval_ideas
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = indigenous_ideas
+		has_idea_group = horde_gov_ideas
+		has_idea_group = plutocracy_ideas
+		has_idea_group = mercenary_ideas
+		amount = 1
+	}
+}
+
+hmm_2_has_idea_groups_adm = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_adm_tt
+		has_idea_group = innovativeness_ideas
+		has_idea_group = religious_ideas
+		has_idea_group = economic_ideas
+		has_idea_group = expansion_ideas
+		has_idea_group = administrative_ideas
+		has_idea_group = humanist_ideas
+		has_idea_group = infrastructure_ideas
+		amount = 2
+	}
+}
+
+hmm_2_has_idea_groups_dip = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_dip_tt
+		has_idea_group = spy_ideas
+		has_idea_group = diplomatic_ideas
+		has_idea_group = trade_ideas
+		has_idea_group = exploration_ideas
+		has_idea_group = maritime_ideas
+		has_idea_group = influence_ideas
+		has_idea_group = court_ideas
+		amount = 2
+	}
+}
+
+hmm_2_has_idea_groups_mil = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_mil_tt
+		has_idea_group = aristocracy_ideas
+		has_idea_group = offensive_ideas
+		has_idea_group = defensive_ideas
+		has_idea_group = quality_ideas
+		has_idea_group = quantity_ideas
+		has_idea_group = naval_ideas
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = indigenous_ideas
+		has_idea_group = horde_gov_ideas
+		has_idea_group = plutocracy_ideas
+		has_idea_group = mercenary_ideas
+		amount = 2
+	}
+}
+
+hmm_3_has_idea_groups_adm = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_adm_tt
+		has_idea_group = innovativeness_ideas
+		has_idea_group = religious_ideas
+		has_idea_group = economic_ideas
+		has_idea_group = expansion_ideas
+		has_idea_group = administrative_ideas
+		has_idea_group = humanist_ideas
+		has_idea_group = infrastructure_ideas
+		amount = 3
+	}
+}
+
+hmm_3_has_idea_groups_dip = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_dip_tt
+		has_idea_group = spy_ideas
+		has_idea_group = diplomatic_ideas
+		has_idea_group = trade_ideas
+		has_idea_group = exploration_ideas
+		has_idea_group = maritime_ideas
+		has_idea_group = influence_ideas
+		has_idea_group = court_ideas
+		amount = 3
+	}
+}
+
+hmm_3_has_idea_groups_mil = {
+	calc_true_if = {
+		desc = num_of_has_idea_groups_mil_tt
+		has_idea_group = aristocracy_ideas
+		has_idea_group = offensive_ideas
+		has_idea_group = defensive_ideas
+		has_idea_group = quality_ideas
+		has_idea_group = quantity_ideas
+		has_idea_group = naval_ideas
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = indigenous_ideas
+		has_idea_group = horde_gov_ideas
+		has_idea_group = plutocracy_ideas
+		has_idea_group = mercenary_ideas
+		amount = 3
+	}
+}

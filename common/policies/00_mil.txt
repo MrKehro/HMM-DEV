@@ -2,17 +2,26 @@ hmm_mil_11 = {
 	monarch_power = MIL
 	
 	potential = {
-		hmm_1_completed_idea_groups_mil = yes
+		OR = {
+			hmm_1_has_idea_groups_mil = yes
+			hmm_1_has_idea_groups_adm = yes
+		}
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_12 }
-        NOT = { active_policy = hmm_mil_13 }
+		hmm_1_completed_idea_groups_mil = yes
+		hmm_1_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_12_active }
+		NOT = { has_country_flag = hmm_mil_13_active }
 	}
 
-	infantry_power = 0.1
+	global_manpower_modifier = 0.2
 
-	effect = {}
-	removed_effect = {}
+	effect = {
+		set_country_flag = hmm_mil_11_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_11_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -22,17 +31,26 @@ hmm_mil_12 = {
 	monarch_power = MIL
 
 	potential = {
-		hmm_1_completed_idea_groups_mil = yes
+		OR = {
+			hmm_1_has_idea_groups_mil = yes
+			hmm_1_has_idea_groups_adm = yes
+		}
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_11 }
-        NOT = { active_policy = hmm_mil_13 }
+		hmm_1_completed_idea_groups_mil = yes
+		hmm_1_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_11_active }
+		NOT = { has_country_flag = hmm_mil_13_active }
 	}
 
-	cavalry_power = 0.1
+	land_forcelimit_modifier = 0.25
 	
-	effect = {}
-	removed_effect = {}
+	effect = {
+		set_country_flag = hmm_mil_12_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_12_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -42,86 +60,156 @@ hmm_mil_13 = {
 	monarch_power = MIL
 
 	potential = {
-		hmm_1_completed_idea_groups_mil = yes
+		OR = {
+			hmm_1_has_idea_groups_mil = yes
+			hmm_1_has_idea_groups_adm = yes
+		}
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_11 }
-        NOT = { active_policy = hmm_mil_12 }
+		hmm_1_completed_idea_groups_mil = yes
+		hmm_1_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_11_active }
+		NOT = { has_country_flag = hmm_mil_12_active }
 	}
 
-	artillery_power = 0.1
+	mercenary_cost = -0.15
+    merc_maintenance_modifier = -0.15
 	
-	effect = {}
-	removed_effect = {}
+	effect = {
+		set_country_flag = hmm_mil_13_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_13_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-hmm_mil_21 = { 
+hmm_mil_21 = {
+	monarch_power = MIL
+	
+	potential = {
+		OR = {
+			AND = {
+				hmm_2_has_idea_groups_mil = yes
+				hmm_1_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_has_idea_groups_mil = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_2_completed_idea_groups_mil = yes
+				hmm_1_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_completed_idea_groups_mil = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_mil_22_active }
+		NOT = { has_country_flag = hmm_mil_23_active }
+	}
+
+	discipline = 0.05
+
+	effect = {
+		set_country_flag = hmm_mil_21_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_21_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_mil_22 = {
 	monarch_power = MIL
 
 	potential = {
 		OR = {
-			hmm_2_completed_idea_groups_mil = yes
-			hmm_2_completed_idea_groups_adm = yes
+			AND = {
+				hmm_2_has_idea_groups_mil = yes
+				hmm_1_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_has_idea_groups_mil = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
 		}
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_22 }
-        NOT = { active_policy = hmm_mil_23 }
+		OR = {
+			AND = {
+				hmm_2_completed_idea_groups_mil = yes
+				hmm_1_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_completed_idea_groups_mil = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_mil_21_active }
+		NOT = { has_country_flag = hmm_mil_23_active }
 	}
 
 	land_morale = 0.1
-	
-	effect = {}
-	removed_effect = {}
+
+	effect = {
+		set_country_flag = hmm_mil_22_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_22_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-hmm_mil_22 = { 
+hmm_mil_23 = {
 	monarch_power = MIL
 
 	potential = {
 		OR = {
-			hmm_2_completed_idea_groups_mil = yes
-			hmm_2_completed_idea_groups_adm = yes
+			AND = {
+				hmm_2_has_idea_groups_mil = yes
+				hmm_1_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_has_idea_groups_mil = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
 		}
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_21 }
-        NOT = { active_policy = hmm_mil_23 }
-	}
-
-	discipline = 0.04
-	
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-hmm_mil_23 = { 
-	monarch_power = MIL
-
-	potential = {
 		OR = {
-			hmm_2_completed_idea_groups_mil = yes
-			hmm_2_completed_idea_groups_adm = yes
+			AND = {
+				hmm_2_completed_idea_groups_mil = yes
+				hmm_1_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_1_completed_idea_groups_mil = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
 		}
-	}
-	allow = {
-		NOT = { active_policy = hmm_mil_21 }
-        NOT = { active_policy = hmm_mil_22 }
+		NOT = { has_country_flag = hmm_mil_21_active }
+		NOT = { has_country_flag = hmm_mil_22_active }
 	}
 
-	mercenary_discipline = 0.06
-	
-	effect = {}
-	removed_effect = {}
+	mercenary_discipline = 0.08
+
+	effect = {
+		set_country_flag = hmm_mil_23_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_23_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -131,20 +219,24 @@ hmm_mil_31 = {
 	monarch_power = MIL
 	
 	potential = {
-		OR = {
-			hmm_3_completed_idea_groups_mil = yes
-			hmm_3_completed_idea_groups_adm = yes
-		}
+		hmm_2_has_idea_groups_mil = yes
+		hmm_2_has_idea_groups_adm = yes
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_32 }
-        NOT = { active_policy = hmm_mil_33 }
+		hmm_2_completed_idea_groups_mil = yes
+		hmm_2_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_32_active }
+		NOT = { has_country_flag = hmm_mil_33_active }
 	}
 
-	fire_damage = 0.1
-	
-	effect = {}
-	removed_effect = {}
+	yearly_army_professionalism = 0.005
+
+	effect = {
+		set_country_flag = hmm_mil_31_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_31_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -152,22 +244,26 @@ hmm_mil_31 = {
 
 hmm_mil_32 = {
 	monarch_power = MIL
-	
+
 	potential = {
-		OR = {
-			hmm_3_completed_idea_groups_mil = yes
-			hmm_3_completed_idea_groups_adm = yes
-		}
+		hmm_2_has_idea_groups_mil = yes
+		hmm_2_has_idea_groups_adm = yes
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_31 }
-        NOT = { active_policy = hmm_mil_33 }
+		hmm_2_completed_idea_groups_mil = yes
+		hmm_2_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_31_active }
+		NOT = { has_country_flag = hmm_mil_33_active }
 	}
 
-	shock_damage = 0.1
-	
-	effect = {}
-	removed_effect = {}
+	army_tradition = 1
+
+	effect = {
+		set_country_flag = hmm_mil_32_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_32_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
@@ -175,22 +271,236 @@ hmm_mil_32 = {
 
 hmm_mil_33 = {
 	monarch_power = MIL
+
+	potential = {
+		hmm_2_has_idea_groups_mil = yes
+		hmm_2_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_2_completed_idea_groups_mil = yes
+		hmm_2_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_31_active }
+		NOT = { has_country_flag = hmm_mil_32_active }
+	}
+
+	special_unit_forcelimit = 0.1
+
+	effect = {
+		set_country_flag = hmm_mil_33_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_33_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_mil_41 = {
+	monarch_power = MIL
 	
 	potential = {
 		OR = {
-			hmm_3_completed_idea_groups_mil = yes
-			hmm_3_completed_idea_groups_adm = yes
+			AND = {
+				hmm_3_has_idea_groups_mil = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_has_idea_groups_mil = yes
+				hmm_3_has_idea_groups_adm = yes
+			}
 		}
 	}
 	allow = {
-		NOT = { active_policy = hmm_mil_31 }
-        NOT = { active_policy = hmm_mil_33 }
+		OR = {
+			AND = {
+				hmm_3_completed_idea_groups_mil = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_completed_idea_groups_mil = yes
+				hmm_3_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_mil_42_active }
+		NOT = { has_country_flag = hmm_mil_43_active }
+	}
+
+	fire_damage = 0.1
+
+	effect = {
+		set_country_flag = hmm_mil_41_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_41_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_mil_42 = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			AND = {
+				hmm_3_has_idea_groups_mil = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_has_idea_groups_mil = yes
+				hmm_3_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_3_completed_idea_groups_mil = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_completed_idea_groups_mil = yes
+				hmm_3_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_mil_41_active }
+		NOT = { has_country_flag = hmm_mil_43_active }
+	}
+
+	shock_damage = 0.1
+
+	effect = {
+		set_country_flag = hmm_mil_42_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_42_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_mil_43 = {
+	monarch_power = MIL
+
+	potential = {
+		OR = {
+			AND = {
+				hmm_3_has_idea_groups_mil = yes
+				hmm_2_has_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_has_idea_groups_mil = yes
+				hmm_3_has_idea_groups_adm = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			AND = {
+				hmm_3_completed_idea_groups_mil = yes
+				hmm_2_completed_idea_groups_adm = yes
+			}
+			AND = {
+				hmm_2_completed_idea_groups_mil = yes
+				hmm_3_completed_idea_groups_adm = yes
+			}
+		}
+		NOT = { has_country_flag = hmm_mil_41_active }
+		NOT = { has_country_flag = hmm_mil_42_active }
 	}
 
 	morale_damage = 0.1
+
+	effect = {
+		set_country_flag = hmm_mil_43_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_43_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_mil_51 = {
+	monarch_power = MIL
 	
-	effect = {}
-	removed_effect = {}
+	potential = {
+		hmm_3_has_idea_groups_mil = yes
+		hmm_3_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_3_completed_idea_groups_mil = yes
+		hmm_3_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_52_active }
+		NOT = { has_country_flag = hmm_mil_53_active }
+	}
+
+	reinforce_speed = 0.5
+
+	effect = {
+		set_country_flag = hmm_mil_51_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_51_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_mil_52 = {
+	monarch_power = MIL
+
+	potential = {
+		hmm_3_has_idea_groups_mil = yes
+		hmm_3_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_3_completed_idea_groups_mil = yes
+		hmm_3_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_51_active }
+		NOT = { has_country_flag = hmm_mil_53_active }
+	}
+
+	land_attrition = -0.5
+
+	effect = {
+		set_country_flag = hmm_mil_52_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_52_active
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+hmm_mil_53 = {
+	monarch_power = MIL
+
+	potential = {
+		hmm_3_has_idea_groups_mil = yes
+		hmm_3_has_idea_groups_adm = yes
+	}
+	allow = {
+		hmm_3_completed_idea_groups_mil = yes
+		hmm_3_completed_idea_groups_adm = yes
+		NOT = { has_country_flag = hmm_mil_51_active }
+		NOT = { has_country_flag = hmm_mil_52_active }
+	}
+
+	artillery_level_modifier = 10
+
+	effect = {
+		set_country_flag = hmm_mil_53_active
+	}
+	removed_effect = {
+		clr_country_flag = hmm_mil_53_active
+	}
 	ai_will_do = {
 		factor = 1
 	}
