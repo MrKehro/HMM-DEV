@@ -710,20 +710,16 @@ exploration_ideas = {
 		}
 		modifier = {
 			factor = 100
-			has_colonist = yes	
+			has_any_colonist_idea = yes	
 		}
 		modifier = {
 			factor = 1000
 			OR = {
-				tag = POR
-				tag = CAS
-				tag = SPA
-				tag = GBR
-				tag = ENG
 				tag = NED
-				tag = HOL
 				tag = BRI
-				tag = SCO
+				tag = MCM
+				tag = DMS
+				tag = IRE
 				tag = NOR
 				tag = KON
 			}
@@ -783,7 +779,7 @@ maritime_ideas = {
 			has_idea_group = exploration_ideas
 		}
 		modifier = {
-			factor = 125
+			factor = 50
 			OR = {
 				capital_scope = {
 					is_island = yes 
@@ -797,9 +793,6 @@ maritime_ideas = {
 				tag = NED
 				tag = HOL
 				tag = BRI
-				tag = SCO
-				tag = NOR
-				tag = KON
 			}
 		}
 	}
