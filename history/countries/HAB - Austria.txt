@@ -9,7 +9,6 @@ historical_friend = HUN
 historical_rival = TUR
 historical_rival = FRA
 elector = yes
-add_army_professionalism = 0.1
 add_accepted_culture = slovene
 
 1439.10.27 = {
