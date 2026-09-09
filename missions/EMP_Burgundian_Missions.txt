@@ -659,21 +659,38 @@ emp_burgundy_3 = {
 				province_id = 2974
 				province_id = 1742
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				OR = {
+					owned_by = ROOT
+					owner = { is_subject_of = ROOT }
+				}
+			}
 		}
 		
 		trigger = {
 			93 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					owned_by = ROOT
+					owner = { is_subject_of = ROOT }
+				}
 			}
 			1878 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					owned_by = ROOT
+					owner = { is_subject_of = ROOT }
+				}
 			}
 			2974 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					owned_by = ROOT
+					owner = { is_subject_of = ROOT }
+				}
 			}
 			1742 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					owned_by = ROOT
+					owner = { is_subject_of = ROOT }
+				}
 			}
 		}
 		

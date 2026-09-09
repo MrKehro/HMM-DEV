@@ -1,11 +1,3 @@
-#Maravi State System
-vassal = {
-	first = MRA
-	second = LDU
-	start_date = 1444.1.1
-	end_date = 1572.1.1
-}
-
 vassal = {
 	first = MRA
 	second = LDU
@@ -140,13 +132,6 @@ march = {
 #Kilwan Vassals
 
 vassal = {
-	first = ZAN
-	second = SFA
-	start_date = 1444.1.1
-	end_date = 1490.1.1
-}
-
-vassal = {
 	first = POR
 	second = ZAN
 	start_date = 1505.7.15 #Portuguese seize control
@@ -191,13 +176,6 @@ vassal = {
 #	start_date = 1444.1.1
 #	end_date = 1556.1.1
 #}
-
-vassal = {
-	first = KON
-	second = LOA
-	start_date = 1444.1.1
-	end_date = 1564.1.1
-}
 
 vassal = {
 	first = POR

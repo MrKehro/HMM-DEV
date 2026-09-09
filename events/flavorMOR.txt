@@ -22,7 +22,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3
+		months = 1
 	}
 
 	option = {
@@ -173,7 +173,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 126
+		months = 12
 	}
 	
 	option = {
